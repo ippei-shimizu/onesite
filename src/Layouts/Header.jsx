@@ -11,7 +11,7 @@ const NAV_ITEMS = [
 
 export const Header = () => {
   return (
-    <header className="h-16 flex justify-center items-center">
+    <header className="h-16 flex justify-center items-center w-full">
       <div className="w-11/12 max-w-7xl mx-auto flex justify-between items-center">
         <Link href="/">
           <a>
@@ -31,13 +31,13 @@ export const Header = () => {
             })}
           </ul>
         </nav>
-        <div className="flex space-x-6">
-          <ul className="flex space-x-3">
-            <li>
+        <div className="flex space-x-6 items-center">
+          <ul className="flex space-x-3 items-center">
+            <li className="h-7">
               <Image  src="/search.svg" alt="検索する" width={30} height={30} />
             </li>
-            <li>
-              <Image  src="/sun.svg" alt="検索する" width={30} height={30} />
+            <li className="h-7">
+              <Image  src="/sun.svg" alt="ダークモード切り替えボタン" width={30} height={30} />
             </li>
           </ul>
           <div className="w-10">
