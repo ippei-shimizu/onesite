@@ -1,0 +1,26 @@
+.fv {
+  background: linear-gradient(
+    45deg,
+    rgba(250, 255, 255, 0.9374343487394958) 0%,
+    rgba(240, 255, 255, 1) 100%
+  );
+}
+.fvTitle {
+  font-size: clamp(5rem, 3.01rem + 10.61vw, 11.5rem);
+  line-height: 1em;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.gradient {
+  background: linear-gradient(
+    129deg,
+    rgba(64, 162, 253, 1) 0%,
+    rgba(0, 223, 216, 1) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
