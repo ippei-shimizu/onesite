@@ -1,8 +1,10 @@
+import { client } from "libs/client";
 import Head from "next/head";
+import Link from "next/link";
 import { Suspense } from "react";
 import { HomeFv } from "src/components/Home/HomeFv";
 
-const Home = () => {
+const Home = ({blogs,categories}) => {
   return (
     <>
       <Head>
@@ -12,12 +14,41 @@ const Home = () => {
       <Suspense>
         <main>
           <HomeFv />
+          <ul>
+            {blogs.map((blog) => (
+              <li key={blog.id}>
+                <Link href={`/blogs/${blog.id}`}>
+                  <a>{blog.title}</a>
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <ul>
+            {categories.map((category) => (
+              <li key={category.id}>
+                <Link href={`/categories/${category.id}`}>
+                  <a>{category.name}</a>
+                </Link>
+              </li>
+            ))}
+          </ul>
         </main>
 
         <footer></footer>
       </Suspense>
     </>
   );
+};
+
+export const getStaticProps = async () => {
+  const data = await client.get({ endpoint: "blogs" });
+  const categoryData = await client.get({ endpoint: "categories" });
+  return {
+    props: {
+      blogs: data.contents,
+      categories: categoryData.contents,
+    },
+  };
 };
 
 export default Home;
