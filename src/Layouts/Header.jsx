@@ -3,10 +3,10 @@ import Link from "next/link";
 
 const NAV_ITEMS = [
   { href: "/", label: "Home" },
-  { href: "/web-production", label: "Web Production" },
-  { href: "/frontend", label: "Front End" },
-  { href: "/design", label: "Design" },
-  { href: "/life-style", label: "Life Style" },
+  { href: "/categories/web-production", label: "Web Production" },
+  { href: "/categories/front-end", label: "Front End" },
+  { href: "/categories/design", label: "Design" },
+  { href: "/categories/life-style", label: "Life Style" },
 ];
 
 export const Header = () => {
