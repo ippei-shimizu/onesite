@@ -10,3 +10,5 @@ export const formatDate = (date) => {
   return formattedDate;
 };
 
+export default formatDate;
+
