@@ -1,7 +1,10 @@
 import { Header } from "./Header";
 
-export const AppLayout = () => {
+export const AppLayout = (props) => {
   return (
+    <>
       <Header />
+      {props.children}
+    </>
   );
 };
