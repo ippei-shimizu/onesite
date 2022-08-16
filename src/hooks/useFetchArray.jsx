@@ -1,8 +1,9 @@
+import { API_URL_M_CMS } from "src/utils/const";
 import useSWRImmutable from "swr/immutable";
 
 export const useFetchArray = (id) => {
   const { data, error } = useSWRImmutable(
-    `https://ippei-shimizu.microcms.io/api/v1/${id}`
+    `${API_URL_M_CMS}/${id}`
   );
 
   return {

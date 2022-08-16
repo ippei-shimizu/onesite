@@ -5,7 +5,6 @@ import { useFetchArray } from "src/hooks/useFetchArray";
 
 export const CategoryItems = () => {
   const { data, error, isLoading, isEmpty } = useFetchArray(`blogs`);
-  // console.log(data);
 
   if (isLoading) {
     return <div>Loading....</div>;

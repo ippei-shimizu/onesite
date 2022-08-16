@@ -1,6 +1,7 @@
 import { client } from "libs/client";
 import Head from "next/head";
 import { CategoryItems } from "src/components/Category/CategoryItems";
+import { API_URL_M_CMS } from "src/utils/const";
 import { SWRConfig } from "swr";
 
 // 静的生成のためのパスを指定します
@@ -17,10 +18,11 @@ export const getStaticProps = async (context) => {
     endpoint: "blogs",
     queries: { filters: `category[equals]${id}` },
   });
+  const API_CATEGORY = `${API_URL_M_CMS}/blogs`
   return {
     props: {
       fallback: {
-        "https://ippei-shimizu.microcms.io/api/v1/blogs": data,
+        [API_CATEGORY]: data,
       },
     },
     revalidate: 10,
