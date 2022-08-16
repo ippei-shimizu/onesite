@@ -1,7 +1,6 @@
 import { client } from "libs/client";
 
-
-export default function BlogsId({ blogs }) {
+export const BlogsId = ({ blogs }) => {
   return (
     <main>
       <h1>{blogs.title}</h1>
@@ -13,7 +12,9 @@ export default function BlogsId({ blogs }) {
       />
     </main>
   );
-}
+};
+
+export default BlogsId;
 
 // 静的生成のためのパスを指定します
 export const getStaticPaths = async () => {
