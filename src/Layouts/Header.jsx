@@ -13,7 +13,7 @@ export const Header = () => {
   return (
     <header className="h-16 flex justify-center items-center w-full fixed z-50">
       <div className="w-11/12 max-w-7xl mx-auto flex justify-between items-center">
-        <Link href="/">
+        <Link href="/" prefetch={false}>
           <a>
             <Image src="/logo.svg" alt="Onesite Logo" width={105} height={26} />
           </a>
@@ -23,7 +23,7 @@ export const Header = () => {
             {NAV_ITEMS.map((item) => {
               return (
                 <li key={item.href}>
-                  <Link href={item.href}>
+                  <Link href={item.href} prefetch={false}>
                     <a>{item.label}</a>
                   </Link>
                 </li>
