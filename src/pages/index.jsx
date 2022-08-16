@@ -4,6 +4,18 @@ import Link from "next/link";
 import { Suspense } from "react";
 import { HomeFv } from "src/components/Home/HomeFv";
 
+export const getStaticProps = async () => {
+  const data = await client.get({ endpoint: "blogs" });
+  const categoryData = await client.get({ endpoint: "categories" });
+  return {
+    props: {
+      blogs: data.contents,
+      categories: categoryData.contents,
+    },
+  };
+};
+
+
 const Home = ({blogs,categories}) => {
   return (
     <>
@@ -40,15 +52,5 @@ const Home = ({blogs,categories}) => {
   );
 };
 
-export const getStaticProps = async () => {
-  const data = await client.get({ endpoint: "blogs" });
-  const categoryData = await client.get({ endpoint: "categories" });
-  return {
-    props: {
-      blogs: data.contents,
-      categories: categoryData.contents,
-    },
-  };
-};
 
 export default Home;
