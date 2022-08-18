@@ -40,7 +40,7 @@ export const CategoryItems = () => {
                       height={blog.eyecatch.height}
                       className="rounded-xl"
                     />
-                    <p className={`font-medium mt-2 ${styles.category}`}>
+                    <p className={`font-medium mt-2 text-sky-500 ${styles.category}`}>
                       {blog.category.name}
                     </p>
                     <h2 className={`font-bold my-2 ${styles.postTitle}`}>
