@@ -40,23 +40,29 @@ export const CategoryItems = () => {
                       height={blog.eyecatch.height}
                       className="rounded-xl"
                     />
-                    <p>{blog.category.name}</p>
-                    <h2>{blog.title}</h2>
+                    <p className={`font-medium mt-2 ${styles.category}`}>
+                      {blog.category.name}
+                    </p>
+                    <h2 className={`font-bold my-2 ${styles.postTitle}`}>
+                      {blog.title}
+                    </h2>
                   </a>
                 </Link>
-                <div>
-                  <div>
+                <div className="flex justify-between items-center">
+                  <div className="flex items-center">
                     <Image
                       src={blog.subcategory.icon.url}
                       alt={blog.subcategory.icon.alt}
-                      width={blog.subcategory.icon.width}
-                      height={blog.subcategory.icon.height}
+                      width={42}
+                      height={42}
                     />
-                    <p>{blog.subcategory.name}</p>
+                    <p className="ml-1">{blog.subcategory.name}</p>
                   </div>
-                  <p>
+                  <p className="flex items-center">
                     <Image src="/clock.svg" alt="日時" width={22} height={22} />
-                    <time>{formatDate(blog.updatedAt)}</time>
+                    <time className="ml-1">
+                      {formatDate(blog.updatedAt)}
+                    </time>
                   </p>
                 </div>
               </article>
