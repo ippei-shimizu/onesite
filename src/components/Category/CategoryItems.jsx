@@ -28,7 +28,17 @@ export const CategoryItems = () => {
           <h1 className={`font-bold tracking-wide ${styles.title}`}>
             {data.contents[0].category.name}
           </h1>
-          <div className="grid grid-cols-3 gap-6 mt-9">
+          <nav>
+            <ol className="flex text-sky-500">
+              <li>
+                <Link href={`/`} prefetch={false}>
+                <a>Home<span className="mx-2 text-stone-900">/</span></a>
+                </Link>
+              </li>
+              <li>{data.contents[0].category.name}</li>
+            </ol>
+          </nav>
+          <div className="grid grid-cols-3 gap-6 mt-14">
             {data.contents.map((blog) => (
               <article key={blog.id}>
                 <Link href={`/blogs/${blog.id}`} prefetch={false}>
@@ -40,7 +50,9 @@ export const CategoryItems = () => {
                       height={blog.eyecatch.height}
                       className="rounded-xl"
                     />
-                    <p className={`font-medium mt-2 text-sky-500 ${styles.category}`}>
+                    <p
+                      className={`font-medium mt-2 text-sky-500 ${styles.category}`}
+                    >
                       {blog.category.name}
                     </p>
                     <h2 className={`font-bold my-2 ${styles.postTitle}`}>
@@ -60,9 +72,7 @@ export const CategoryItems = () => {
                   </div>
                   <p className="flex items-center">
                     <Image src="/clock.svg" alt="日時" width={22} height={22} />
-                    <time className="ml-1">
-                      {formatDate(blog.updatedAt)}
-                    </time>
+                    <time className="ml-1">{formatDate(blog.updatedAt)}</time>
                   </p>
                 </div>
               </article>
