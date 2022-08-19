@@ -16,6 +16,7 @@ export const BlogDetail = () => {
   if (error) {
     return <div>error</div>;
   }
+  console.log(data);
   return (
     <main>
       <h1>{data.title}</h1>
