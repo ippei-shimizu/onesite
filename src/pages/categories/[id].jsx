@@ -1,5 +1,6 @@
 import { client } from "libs/client";
 import { CategoryItems } from "src/components/Category/CategoryItems";
+import { SubCategoryItem } from "src/components/SubCategory/SubCategoryItem";
 import { API_URL_M_CMS } from "src/utils/const";
 import { SWRConfig } from "swr";
 
@@ -18,23 +19,25 @@ export const getStaticProps = async (context) => {
     queries: { filters: `category[equals]${id}` },
   });
   const API_CATEGORY = `${API_URL_M_CMS}/blogs`;
+  const subCategoryData = await client.get({ endpoint: "subcategory" });
   return {
     props: {
       fallback: {
         [API_CATEGORY]: data,
       },
-      id
+      id,
+      subCategory: subCategoryData.contents,
     },
     revalidate: 10,
   };
 };
-
 export const CategoryList = (props) => {
   const { fallback } = props;
   return (
     <>
       <SWRConfig value={{ fallback }}>
         <CategoryItems />
+        <SubCategoryItem  value={props.subCategory} />
       </SWRConfig>
     </>
   );
