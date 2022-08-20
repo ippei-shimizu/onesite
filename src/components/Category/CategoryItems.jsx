@@ -65,12 +65,12 @@ export const CategoryItems = () => {
                   <div className="flex justify-between items-center">
                     <div className="flex items-center">
                       <Image
-                        src={blog.subcategory.icon.url}
-                        alt={blog.subcategory.icon.alt}
+                        src={blog.subcategory[0].icon.url}
+                        alt={blog.subcategory[0].icon.url}
                         width={42}
                         height={42}
                       />
-                      <p className="ml-1">{blog.subcategory.name}</p>
+                      <p className="ml-1">{blog.subcategory[0].name}</p>
                     </div>
                     <p className="flex items-center">
                       <Image
