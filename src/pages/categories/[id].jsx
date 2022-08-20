@@ -33,11 +33,12 @@ export const getStaticProps = async (context) => {
 };
 export const CategoryList = (props) => {
   const { fallback } = props;
+  console.log(props);
   return (
     <>
       <SWRConfig value={{ fallback }}>
         <CategoryItems />
-        <SubCategoryItem  value={props.subCategory} />
+        <SubCategoryItem props={props.subCategory} />
       </SWRConfig>
     </>
   );
