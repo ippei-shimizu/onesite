@@ -7,16 +7,14 @@ import { SWRConfig } from "swr";
 export const getStaticPaths = async () => {
   const data = await client.get({ endpoint: "subcategory" });
   const paths = data.contents.map((content) => `/subcategory/${content.id}`);
-  console.log(paths);
   return { paths, fallback: "blocking" };
 };
 
 export const getStaticProps= async (context) => {
-  console.log(context);
   const id = context.params.id;
   const data = await client.get({
     endpoint: "blogs",
-    queries: { filters: `subcategory[equals]${id}` },
+    queries: { filters: `subcategory[contains]${id}` },
   });
   const API_SUB_CATEGORY = `${API_URL_M_CMS}/subcategory`;
   return {
