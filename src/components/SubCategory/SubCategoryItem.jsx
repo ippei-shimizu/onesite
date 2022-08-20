@@ -1,13 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export const SubCategoryItem = (value = { props: subCategory }) => {
+export const SubCategoryItem = (props) => {
   return (
     <>
       <section className="w-11/12 max-w-7xl mx-auto">
         <h2 className="mt-20 mb-6 text-3xl font-bold">Category</h2>
         <ul className="grid grid-cols-4 gap-5 mb-16">
-          {value.value.map((sub) => {
+          {props.props.map((sub) => {
             return (
               <li
                 key={sub.id}
@@ -29,6 +29,7 @@ export const SubCategoryItem = (value = { props: subCategory }) => {
           })}
         </ul>
       </section>
+      {/* </SWRConfig> */}
     </>
   );
 };

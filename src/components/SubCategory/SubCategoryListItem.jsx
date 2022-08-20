@@ -16,7 +16,6 @@ export const SubCategoryListItem = () => {
   if (isEmpty) {
     return <div>ブログ記事はありません</div>;
   }
-  console.log(data);
   return (
     <>
       <div className="w-11/12 max-w-7xl mx-auto">
@@ -48,11 +47,19 @@ export const SubCategoryListItem = () => {
                       height={content.eyecatch.height}
                       className="rounded-xl"
                     />
+                  </a>
+                </Link>
+                <Link href={`/categories/${content.category.id}`}>
+                  <a>
                     <p
                       className={`font-medium mt-2 text-sky-500 ${styles.category}`}
                     >
                       {content.category.name}
                     </p>
+                  </a>
+                </Link>
+                <Link href={`/blogs/${content.id}`} prefetch={false}>
+                  <a>
                     <h2 className={`font-bold my-2 ${styles.postTitle}`}>
                       {content.title}
                     </h2>
