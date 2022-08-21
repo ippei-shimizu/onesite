@@ -4,7 +4,7 @@ import Link from "next/link";
 export const SubCategoryItem = (props) => {
   return (
     <>
-      <section className="w-11/12 max-w-7xl mx-auto">
+      <section className="w-11/12 max-w-6xl mx-auto">
         <h2 className="mt-20 mb-6 text-3xl font-bold">Category</h2>
         <ul className="grid grid-cols-4 gap-5 mb-16">
           {props.props.map((sub) => {
@@ -18,10 +18,10 @@ export const SubCategoryItem = (props) => {
                     <Image
                       src={sub.icon.url}
                       alt={sub.alt}
-                      width={52}
-                      height={52}
+                      width={42}
+                      height={42}
                     />
-                    <h3 className="ml-2 text-base font-medium">{sub.name}</h3>
+                    <h3 className="ml-2 text-sm font-medium">{sub.name}</h3>
                   </a>
                 </Link>
               </li>
@@ -29,7 +29,6 @@ export const SubCategoryItem = (props) => {
           })}
         </ul>
       </section>
-      {/* </SWRConfig> */}
     </>
   );
 };
