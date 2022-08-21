@@ -27,11 +27,39 @@ export const getStaticProps = async () => {
   };
 };
 
+const SNS_LIST = [
+  {
+    href: "https://github.com/ippei-shimizu",
+    src: "/github.svg",
+    alt: "github",
+    width: 24,
+    height: 24,
+  },
+  {
+    href: "https://codepen.io/ippei-shimizu",
+    src: "/codepen.svg",
+    alt: "codepen",
+    width: 24,
+    height: 24,
+  },
+  {
+    href: "https://twitter.com/ippei_111",
+    src: "/twitter.svg",
+    alt: "twitter",
+    width: 24,
+    height: 24,
+  },
+  {
+    href: "https://www.instagram.com/ippei_5/",
+    src: "/instagram.svg",
+    alt: "instagram",
+    width: 24,
+    height: 24,
+  },
+];
+
 const Home = (props) => {
   const { fallback } = props;
-  const sns = [
-  
-  ]
   return (
     <>
       <Head>
@@ -62,63 +90,32 @@ const Home = (props) => {
                   <h5>Ippei Shimizu</h5>
                   <p>Yamanashi / web coder</p>
                   <ul>
-                    <li>
-                      <Link href="https://github.com/ippei-shimizu">
-                        <a target="_blank">
-                          <Image
-                            src="/github.svg"
-                            alt="github"
-                            width={24}
-                            height={24}
-                          />
-                        </a>
-                      </Link>
-                    </li>
-
-                    <li>
-                      <Link href="https://codepen.io/ippei-shimizu">
-                        <a target="_blank">
-                          <Image
-                            src="/codepen.svg"
-                            alt="codepen"
-                            width={24}
-                            height={24}
-                          />
-                        </a>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="https://twitter.com/ippei_111">
-                        <a target="_blank">
-                          <Image
-                            src="/twitter.svg"
-                            alt="twitter"
-                            width={24}
-                            height={24}
-                          />
-                        </a>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="https://www.instagram.com/ippei_5/">
-                        <a target="_blank">
-                          <Image
-                            src="/instagram.svg"
-                            alt="instagram"
-                            width={24}
-                            height={24}
-                          />
-                        </a>
-                      </Link>
-                    </li>
+                    {SNS_LIST.map((sns) => {
+                      return (
+                        <li key={sns.href}>
+                          <Link href={sns.href}>
+                            <a>
+                              <Image
+                                src={sns.src}
+                                alt={sns.alt}
+                                width={sns.width}
+                                height={sns.height}
+                              />
+                            </a>
+                          </Link>
+                        </li>
+                      );
+                    })}
                   </ul>
                 </div>
               </div>
             </div>
-            <p>テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□
-テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□
-テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□
-テキスト□テキスト□テキスト□テキスト□テキスト□</p>
+            <p>
+              テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□
+              テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□
+              テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□
+              テキスト□テキスト□テキスト□テキスト□テキスト□
+            </p>
           </div>
         </div>
       </footer>
