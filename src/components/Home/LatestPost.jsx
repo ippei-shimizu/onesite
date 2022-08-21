@@ -39,9 +39,9 @@ export const LatestPost = () => {
                     >
                       {content.category.name}
                     </p>
-                    <h2 className={`font-bold my-2 ${styles.postTitle}`}>
+                    <h3 className={`font-bold my-2 ${styles.postTitle}`}>
                       {content.title}
-                    </h2>
+                    </h3>
                   </a>
                 </Link>
                 <div className="flex justify-between items-center">

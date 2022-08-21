@@ -5,9 +5,7 @@ import { API_URL_M_CMS } from "src/utils/const";
 export const BlogDetail = () => {
   const router = useRouter();
   const { data, error, isLoading } = useFetch(
-    router.query.id
-      ? `${API_URL_M_CMS}/blogs/${router.query.id}`
-      : null
+    router.query.id ? `${API_URL_M_CMS}/blogs/${router.query.id}` : null
   );
 
   if (isLoading) {
@@ -16,7 +14,6 @@ export const BlogDetail = () => {
   if (error) {
     return <div>error</div>;
   }
-  console.log(data);
   return (
     <main>
       <h1>{data.title}</h1>
