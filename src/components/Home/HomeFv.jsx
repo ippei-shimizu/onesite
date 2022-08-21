@@ -7,11 +7,11 @@ export const HomeFv = () => {
       <h1
         className={`w-11/12 max-w-7xl mx-auto tracking-tight ${styles.fvTitle}`}
       >
-        <span className={styles.gradient}>Front End</span>
+        <span className={styles.gradient}>FRONT END</span>
         <br />
-        Output
+        OUTPUT
         <br />
-        Blog
+        BLOG
       </h1>
       </div>
     </section>
