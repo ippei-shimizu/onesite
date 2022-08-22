@@ -5,7 +5,7 @@ export const SubCategoryItem = (props) => {
   return (
     <>
       <section className="w-11/12 max-w-6xl mx-auto">
-        <h2 className="mt-20 mb-6 text-3xl font-bold">Category</h2>
+        <h2 className="mt-20 mb-6 text-5xl font-bold">Category</h2>
         <ul className="grid grid-cols-4 gap-5 mb-16">
           {props.props.map((sub) => {
             return (
