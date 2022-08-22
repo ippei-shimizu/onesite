@@ -1,11 +1,9 @@
 import { client } from "libs/client";
 import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
-import { Suspense } from "react";
 import { HomeFv } from "src/components/Home/HomeFv";
 import { LatestPost } from "src/components/Home/LatestPost";
 import { SubCategoryItem } from "src/components/SubCategory/SubCategoryItem";
+import { Footer } from "src/Layouts/Footer";
 import { API_URL_M_CMS, PostListLimit } from "src/utils/const";
 import { SWRConfig } from "swr";
 
@@ -15,12 +13,14 @@ export const getStaticProps = async () => {
     queries: { limit: PostListLimit },
   });
   const subCategoryData = await client.get({ endpoint: "subcategory" });
+  const CategoryData = await client.get({ endpoint: "categories" });
   const API_BLOG = `${API_URL_M_CMS}/blogs`;
   return {
     props: {
       fallback: {
         [API_BLOG]: blogData,
       },
+      categories: CategoryData,
       subCategory: subCategoryData.contents,
     },
     revalidate: 10,
@@ -29,9 +29,6 @@ export const getStaticProps = async () => {
 
 const Home = (props) => {
   const { fallback } = props;
-  const sns = [
-  
-  ]
   return (
     <>
       <Head>
@@ -43,85 +40,9 @@ const Home = (props) => {
         <SWRConfig value={{ fallback }}>
           <SubCategoryItem props={props.subCategory} />
           <LatestPost />
+          <Footer contents={props} />
         </SWRConfig>
       </main>
-
-      <footer>
-        <div>
-          <div>
-            <div>
-              <h4>Profile</h4>
-              <div>
-                <Image
-                  src="/profile.png"
-                  alt="清水一平"
-                  width={83}
-                  height={83}
-                />
-                <div>
-                  <h5>Ippei Shimizu</h5>
-                  <p>Yamanashi / web coder</p>
-                  <ul>
-                    <li>
-                      <Link href="https://github.com/ippei-shimizu">
-                        <a target="_blank">
-                          <Image
-                            src="/github.svg"
-                            alt="github"
-                            width={24}
-                            height={24}
-                          />
-                        </a>
-                      </Link>
-                    </li>
-
-                    <li>
-                      <Link href="https://codepen.io/ippei-shimizu">
-                        <a target="_blank">
-                          <Image
-                            src="/codepen.svg"
-                            alt="codepen"
-                            width={24}
-                            height={24}
-                          />
-                        </a>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="https://twitter.com/ippei_111">
-                        <a target="_blank">
-                          <Image
-                            src="/twitter.svg"
-                            alt="twitter"
-                            width={24}
-                            height={24}
-                          />
-                        </a>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="https://www.instagram.com/ippei_5/">
-                        <a target="_blank">
-                          <Image
-                            src="/instagram.svg"
-                            alt="instagram"
-                            width={24}
-                            height={24}
-                          />
-                        </a>
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <p>テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□
-テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□
-テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□
-テキスト□テキスト□テキスト□テキスト□テキスト□</p>
-          </div>
-        </div>
-      </footer>
     </>
   );
 };

@@ -1,5 +1,4 @@
 import { client } from "libs/client";
-import Head from "next/head";
 import { SubCategoryItem } from "src/components/SubCategory/SubCategoryItem";
 import { SubCategoryListItem } from "src/components/SubCategory/SubCategoryListItem";
 import { API_URL_M_CMS } from "src/utils/const";
@@ -31,7 +30,7 @@ export const getStaticProps = async (context) => {
 };
 
 export const SubCategoryList = (props) => {
-  const {fallback} = props;
+  const { fallback } = props;
   return (
     <>
       <SWRConfig value={{ fallback }}>
