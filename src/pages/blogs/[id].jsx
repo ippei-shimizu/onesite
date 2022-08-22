@@ -1,5 +1,6 @@
 import { client } from "libs/client";
 import { BlogDetail } from "src/components/Blog/BlogDetail";
+import { Footer } from "src/Layouts/Footer";
 import { API_URL_M_CMS } from "src/utils/const";
 import { SWRConfig } from "swr";
 
@@ -15,11 +16,15 @@ export const getStaticProps = async (context) => {
   const id = context.params.id;
   const data = await client.get({ endpoint: "blogs", contentId: id });
   const API = `${API_URL_M_CMS}/blogs/${id}`;
+  const subCategoryData = await client.get({ endpoint: "subcategory" });
+  const CategoryData = await client.get({ endpoint: "categories" });
   return {
     props: {
       fallback: {
         [API]: data,
       },
+      categories: CategoryData,
+      subCategory: subCategoryData.contents,
     },
     revalidate: 10,
   };
@@ -31,6 +36,7 @@ export const BlogsId = (props) => {
     <>
       <SWRConfig value={{ fallback }}>
         <BlogDetail />
+        <Footer contents={props} />
       </SWRConfig>
     </>
   );
