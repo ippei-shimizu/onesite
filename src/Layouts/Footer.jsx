@@ -7,35 +7,43 @@ const SNS_LIST = [
     href: "https://github.com/ippei-shimizu",
     src: "/github.svg",
     alt: "github",
-    width: 24,
-    height: 24,
+    width: 28,
+    height: 28,
+    id: "@ippei-shimizu",
+    class: "bg-black",
   },
   {
     href: "https://codepen.io/ippei-shimizu",
     src: "/codepen.svg",
     alt: "codepen",
-    width: 24,
-    height: 24,
+    width: 28,
+    height: 28,
+    id: "@ippei-shimizu",
+    class: "bg-gray-700",
   },
   {
     href: "https://twitter.com/ippei_111",
     src: "/twitter.svg",
     alt: "twitter",
-    width: 24,
-    height: 24,
+    width: 28,
+    height: 28,
+    id: "@ippei_111",
+    class: "bg-sky-500",
   },
   {
     href: "https://www.instagram.com/ippei_5/",
     src: "/instagram.svg",
     alt: "instagram",
-    width: 24,
-    height: 24,
+    width: 28,
+    height: 28,
+    id: "@ippei_5",
+    class: "bg-pink-600",
   },
 ];
 
 const PAGE_LIST = [
-  { href: "/contact", name: "Contact" },
-  { href: "/privacy-policy", name: "Privacy Policy" },
+  { href: "/contact", id: "Contact" },
+  { href: "/privacy-policy", id: "Privacy Policy" },
 ];
 
 export const Footer = (contents) => {
@@ -45,45 +53,34 @@ export const Footer = (contents) => {
     <>
       <footer className={`mt-40 ${styles.footer}`}>
         <div className="w-11/12 max-w-6xl mx-auto">
-          <h4 className="pt-16 mb-8 text-5xl font-bold">Profile</h4>
-          <div className="bg-white border border-slate-200 rounded p-12">
-            <div className="flex items-center">
-              <Image src="/profile.png" alt="清水一平" width={83} height={83} />
-              <div className="ml-6">
-                <h5 className="text-lg font-bold">Ippei Shimizu</h5>
-                <div className="flex items-center">
-                  <p className="text-base text-gray-500 mr-4">
+          <div>
+            {/* <Image src="/profile.png" alt="清水一平" width={83} height={83} /> */}
+            {/* <h5 className="text-lg font-bold">Ippei Shimizu</h5> */}
+
+            {/* <p className="text-base text-gray-500 mr-4">
                     Yamanashi / web coder
-                  </p>
-                  <ul className="flex mt-1 space-x-3">
-                    {SNS_LIST.map((sns) => {
-                      return (
-                        <li key={sns.href}>
-                          <Link href={sns.href}>
-                            <a>
-                              <Image
-                                src={sns.src}
-                                alt={sns.alt}
-                                width={sns.width}
-                                height={sns.height}
-                              />
-                            </a>
-                          </Link>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <p className="mt-6 leading-6">
-              テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□
-              テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□
-              テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□テキスト□
-              テキスト□テキスト□テキスト□テキスト□テキスト□
-            </p>
+                  </p> */}
+            <ul className="grid grid-cols-4 gap-6">
+              {SNS_LIST.map((sns) => {
+                return (
+                  <li key={sns.href} className={`rounded-lg ${sns.class}`}>
+                    <Link href={sns.href}>
+                      <a className="flex items-center py-4 px-7 space-x-3">
+                        <Image
+                          src={sns.src}
+                          alt={sns.alt}
+                          width={sns.width}
+                          height={sns.height}
+                        />
+                        <p className="text-white font-medium text-base">{sns.id}</p>
+                      </a>
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
           </div>
-          <div className="mt-24">
+          <div className="mt28">
             <Image src="/logo.svg" alt="Onesite" width={184} height={45} />
             <div>
               <ul>
