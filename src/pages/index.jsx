@@ -3,13 +3,13 @@ import Head from "next/head";
 import { LatestPost } from "src/components/Home/LatestPost";
 import { SubCategoryItem } from "src/components/SubCategory/SubCategoryItem";
 import { Footer } from "src/Layouts/Footer";
-import { API_URL_M_CMS, PostListLimit } from "src/utils/const";
+import { API_URL_M_CMS } from "src/utils/const";
 import { SWRConfig } from "swr";
 
 export const getStaticProps = async () => {
   const blogData = await client.get({
     endpoint: "blogs",
-    queries: { limit: PostListLimit },
+    queries: { limit: 5 },
   });
   const subCategoryData = await client.get({ endpoint: "subcategory" });
   const CategoryData = await client.get({ endpoint: "categories" });
@@ -36,7 +36,7 @@ const Home = (props) => {
       </Head>
       <main>
         <SWRConfig value={{ fallback }}>
-          <SubCategoryItem props={props.subCategory} />
+          {/* <SubCategoryItem props={props.subCategory} /> */}
           <LatestPost />
           <Footer contents={props} />
         </SWRConfig>
