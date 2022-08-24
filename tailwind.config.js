@@ -16,6 +16,8 @@ module.exports = {
         "nav03-blue-b": "#66A6FF",
         "nav04-blue-t": "#A1C4FD",
         "nav04-blue-b": "#C2E9FB",
+        "post-bg-t" : "#7DE2FC",
+        "post-bg-b" : "#B9B6E5",
       },
     },
   },
