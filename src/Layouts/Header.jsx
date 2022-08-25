@@ -8,34 +8,34 @@ const NAV_ITEMS = [
     src: "/frontend.svg",
     src: "/frontend.svg",
     alt: "Front End",
-    class:"bg-gradient-to-tl from-nav01-blue-t to-nav01-blue-b"
+    class:"bg-gradient-to-tl from-nav01-blue-t via-nav01-blue-v to-nav01-blue-b"
   },
   {
     href: "/categories/web-production",
     label: "WebProduction",
     src: "/webproduction.svg",
     alt: "Web Production",
-    class:"bg-gradient-to-tl from-nav02-blue-t to-nav02-blue-b"
+    class:"bg-gradient-to-tl from-nav02-blue-t via-nav02-blue-v to-nav02-blue-b"
   },
   {
     href: "/categories/design",
     label: "Design",
     src: "/design.svg",
     alt: "Design",
-    class:"bg-gradient-to-r from-nav03-blue-t to-nav03-blue-b"
+    class:"bg-gradient-to-tl from-nav03-blue-t via-nav03-blue-v to-nav03-blue-b"
   },
   {
     href: "/categories/life-style",
     label: "Life Style",
     src: "/lifestyle.svg",
     alt: "Life Style",
-    class:"bg-gradient-to-tl from-nav04-blue-t to-nav04-blue-b"
+    class:"bg-gradient-to-tl from-nav04-blue-t via-nav04-blue-v to-nav04-blue-b"
   },
 ];
 
 export const Header = () => {
   return (
-    <header className="w-full mt-10">
+    <header className="w-full mt-12">
       <div className="w-11/12 max-w-3xl mx-auto">
         <div className="flex justify-between items-center">
           <Link href="/" prefetch={false}>
@@ -71,7 +71,7 @@ export const Header = () => {
             </ul>
           </div>
         </div>
-        <div className="flex items-center mt-9">
+        <div className="flex items-center mt-6">
           <Image src="/profile.png" alt="IppeiShimizu" width={48} height={48} />
           <div className="ml-4">
             <p className="text-base font-bold">Ippei Shimize</p>
@@ -86,14 +86,14 @@ export const Header = () => {
               return (
                 <li key={item.href} className={`${item.class} rounded-3xl`}>
                   <Link href={item.href} prefetch={false}>
-                    <a className="text-center block pt-7 pb-6 px-2">
+                    <a className="text-center block pt-8 pb-7 px-2">
                       <Image
                         src={item.src}
                         alt={item.alt}
-                        width={82}
-                        height={82}
+                        width={72}
+                        height={72}
                       />
-                      <h2 className="text-base font-bold">{item.label}</h2>
+                      <h2 className="text-base font-bold mt-2">{item.label}</h2>
                     </a>
                   </Link>
                 </li>
