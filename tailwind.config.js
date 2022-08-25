@@ -10,7 +10,7 @@ module.exports = {
       colors: {
         "nav01-blue-t": "#48C6EF",
         "nav01-blue-v": "#97aeed",
-        "nav01-blue-b": "#6F86D6",
+        "nav01-blue-b": "#beccff",
         "nav02-blue-t": "#4FACFE",
         "nav02-blue-v": "#6ac3ff",
         "nav02-blue-b": "#00F2FE",
