@@ -1,9 +1,32 @@
 .title {
-  font-size:clamp(1.75rem, 1.333rem + 2.08vw, 3rem);
+  font-size: clamp(1.75rem, 1.333rem + 2.08vw, 3rem);
 }
 .category {
-  font-size:clamp(0.875rem, 0.833rem + 0.21vw, 1rem);
+  font-size: clamp(0.875rem, 0.833rem + 0.21vw, 1rem);
 }
 .postTitle {
-  font-size:clamp(1rem, 0.958rem + 0.21vw, 1.125rem);
+  font-size: clamp(1rem, 0.958rem + 0.21vw, 1.125rem);
+}
+
+.article:nth-child(1) {
+  grid-column-start: 1;
+  grid-column-end: 6;
+}
+
+.article:nth-child(2) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.article:nth-child(3) {
+  grid-column-start: 3;
+  grid-column-end: 6;
+}
+.article:nth-child(4) {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+.article:nth-child(5) {
+  grid-column-start: 4;
+  grid-column-end: 6;
 }

@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useFetchArray } from "src/hooks/useFetchArray";
 import styles from "src/components/Category/Category.module.css";
-import formatDate from "libs/utils";
 
 export const LatestPost = () => {
   const { data, error, isLoading, isEmpty } = useFetchArray(`blogs`);
@@ -20,72 +19,51 @@ export const LatestPost = () => {
     <>
       <section className="mt-10">
         <div className="w-11/12 max-w-3xl mx-auto">
-          <div className="grid grid-cols-3 gap-6">
+          <div className="grid grid-cols-5 gap-6">
             {data.contents.map((content) => {
               return (
                 <article
                   key={content.id}
-                  className={`${styles.article} bg-gradient-to-r from-post-bg-t to-post-bg-b`}
+                  className={`${styles.article} bg-gradient-to-r from-post-bg-t to-post-bg-b p-7 rounded-3xl`}
                 >
-                  <div className="flex">
+                  <div className="text-center">
                     <Link href={`/blogs/${content.id}`} prefetch={false}>
-                      <a>
+                      <a className="block">
                         <Image
                           src={content.icon.url}
                           alt={content.title}
-                          width={68}
-                          height={68}
+                          width={80}
+                          height={80}
                         />
                       </a>
                     </Link>
                     <div className="ml-4">
-                      <Link
-                        href={`/categories/${content.category.id}`}
-                        prefetch={false}
-                      >
-                        <a>
-                          <p className={`font-medium ${styles.category}`}>
-                            {content.category.name}
-                          </p>
-                        </a>
-                      </Link>
                       <Link href={`/blogs/${content.id}`} prefetch={false}>
                         <a>
-                          <h3 className={`font-bold my-1 ${styles.postTitle}`}>
+                          <h3 className={`font-bold my-4 text-base`}>
                             {content.title}
                           </h3>
                         </a>
                       </Link>
-                      <div className="flex justify-between items-center">
+                      <div>
                         <div>
                           <Link
                             href={`/subcategory/${content.subcategory[0].id}`}
                             prefetch={false}
                           >
-                            <a className="flex items-center">
+                            <a className="flex items-center justify-center">
                               <Image
                                 src={content.subcategory[0].icon.url}
                                 alt={content.subcategory[0].icon.url}
-                                width={34}
-                                height={34}
+                                width={32}
+                                height={32}
                               />
-                              <p className="ml-1">
+                              <p className="text-sm font-medium mr-4 ml-1">
                                 {content.subcategory[0].name}
                               </p>
                             </a>
                           </Link>
                         </div>
-                        <p className="flex items-center">
-                          <Image
-                            src="/clock.svg"
-                            alt="日時"
-                            width={22}
-                            height={22}
-                          />
-                          <time className="ml-1 text-sm">
-                            {formatDate(content.updatedAt)}
-                          </time>
-                        </p>
                       </div>
                     </div>
                   </div>
