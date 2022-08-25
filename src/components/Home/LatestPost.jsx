@@ -37,10 +37,17 @@ export const LatestPost = () => {
                         />
                       </a>
                     </Link>
-                    <div className="ml-4">
+                    <div className="mt-4">
+                      <Link href={`categories/${content.category.id}`}>
+                        <a>
+                          <p className="font-bold text-sky-600">
+                            {content.category.name}
+                          </p>
+                        </a>
+                      </Link>
                       <Link href={`/blogs/${content.id}`} prefetch={false}>
                         <a>
-                          <h3 className={`font-bold my-4 text-base`}>
+                          <h3 className={`font-bold my-3 text-base`}>
                             {content.title}
                           </h3>
                         </a>
