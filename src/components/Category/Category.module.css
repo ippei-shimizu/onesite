@@ -1,5 +1,5 @@
 .title {
-  font-size: clamp(1.75rem, 1.333rem + 2.08vw, 3rem);
+  font-size: clamp(1.5rem, 0.9rem + 3.2vw, 2.5rem);
 }
 .category {
   font-size: clamp(0.875rem, 0.833rem + 0.21vw, 1rem);
@@ -29,4 +29,9 @@
 .article:nth-child(5) {
   grid-column-start: 4;
   grid-column-end: 6;
+}
+
+.categoryPost:nth-child(1) {
+  grid-column-start: 1;
+  grid-column-end: 4;
 }
