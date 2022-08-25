@@ -12,7 +12,7 @@ const NAV_ITEMS = [
   },
   {
     href: "/categories/web-production",
-    label: "Web Production",
+    label: "WebProduction",
     src: "/webproduction.svg",
     alt: "Web Production",
     class:"bg-gradient-to-tl from-nav02-blue-t to-nav02-blue-b"
@@ -81,7 +81,7 @@ export const Header = () => {
           </div>
         </div>
         <nav className="mt-24">
-          <ul className="grid grid-cols-4 gap-8">
+          <ul className="grid grid-cols-4 gap-6">
             {NAV_ITEMS.map((item) => {
               return (
                 <li key={item.href} className={`${item.class} rounded-3xl`}>
@@ -90,10 +90,10 @@ export const Header = () => {
                       <Image
                         src={item.src}
                         alt={item.alt}
-                        width={80}
-                        height={80}
+                        width={82}
+                        height={82}
                       />
-                      <h2 className="text-lg font-bold mt-1">{item.label}</h2>
+                      <h2 className="text-base font-bold">{item.label}</h2>
                     </a>
                   </Link>
                 </li>

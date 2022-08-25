@@ -18,12 +18,15 @@ export const LatestPost = () => {
   }
   return (
     <>
-      <section className="mt-8">
+      <section className="mt-10">
         <div className="w-11/12 max-w-3xl mx-auto">
-          <div>
+          <div className="grid grid-cols-3 gap-6">
             {data.contents.map((content) => {
               return (
-                <article key={content.id} className="bg-gradient-to-r from-post-bg-t to-post-bg-b">
+                <article
+                  key={content.id}
+                  className={`${styles.article} bg-gradient-to-r from-post-bg-t to-post-bg-b`}
+                >
                   <div className="flex">
                     <Link href={`/blogs/${content.id}`} prefetch={false}>
                       <a>
@@ -41,9 +44,7 @@ export const LatestPost = () => {
                         prefetch={false}
                       >
                         <a>
-                          <p
-                            className={`font-medium ${styles.category}`}
-                          >
+                          <p className={`font-medium ${styles.category}`}>
                             {content.category.name}
                           </p>
                         </a>
