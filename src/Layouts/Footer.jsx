@@ -9,7 +9,7 @@ const SNS_LIST = [
     width: 28,
     height: 28,
     id: "@ippei-shimizu",
-    class: "bg-black",
+    class: "bg-gradient-to-tl from-git-icon-t to-git-icon-b",
   },
   {
     href: "https://codepen.io/ippei-shimizu",
@@ -18,7 +18,7 @@ const SNS_LIST = [
     width: 28,
     height: 28,
     id: "@ippei-shimizu",
-    class: "bg-gray-700",
+    class: "bg-gradient-to-tl from-code-icon-t to-code-icon-b",
   },
   {
     href: "https://twitter.com/ippei_111",
@@ -27,7 +27,7 @@ const SNS_LIST = [
     width: 28,
     height: 28,
     id: "@ippei_111",
-    class: "bg-sky-500",
+    class: "bg-gradient-to-tl from-twitter-icon-t to-twitter-icon-b",
   },
   {
     href: "https://www.instagram.com/ippei_5/",
@@ -36,7 +36,7 @@ const SNS_LIST = [
     width: 28,
     height: 28,
     id: "@ippei_5",
-    class: "bg-pink-600",
+    class: "bg-gradient-to-tl from-instagram-icon-t to-instagram-icon-b",
   },
 ];
 
@@ -80,7 +80,16 @@ export const Footer = (contents) => {
             </ul>
           </div>
           <div className="text-center">
-            <Image src="/logo.svg" alt="Onesite Logo" width={124} height={32} />
+            <Link href="/">
+              <a>
+                <Image
+                  src="/logo.svg"
+                  alt="Onesite Logo"
+                  width={124}
+                  height={32}
+                />
+              </a>
+            </Link>
             <p className="text-xs mb-3">&copy; 2022 Ippei Shimizu</p>
           </div>
         </div>
