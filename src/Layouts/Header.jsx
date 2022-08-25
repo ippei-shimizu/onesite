@@ -8,28 +8,32 @@ const NAV_ITEMS = [
     src: "/frontend.svg",
     src: "/frontend.svg",
     alt: "Front End",
-    class:"bg-gradient-to-tl from-nav01-blue-t via-nav01-blue-v to-nav01-blue-b"
+    class:
+      "bg-gradient-to-tl from-nav01-blue-t via-nav01-blue-v to-nav01-blue-b",
   },
   {
     href: "/categories/web-production",
     label: "WebProduction",
     src: "/webproduction.svg",
     alt: "Web Production",
-    class:"bg-gradient-to-tl from-nav02-blue-t via-nav02-blue-v to-nav02-blue-b"
+    class:
+      "bg-gradient-to-tl from-nav02-blue-t via-nav02-blue-v to-nav02-blue-b",
   },
   {
     href: "/categories/design",
     label: "Design",
     src: "/design.svg",
     alt: "Design",
-    class:"bg-gradient-to-tl from-nav03-blue-t via-nav03-blue-v to-nav03-blue-b"
+    class:
+      "bg-gradient-to-tl from-nav03-blue-t via-nav03-blue-v to-nav03-blue-b",
   },
   {
     href: "/categories/life-style",
     label: "Life Style",
     src: "/lifestyle.svg",
     alt: "Life Style",
-    class:"bg-gradient-to-tl from-nav04-blue-t via-nav04-blue-v to-nav04-blue-b"
+    class:
+      "bg-gradient-to-tl from-nav04-blue-t via-nav04-blue-v to-nav04-blue-b",
   },
 ];
 
@@ -41,12 +45,12 @@ export const Header = () => {
           <Link href="/" prefetch={false}>
             <a>
               <h1>
-              <Image
-                src="/logo.svg"
-                alt="Onesite Logo"
-                width={148}
-                height={36}
-              />
+                <Image
+                  src="/logo.svg"
+                  alt="Onesite Logo"
+                  width={148}
+                  height={36}
+                />
               </h1>
             </a>
           </Link>

@@ -80,13 +80,8 @@ export const Footer = (contents) => {
             </ul>
           </div>
           <div className="text-center">
-          <Image
-                src="/logo.svg"
-                alt="Onesite Logo"
-                width={124}
-                height={32}
-              />
-              <p className="text-xs mb-3">&copy; 2022 Ippei Shimizu</p>
+            <Image src="/logo.svg" alt="Onesite Logo" width={124} height={32} />
+            <p className="text-xs mb-3">&copy; 2022 Ippei Shimizu</p>
           </div>
         </div>
       </footer>
