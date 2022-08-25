@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import styles from "../Layouts/Footer.module.css";
 
 const SNS_LIST = [
   {
@@ -51,28 +50,28 @@ export const Footer = (contents) => {
   const SubCategoryList = contents.contents.subCategory;
   return (
     <>
-      <footer className={`mt-40 ${styles.footer}`}>
-        <div className="w-11/12 max-w-6xl mx-auto">
-          <div>
-            {/* <Image src="/profile.png" alt="清水一平" width={83} height={83} /> */}
-            {/* <h5 className="text-lg font-bold">Ippei Shimizu</h5> */}
-
-            {/* <p className="text-base text-gray-500 mr-4">
-                    Yamanashi / web coder
-                  </p> */}
+      <footer className="mt-10">
+        <div className="w-11/12 max-w-3xl mx-auto">
+          <div className="mb-36">
             <ul className="grid grid-cols-4 gap-6">
               {SNS_LIST.map((sns) => {
                 return (
-                  <li key={sns.href} className={`rounded-lg ${sns.class}`}>
+                  <li
+                    key={sns.href}
+                    className={`rounded-3xl text-center py-8 ${sns.class}`}
+                  >
                     <Link href={sns.href}>
-                      <a className="flex items-center py-4 px-7 space-x-3">
+                      <a className="block">
                         <Image
                           src={sns.src}
                           alt={sns.alt}
-                          width={sns.width}
-                          height={sns.height}
+                          width={64}
+                          height={64}
+                          className="block mx-auto"
                         />
-                        <p className="text-white font-medium text-base">{sns.id}</p>
+                        <p className="text-white font-bold text-sm mt-1">
+                          {sns.id}
+                        </p>
                       </a>
                     </Link>
                   </li>
@@ -80,43 +79,9 @@ export const Footer = (contents) => {
               })}
             </ul>
           </div>
-          <div className="mt28">
-            <Image src="/logo.svg" alt="Onesite" width={184} height={45} />
-            <div>
-              <ul>
-                {CategoryList.contents.map((content) => {
-                  return (
-                    <li key={content.id}>
-                      <Link href={`/categories/${content.id}`}>
-                        <a>{content.name}</a>
-                      </Link>
-                    </li>
-                  );
-                })}
-              </ul>
-              <ul>
-                {PAGE_LIST.map((page) => {
-                  return (
-                    <li key={page.href}>
-                      <Link href={`${page.href}`}>
-                        <a>{page.name}</a>
-                      </Link>
-                    </li>
-                  );
-                })}
-              </ul>
-              <ul>
-                {SubCategoryList.map((sub) => {
-                  return (
-                    <li key={sub.id}>
-                      <Link href={`/subcategory/${sub.id}`}>
-                        <a>{sub.name}</a>
-                      </Link>
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
+          <div className="text-center">
+            <Image src="/logo.svg" alt="Onesite Logo" width={124} height={32} />
+            <p className="text-xs mb-3">&copy; 2022 Ippei Shimizu</p>
           </div>
         </div>
       </footer>
