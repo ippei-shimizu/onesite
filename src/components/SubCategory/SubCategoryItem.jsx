@@ -11,7 +11,7 @@ export const SubCategoryItem = (props) => {
             return (
               <li
                 key={sub.id}
-                className={`py-3 px-4 rounded-2xl ${styles.bgColor}`}
+                className={`py-4 px-5 rounded-2xl ${styles.bgColor}`}
               >
                 <Link href={`/subcategory/${sub.id}`} prefetch={false}>
                   <a className="flex items-center">
