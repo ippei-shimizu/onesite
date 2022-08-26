@@ -24,7 +24,7 @@ export const LatestPost = () => {
               return (
                 <article
                   key={content.id}
-                  className={`${styles.article} bg-gradient-to-r from-post-bg-t to-post-bg-b p-7 rounded-3xl`}
+                  className={`${styles.article} bg-gradient-to-tl from-post-bg-t to-post-bg-b p-7 rounded-3xl`}
                 >
                   <div className="text-center">
                     <Link href={`/blogs/${content.id}`} prefetch={false}>
