@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { formatDate } from "libs/utils";
 import { useFetchArray } from "src/hooks/useFetchArray";
 import Head from "next/head";
 import styles from "src/components/Category/Category.module.css";
@@ -9,13 +8,13 @@ export const CategoryItems = () => {
   const { data, error, isLoading, isEmpty } = useFetchArray(`blogs`);
 
   if (isLoading) {
-    return <div>Loading....</div>;
+    return <div className="text-lg font-bold text-center w-11/12 max-w-3xl mx-auto mt-6">Loading....</div>;
   }
   if (error) {
-    return <div>error</div>;
+    return <div className="text-lg font-bold text-center w-11/12 max-w-3xl mx-auto mt-6">error</div>;
   }
   if (isEmpty) {
-    return <div>ブログ記事はありません</div>;
+    return <div className="text-lg font-bold text-center w-11/12 max-w-3xl mx-auto mt-6">There is no article.</div>;
   }
   return (
     <>
@@ -44,7 +43,7 @@ export const CategoryItems = () => {
             {data.contents.map((blog) => (
               <article
                 key={blog.id}
-                className={`text-center bg-gradient-to-r from-post-bg-t to-post-bg-b pt-8 pb-7 px-7 rounded-3xl ${styles.categoryPost}`}
+                className={`text-center bg-gradient-to-tr from-post-bg-t to-post-bg-b pt-8 pb-7 px-7 rounded-3xl ${styles.categoryPost}`}
               >
                 <Link href={`/blogs/${blog.id}`} prefetch={false}>
                   <a>
@@ -59,7 +58,7 @@ export const CategoryItems = () => {
                     >
                       {blog.category.name}
                     </p>
-                    <h2 className={`font-bold my-2 ${styles.postTitle}`}>
+                    <h2 className={`font-bold mt-2 mb-3 ${styles.postTitle}`}>
                       {blog.title}
                     </h2>
                   </a>
@@ -73,7 +72,7 @@ export const CategoryItems = () => {
                         width={32}
                         height={32}
                       />
-                      <p className="ml-1 text-sm font-medium mr-4">
+                      <p className="ml-1 text-sm font-bold mr-4">
                         {blog.subcategory[0].name}
                       </p>
                     </a>
