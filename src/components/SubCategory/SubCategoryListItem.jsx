@@ -9,13 +9,13 @@ export const SubCategoryListItem = () => {
   const { data, error, isLoading, isEmpty } = useFetchArray(`subcategory`);
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <div className="text-lg font-bold text-center w-11/12 max-w-3xl mx-auto mt-10">Loading...</div>;
   }
   if (error) {
-    return <div>Error</div>;
+    return <div className="text-lg font-bold text-center w-11/12 max-w-3xl mx-auto mt-10">Error</div>;
   }
   if (isEmpty) {
-    return <div>There is no article.</div>;
+    return <div className="text-lg font-bold text-center w-11/12 max-w-3xl mx-auto mt-10">There is no article.</div>;
   }
   return (
     <>

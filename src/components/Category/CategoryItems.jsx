@@ -8,13 +8,13 @@ export const CategoryItems = () => {
   const { data, error, isLoading, isEmpty } = useFetchArray(`blogs`);
 
   if (isLoading) {
-    return <div className="text-lg font-bold text-center w-11/12 max-w-3xl mx-auto mt-6">Loading....</div>;
+    return <div className="text-lg font-bold text-center w-11/12 max-w-3xl mx-auto mt-10">Loading....</div>;
   }
   if (error) {
-    return <div className="text-lg font-bold text-center w-11/12 max-w-3xl mx-auto mt-6">error</div>;
+    return <div className="text-lg font-bold text-center w-11/12 max-w-3xl mx-auto mt-10">error</div>;
   }
   if (isEmpty) {
-    return <div className="text-lg font-bold text-center w-11/12 max-w-3xl mx-auto mt-6">There is no article.</div>;
+    return <div className="text-lg font-bold text-center w-11/12 max-w-3xl mx-auto mt-10">There is no article.</div>;
   }
   return (
     <>
