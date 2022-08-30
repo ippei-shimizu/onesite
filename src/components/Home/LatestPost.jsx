@@ -7,13 +7,13 @@ export const LatestPost = () => {
   const { data, error, isLoading, isEmpty } = useFetchArray(`blogs`);
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <div className="text-lg font-bold text-center w-11/12 max-w-3xl mx-auto mt-10">Loading...</div>;
   }
   if (error) {
-    return <div>error</div>;
+    return <div className="text-lg font-bold text-center w-11/12 max-w-3xl mx-auto mt-10">error</div>;
   }
   if (isEmpty) {
-    return <div>最新の記事はありません</div>;
+    return <div className="text-lg font-bold text-center w-11/12 max-w-3xl mx-auto mt-10">最新の記事はありません</div>;
   }
   return (
     <>
