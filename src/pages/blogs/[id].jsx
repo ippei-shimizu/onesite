@@ -1,5 +1,6 @@
 import { client } from "libs/client";
 import { BlogDetail } from "src/components/Blog/BlogDetail";
+import { SubCategoryItem } from "src/components/SubCategory/SubCategoryItem";
 import { Footer } from "src/Layouts/Footer";
 import { API_URL_M_CMS } from "src/utils/const";
 import { SWRConfig } from "swr";
@@ -36,6 +37,7 @@ export const BlogsId = (props) => {
     <>
       <SWRConfig value={{ fallback }}>
         <BlogDetail />
+        <SubCategoryItem props={props.subCategory} />
         <Footer contents={props} />
       </SWRConfig>
     </>
