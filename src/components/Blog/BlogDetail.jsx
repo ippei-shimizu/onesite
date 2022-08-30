@@ -6,17 +6,6 @@ import Link from "next/link";
 import Image from "next/image";
 import formatDate from "libs/utils";
 
-// データをテンプレートに受け渡す部分の処理を記述します
-// export const getStaticProps = async () => {
-//   const subCategoryData = await client.get({ endpoint: "subcategory" });
-//   return {
-//     props: {
-//       subCategory: subCategoryData.contents,
-//     },
-//     revalidate: 10,
-//   };
-// };
-
 export const BlogDetail = () => {
   const router = useRouter();
   const { data, error, isLoading } = useFetch(
@@ -29,7 +18,6 @@ export const BlogDetail = () => {
   if (error) {
     return <div>error</div>;
   }
-  console.log(data);
   return (
     <main>
       <div className="w-11/12 max-w-3xl mx-auto mt-10">
@@ -68,23 +56,40 @@ export const BlogDetail = () => {
           height={630}
           className="rounded-3xl"
         />
-        <div className="flex items-center mt-2">
-          <Image src="/clock.svg" alt="投稿日時" width={20} height={20} />
-          <p
-            className="ml-1 text-base tracking-normal
-          "
-          >
-            <time>{formatDate(data.date)}</time>
-          </p>
+        <div className="mt-3">
+          <div className="flex items-center mb-4">
+            <Image src="/clock.svg" alt="投稿日時" width={20} height={20} />
+            <p className="ml-1 text-base tracking-normal font-medium">
+              <time>{formatDate(data.date)}</time>
+            </p>
+          </div>
+          <ul className="flex -ml-1 space-x-4">
+            {data.subcategory.map((sub) => {
+              return (
+                <li key={sub.id}>
+                  <Link href={`/subcategory/${sub.id}`}>
+                    <a className="flex items-center">
+                      <Image
+                        src={sub.icon.url}
+                        alt={sub.alt}
+                        width={32}
+                        height={32}
+                      />
+                      <p className="font-medium text-base">{sub.name}</p>
+                    </a>
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
         </div>
         <div
-          className="mt-14"
+          className={`mt-20 ${styles.content}`}
           dangerouslySetInnerHTML={{
             __html: `${data.content}`,
           }}
         />
       </div>
-      {/* <SubCategoryItem props={props.subCategory} /> */}
     </main>
   );
 };
