@@ -21,7 +21,7 @@ export const SubCategoryItem = (props) => {
                       width={32}
                       height={32}
                     />
-                    <h3 className="ml-2 text-sm font-bold">{sub.name}</h3>
+                    <h3 className="ml-2 text-base font-bold">{sub.name}</h3>
                   </a>
                 </Link>
               </li>

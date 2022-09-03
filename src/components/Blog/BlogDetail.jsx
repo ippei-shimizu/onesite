@@ -81,7 +81,7 @@ export const BlogDetail = () => {
                           width={32}
                           height={32}
                         />
-                        <p className="font-medium text-base pl-2">{sub.name}</p>
+                        <p className="font-bold text-base pl-2">{sub.name}</p>
                       </a>
                     </Link>
                   </li>
