@@ -8,7 +8,7 @@ body {
   margin: 0;
   @apply text-stone-900;
   background-color: #ecfeff;
-  font-family: "Raleway", sans-serif;
+  font-family: "Roboto", "Noto Sans JP", sans-serif;
 }
 
 a {

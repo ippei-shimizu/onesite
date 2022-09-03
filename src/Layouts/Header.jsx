@@ -97,7 +97,7 @@ export const Header = () => {
                         width={72}
                         height={72}
                       />
-                      <h2 className="text-base font-bold mt-2">{item.label}</h2>
+                      <h2 className="text-base tracking-wide font-bold mt-2">{item.label}</h2>
                     </a>
                   </Link>
                 </li>
