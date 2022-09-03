@@ -62,8 +62,8 @@ export const LatestPost = () => {
                               <Image
                                 src={content.subcategory[0].icon.url}
                                 alt={content.subcategory[0].icon.url}
-                                width={32}
-                                height={32}
+                                width={28}
+                                height={28}
                               />
                               <p className="text-sm font-medium mr-4 ml-1">
                                 {content.subcategory[0].name}
