@@ -69,8 +69,8 @@ export const CategoryItems = () => {
                       <Image
                         src={blog.subcategory[0].icon.url}
                         alt={blog.subcategory[0].icon.url}
-                        width={32}
-                        height={32}
+                        width={28}
+                        height={28}
                       />
                       <p className="ml-1 text-sm font-bold mr-4">
                         {blog.subcategory[0].name}

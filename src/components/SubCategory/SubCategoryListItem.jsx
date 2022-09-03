@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useFetchArray } from "src/hooks/useFetchArray";
 import styles from "src/components/Category/Category.module.css";
-import formatDate from "libs/utils";
 import Head from "next/head";
 
 export const SubCategoryListItem = () => {

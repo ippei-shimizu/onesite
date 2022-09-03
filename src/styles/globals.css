@@ -6,10 +6,9 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   @apply text-stone-900;
-  background-color:#ecfeff;
+  background-color: #ecfeff;
+  font-family: "Raleway", sans-serif;
 }
 
 a {
@@ -20,5 +19,3 @@ a {
 * {
   box-sizing: border-box;
 }
-
-

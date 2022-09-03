@@ -26,11 +26,32 @@ margin: 1.8em 0 1rem;
 }
 .content p {
 font-size:clamp(0.938rem, 0.9rem + 0.2vw, 1rem);
-line-height: 2em;
+line-height: 1.8em;
 letter-spacing: .01em;
 margin-bottom:1rem;
 }
 .content strong {
 font-weight:bolder;
 background:linear-gradient(transparent 60%, #ff6 60%);
+}
+.content a {
+display:inline-block;
+font-weight:700;
+padding:16px 32px;
+border-radius:8px;
+background-color:#2674cf;
+color:#fff;
+margin:16px 0;
+}
+.content pre {
+background-color:#1a2638;
+overflow: scroll;
+padding:32px 24px;
+border-radius:12px;
+margin:16px 0;
+}
+.content code {
+  color:#fff;
+  font-size:14px;
+  line-height:2em;
 }

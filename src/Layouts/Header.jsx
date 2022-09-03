@@ -78,13 +78,13 @@ export const Header = () => {
         <div className="flex items-center mt-6">
           <Image src="/profile.png" alt="IppeiShimizu" width={48} height={48} />
           <div className="ml-4">
-            <p className="text-base font-bold">Ippei Shimize</p>
+            <p className="text-base font-bold">Ippei</p>
             <p className="text-xs font-medium text-zinc-500">
               Yamanashi / Web Coder
             </p>
           </div>
         </div>
-        <nav className="mt-24">
+        <nav className="mt-16">
           <ul className="grid grid-cols-4 gap-6">
             {NAV_ITEMS.map((item) => {
               return (
