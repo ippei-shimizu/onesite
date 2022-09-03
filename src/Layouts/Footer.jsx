@@ -91,6 +91,12 @@ export const Footer = (contents) => {
               </a>
             </Link>
             <p className="text-xs mb-3">&copy; 2022 Ippei Shimizu</p>
+            <p className="text-xs mb-1">
+              Site designed by Auforia. App icon by 
+              <Link href="https://icons8.com/">
+                <a target="_blank" className="pl-1">icons8</a>
+              </Link>
+            </p>
           </div>
         </div>
       </footer>
