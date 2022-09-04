@@ -76,10 +76,10 @@ export const Header = () => {
           </div>
         </div>
         <div className="flex items-center mt-6">
-          <Image src="/profile.png" alt="IppeiShimizu" width={48} height={48} />
+          <Image src="/profile.png" alt="IppeiShimizu" width={52} height={52} />
           <div className="ml-4">
-            <p className="text-base font-bold">Ippei</p>
-            <p className="text-xs font-medium text-zinc-500">
+            <p className="text-lg font-bold">Ippei</p>
+            <p className="text-sm font-medium text-zinc-500">
               Yamanashi / Web Coder
             </p>
           </div>
@@ -97,7 +97,7 @@ export const Header = () => {
                         width={72}
                         height={72}
                       />
-                      <h2 className="text-base tracking-wide font-bold mt-2">{item.label}</h2>
+                      <h2 className="text-lg tracking-wide font-bold mt-2">{item.label}</h2>
                     </a>
                   </Link>
                 </li>

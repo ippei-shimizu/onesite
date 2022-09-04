@@ -69,7 +69,7 @@ export const Footer = (contents) => {
                           height={64}
                           className="block mx-auto"
                         />
-                        <p className="text-white font-bold text-sm mt-1">
+                        <p className="text-white font-bold text-base mt-1">
                           {sns.id}
                         </p>
                       </a>
@@ -90,8 +90,8 @@ export const Footer = (contents) => {
                 />
               </a>
             </Link>
-            <p className="text-xs mb-3">&copy; 2022 Ippei Shimizu</p>
-            <p className="text-xs mb-1">
+            <p className="text-xs mb-3 font-normal">&copy; 2022 Ippei Shimizu</p>
+            <p className="text-xs mb-1 font-normal text-gray-500">
               Site designed by Auforia. App icon by 
               <Link href="https://icons8.com/">
                 <a target="_blank" className="pl-1">icons8</a>
