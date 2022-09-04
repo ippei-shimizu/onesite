@@ -57,7 +57,7 @@ export const BlogDetail = () => {
         <div className="w-11/12 max-w-3xl mx-auto bg-white mt-6 py-10 px-10 rounded-3xl border-2 border-slate-200">
           <Image
             src={data.eyecatch.url}
-            alt={data.eyecatch.alt}
+            alt={data.alt}
             width={1200}
             height={630}
             className="rounded-3xl"
