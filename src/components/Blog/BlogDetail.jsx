@@ -38,7 +38,7 @@ export const BlogDetail = () => {
             </h1>
           </div>
           <nav className="mt-4">
-            <ol className="flex justify-center text-sky-600">
+            <ol className="flex justify-center text-sky-600 font-bold tracking-wide">
               <li>
                 <Link href={`/`} prefetch={false}>
                   <a>
