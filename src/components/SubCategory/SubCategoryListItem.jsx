@@ -8,13 +8,25 @@ export const SubCategoryListItem = () => {
   const { data, error, isLoading, isEmpty } = useFetchArray(`subcategory`);
 
   if (isLoading) {
-    return <div className="text-lg font-bold text-center w-11/12 max-w-3xl mx-auto mt-10">Loading...</div>;
+    return (
+      <div className="text-lg font-bold text-center w-11/12 max-w-3xl mx-auto mt-10">
+        Loading...
+      </div>
+    );
   }
   if (error) {
-    return <div className="text-lg font-bold text-center w-11/12 max-w-3xl mx-auto mt-10">Error</div>;
+    return (
+      <div className="text-lg font-bold text-center w-11/12 max-w-3xl mx-auto mt-10">
+        Error
+      </div>
+    );
   }
   if (isEmpty) {
-    return <div className="text-lg font-bold text-center w-11/12 max-w-3xl mx-auto mt-10">There is no article.</div>;
+    return (
+      <div className="text-lg font-bold text-center w-11/12 max-w-3xl mx-auto mt-10">
+        There is no article.
+      </div>
+    );
   }
   return (
     <>
@@ -43,7 +55,7 @@ export const SubCategoryListItem = () => {
             {data.contents.map((content) => (
               <article
                 key={content.id}
-                className={`text-center bg-gradient-to-tr from-post-bg-t to-post-bg-b pt-8 pb-7 px-7 rounded-3xl ${styles.categoryPost}`}
+                className={`text-center bg-gradient-to-tr from-post-bg-t to-post-bg-b pt-8 pb-7 px-4 rounded-3xl ${styles.categoryPost}`}
               >
                 <Link href={`/blogs/${content.id}`} prefetch={false}>
                   <a>
@@ -67,19 +79,23 @@ export const SubCategoryListItem = () => {
                 </Link>
                 <Link href={`/blogs/${content.id}`} prefetch={false}>
                   <a>
-                    <h2 className={`font-bold mt-2 mb-3 ${styles.postTitle}`}>
-                      {content.title}
-                    </h2>
+                    <div className="text-center">
+                      <h2 className={`font-bold mt-2 mb-3 inline-block text-left ${styles.postTitle}`}>
+                        {content.title}
+                      </h2>
+                    </div>
                   </a>
                 </Link>
                 <div className="flex justify-center items-center">
                   <Image
                     src={content.subcategory[0].icon.url}
                     alt={content.subcategory[0].icon.url}
-                    width={32}
-                    height={32}
+                    width={24}
+                    height={24}
                   />
-                  <p className="ml-1 text-sm font-bold mr-4">{content.subcategory[0].name}</p>
+                  <p className="ml-2 text-base font-bold mr-4">
+                    {content.subcategory[0].name}
+                  </p>
                 </div>
               </article>
             ))}
