@@ -7,13 +7,25 @@ export const LatestPost = () => {
   const { data, error, isLoading, isEmpty } = useFetchArray(`blogs`);
 
   if (isLoading) {
-    return <div className="text-lg font-bold text-center w-11/12 max-w-3xl mx-auto mt-10">Loading...</div>;
+    return (
+      <div className="text-lg font-bold text-center w-11/12 max-w-3xl mx-auto mt-10">
+        Loading...
+      </div>
+    );
   }
   if (error) {
-    return <div className="text-lg font-bold text-center w-11/12 max-w-3xl mx-auto mt-10">error</div>;
+    return (
+      <div className="text-lg font-bold text-center w-11/12 max-w-3xl mx-auto mt-10">
+        error
+      </div>
+    );
   }
   if (isEmpty) {
-    return <div className="text-lg font-bold text-center w-11/12 max-w-3xl mx-auto mt-10">最新の記事はありません</div>;
+    return (
+      <div className="text-lg font-bold text-center w-11/12 max-w-3xl mx-auto mt-10">
+        最新の記事はありません
+      </div>
+    );
   }
   return (
     <>
@@ -47,9 +59,11 @@ export const LatestPost = () => {
                       </Link>
                       <Link href={`/blogs/${content.id}`} prefetch={false}>
                         <a>
-                          <h3 className={`font-bold my-3 text-lg`}>
-                            {content.title}
-                          </h3>
+                          <div className="text-center">
+                            <h3 className={`font-bold my-3 text-lg inline-block text-left`}>
+                              {content.title}
+                            </h3>
+                          </div>
                         </a>
                       </Link>
                       <div>
@@ -62,10 +76,10 @@ export const LatestPost = () => {
                               <Image
                                 src={content.subcategory[0].icon.url}
                                 alt={content.subcategory[0].icon.url}
-                                width={28}
-                                height={28}
+                                width={24}
+                                height={24}
                               />
-                              <p className="text-sm font-bold mr-4 ml-1">
+                              <p className="text-sm font-bold mr-4 ml-2">
                                 {content.subcategory[0].name}
                               </p>
                             </a>

@@ -78,8 +78,8 @@ export const BlogDetail = () => {
                         <Image
                           src={sub.icon.url}
                           alt={sub.alt}
-                          width={32}
-                          height={32}
+                          width={28}
+                          height={28}
                         />
                         <p className="font-bold text-base pl-2">{sub.name}</p>
                       </a>
