@@ -8,7 +8,16 @@ body {
   margin: 0;
   @apply text-stone-900;
   background-color: #ecfeff;
-  font-family: "Roboto", "Noto Sans JP", sans-serif;
+  font-family: din-2014, source-han-sans-japanese, sans-serif;
+  font-weight: 400,500,600,700;
+  font-style: normal;
+}
+
+html {
+  visibility: hidden;
+}
+html.wf-active {
+  visibility: visible;
 }
 
 a {

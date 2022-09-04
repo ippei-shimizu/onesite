@@ -40,14 +40,14 @@ export const LatestPost = () => {
                     <div className="mt-4">
                       <Link href={`categories/${content.category.id}`}>
                         <a>
-                          <p className="font-bold text-sky-600">
+                          <p className="font-medium text-sky-600">
                             {content.category.name}
                           </p>
                         </a>
                       </Link>
                       <Link href={`/blogs/${content.id}`} prefetch={false}>
                         <a>
-                          <h3 className={`font-bold my-3 text-base`}>
+                          <h3 className={`font-bold my-3 text-lg`}>
                             {content.title}
                           </h3>
                         </a>
@@ -65,7 +65,7 @@ export const LatestPost = () => {
                                 width={28}
                                 height={28}
                               />
-                              <p className="text-sm font-medium mr-4 ml-1">
+                              <p className="text-sm font-bold mr-4 ml-1">
                                 {content.subcategory[0].name}
                               </p>
                             </a>
