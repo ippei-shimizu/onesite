@@ -18,8 +18,8 @@ export const SubCategoryItem = (props) => {
                     <Image
                       src={sub.icon.url}
                       alt={sub.alt}
-                      width={24}
-                      height={24}
+                      width={28}
+                      height={28}
                     />
                     <h3 className="ml-2 text-base font-bold">{sub.name}</h3>
                   </a>

@@ -7,6 +7,9 @@ module.exports = {
       height: {
         screen: ["100vh", "100dvh"],
       },
+      minWidth: {
+        48: "48rem",
+      },
       colors: {
         "nav01-blue-t": "#48C6EF",
         "nav01-blue-v": "#97aeed",
