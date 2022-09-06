@@ -8,6 +8,7 @@ import formatDate from "libs/utils";
 import Head from "next/head";
 import { renderToc } from "libs/render-toc";
 import { TableOfContents } from "./TalbleOfContent";
+import { TwitterShareButton, TwitterIcon } from "react-share";
 
 const PROFILE_SNS = [
   {
@@ -60,7 +61,9 @@ export const BlogDetail = () => {
         <meta name="description" content={data.description} />
       </Head>
       <main className={`w-11/12 mx-auto ${styles.main}`}>
-        <div></div>
+        <div>
+          <div className="mt-10 text-right pr-6 sticky top-28"></div>
+        </div>
         <div>
           <div className="w-11/12 max-w-3xl min-w-48 mx-auto mt-10 bg-white rounded-3xl py-8 px-8 border-2 border-slate-200">
             <div className="text-center">
@@ -166,6 +169,15 @@ export const BlogDetail = () => {
               </div>
             </div>
             <TableOfContents toc={toc} />
+            <div className=" mt-6 ml-3">
+              <TwitterShareButton
+                url={`https://www.onesite-web.com/blogs/${data.id}`}
+                title={data.title}
+              >
+                <TwitterIcon size={40} round={true} className="mx-auto" />
+                <p className="text-xs mt-1 text-slate-400">ツイート</p>
+              </TwitterShareButton>
+            </div>
           </div>
         </div>
       </main>

@@ -9,7 +9,7 @@ export const TableOfContents = ({ toc }) => {
       <ul className="mt-4">
         {toc.map((data) => (
           <li key={data.id}>
-            <ScrollLink to={data.id} smooth offset={-60}>
+            <ScrollLink to={data.id} smooth offset={-60} href={data.id}>
               <p className="cursor-pointer text-sm font-bold text-slate-500 mb-2">
                 {data.text}
               </p>
