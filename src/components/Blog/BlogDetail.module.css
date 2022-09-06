@@ -11,6 +11,8 @@
   letter-spacing: 0.04em;
   line-height: 1.4em;
   margin: 2.15em 0 1rem;
+  padding-bottom:8px;
+  border-bottom:2px solid #e2e8f0;
 }
 
 .content h3 {
