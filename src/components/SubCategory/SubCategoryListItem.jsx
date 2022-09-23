@@ -80,7 +80,9 @@ export const SubCategoryListItem = () => {
                 <Link href={`/blogs/${content.id}`} prefetch={false}>
                   <a>
                     <div className="text-center">
-                      <h2 className={`font-bold mt-2 mb-3 inline-block text-left ${styles.postTitle}`}>
+                      <h2
+                        className={`font-bold mt-2 mb-3 inline-block text-left ${styles.postTitle}`}
+                      >
                         {content.title}
                       </h2>
                     </div>
