@@ -51,7 +51,7 @@ export const SubCategoryListItem = () => {
               <li>{data.contents[0].subcategory[0].name}</li>
             </ol>
           </nav>
-          <div className="grid grid-cols-2 gap-4 mt-4">
+          <div className="grid grid-cols-2 gap-4 mt-4 md:grid-cols-1 gap-2">
             {data.contents.map((content) => (
               <article
                 key={content.id}

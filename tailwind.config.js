@@ -34,6 +34,12 @@ module.exports = {
         "instagram-icon-t": "#d57eeb",
         "instagram-icon-b": "#fccb90",
       },
+      screens: {
+        xl: [{ min: "1000px", max: "1400px" }],
+        lg: { max: "1000px" },
+        md: { max: "768px" },
+        sm: { max: "640px" },
+      },
     },
   },
   plugins: [],

@@ -35,3 +35,33 @@
   grid-column-start: 1;
   grid-column-end: 3;
 }
+
+@media (width <= 768px) {
+  .article:nth-child(1) {
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+
+.article:nth-child(2) {
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+
+.article:nth-child(3) {
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+.article:nth-child(4) {
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+.article:nth-child(5) {
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+
+.categoryPost:nth-child(1) {
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+}

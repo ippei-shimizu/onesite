@@ -72,7 +72,7 @@ export const BlogDetail = () => {
           <div className="mt-10 text-right pr-6 sticky top-28"></div>
         </div>
         <div>
-          <div className="w-11/12 max-w-3xl min-w-48 mx-auto mt-10 bg-white rounded-3xl py-8 px-8 border-2 border-slate-200">
+          <div className="w-11/12 max-w-3xl min-w-48 mx-auto mt-10 bg-white rounded-3xl py-8 px-8 border-2 border-slate-200 xl:min-w-0 xl:max-w-max xl:w-auto lg:min-w-0 lg:w-auto md:p-4">
             <div className="text-center">
               <Image src={data.icon.url} alt="icon" width={90} height={90} />
             </div>
@@ -100,7 +100,7 @@ export const BlogDetail = () => {
               </ol>
             </nav>
           </div>
-          <div className="w-11/12 max-w-3xl min-w-48 mx-auto bg-white mt-6 py-10 px-10 rounded-3xl border-2 border-slate-200">
+          <div className="w-11/12 max-w-3xl min-w-48 mx-auto bg-white mt-6 py-10 px-10 rounded-3xl border-2 border-slate-200 xl:min-w-0 xl:max-w-max xl:w-auto lg:min-w-0 lg:w-auto md:mt-4 md:p-4">
             <Image
               src={data.eyecatch.url}
               alt={data.alt}
@@ -162,7 +162,7 @@ export const BlogDetail = () => {
           </div>
         </div>
         {/* サイドバー */}
-        <div className="mt-10 ml-6 relative">
+        <div className="mt-10 ml-6 relative lg:hidden">
           <div className="sticky top-6">
             <div className="flex items-center bg-white rounded-3xl py-5 px-6 border-2 border-slate-200 mb-6">
               <Image
