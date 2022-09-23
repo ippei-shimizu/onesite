@@ -8,7 +8,14 @@ import formatDate from "libs/utils";
 import Head from "next/head";
 import { renderToc } from "libs/render-toc";
 import { TableOfContents } from "./TalbleOfContent";
-import { TwitterShareButton, TwitterIcon } from "react-share";
+import {
+  TwitterShareButton,
+  TwitterIcon,
+  FacebookShareButton,
+  FacebookIcon,
+  LineShareButton,
+  LineIcon,
+} from "react-share";
 
 const PROFILE_SNS = [
   {
@@ -102,11 +109,29 @@ export const BlogDetail = () => {
               className="rounded-3xl"
             />
             <div className="mt-3">
-              <div className="flex items-center mb-4">
-                <Image src="/clock.svg" alt="投稿日時" width={20} height={20} />
-                <p className="ml-1 text-base tracking-normal font-medium">
-                  <time>{formatDate(data.date)}</time>
-                </p>
+              <div className="flex">
+                <div className="flex items-center mb-4 mr-4">
+                  <Image
+                    src="/clock.svg"
+                    alt="投稿日時"
+                    width={20}
+                    height={20}
+                  />
+                  <p className="ml-1 text-base tracking-normal font-medium">
+                    <time>{formatDate(data.date)}</time>
+                  </p>
+                </div>
+                <div className="flex items-center mb-4">
+                  <Image
+                    src="/refresh-small.svg"
+                    alt="更新日時"
+                    width={20}
+                    height={20}
+                  />
+                  <p className="ml-1 text-base tracking-normal font-medium">
+                    <time>{formatDate(data.updatedAt)}</time>
+                  </p>
+                </div>
               </div>
               <ul className="flex -ml-1 space-x-4">
                 {data.subcategory.map((sub) => {
@@ -169,14 +194,22 @@ export const BlogDetail = () => {
               </div>
             </div>
             <TableOfContents toc={toc} />
-            <div className=" mt-6 ml-3">
+            <div className=" mt-6 ml-3 space-x-3">
               <TwitterShareButton
                 url={`https://www.onesite-web.com/blogs/${data.id}`}
                 title={data.title}
               >
                 <TwitterIcon size={40} round={true} className="mx-auto" />
-                <p className="text-xs mt-1 text-slate-400">ツイート</p>
               </TwitterShareButton>
+              <FacebookShareButton
+                url={`https://www.onesite-web.com/blogs/${data.id}`}
+                title={data.title}
+              >
+                <FacebookIcon size={40} round={true} className="mx-auto" />
+              </FacebookShareButton>
+              <LineShareButton>
+                <LineIcon size={40} round={true} className="mx-auto" />
+              </LineShareButton>
             </div>
           </div>
         </div>
