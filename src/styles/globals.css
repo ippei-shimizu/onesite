@@ -9,7 +9,7 @@ body {
   @apply text-stone-900;
   background-color: #ecfeff;
   font-family: din-2014, source-han-sans-japanese, sans-serif;
-  font-weight: 400,500,600,700;
+  font-weight: 400, 500, 600, 700;
   font-style: normal;
 }
 
@@ -28,3 +28,4 @@ a {
 * {
   box-sizing: border-box;
 }
+

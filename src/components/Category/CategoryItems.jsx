@@ -77,11 +77,7 @@ export const CategoryItems = () => {
                         {blog.title}
                       </h2>
                     </div>
-                  </a>
-                </Link>
-                <div>
-                  <Link href={`/subcategory/${blog.subcategory[0].id}`}>
-                    <a className="flex justify-center items-center">
+                    <div className="flex justify-center items-end">
                       <Image
                         src={blog.subcategory[0].icon.url}
                         alt={blog.subcategory[0].icon.url}
@@ -91,9 +87,9 @@ export const CategoryItems = () => {
                       <p className="ml-2 text-base font-bold mr-4">
                         {blog.subcategory[0].name}
                       </p>
-                    </a>
-                  </Link>
-                </div>
+                    </div>
+                  </a>
+                </Link>
               </article>
             ))}
           </div>

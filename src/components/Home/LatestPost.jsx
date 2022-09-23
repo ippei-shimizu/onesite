@@ -47,32 +47,19 @@ export const LatestPost = () => {
                           width={80}
                           height={80}
                         />
-                      </a>
-                    </Link>
-                    <div className="mt-4">
-                      <Link href={`categories/${content.category.id}`}>
-                        <a>
+                        <div className="mt-4">
                           <p className="font-medium text-sky-600">
                             {content.category.name}
                           </p>
-                        </a>
-                      </Link>
-                      <Link href={`/blogs/${content.id}`} prefetch={false}>
-                        <a>
                           <div className="text-center">
-                            <h3 className={`font-bold my-3 text-lg inline-block text-left`}>
+                            <h3
+                              className={`font-bold my-3 text-lg inline-block text-left`}
+                            >
                               {content.title}
                             </h3>
                           </div>
-                        </a>
-                      </Link>
-                      <div>
-                        <div>
-                          <Link
-                            href={`/subcategory/${content.subcategory[0].id}`}
-                            prefetch={false}
-                          >
-                            <a className="flex items-center justify-center">
+                          <div>
+                            <div className="flex items-end justify-center">
                               <Image
                                 src={content.subcategory[0].icon.url}
                                 alt={content.subcategory[0].icon.url}
@@ -82,11 +69,11 @@ export const LatestPost = () => {
                               <p className="text-sm font-bold mr-4 ml-2">
                                 {content.subcategory[0].name}
                               </p>
-                            </a>
-                          </Link>
+                            </div>
+                          </div>
                         </div>
-                      </div>
-                    </div>
+                      </a>
+                    </Link>
                   </div>
                 </article>
               );

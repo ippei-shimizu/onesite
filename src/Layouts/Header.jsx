@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import styles from "src/styles/Home.module.css";
 
 const NAV_ITEMS = [
   {
@@ -97,7 +98,7 @@ export const Header = () => {
               return (
                 <li key={item.href} className={`${item.class} rounded-3xl`}>
                   <Link href={item.href} prefetch={false}>
-                    <a className="text-center block pt-8 pb-7 px-2 md:pt-7 md:pb-6">
+                    <a className={`text-center block pt-8 pb-7 px-2 md:pt-7 md:pb-6 rounded-3xl transition duration-100 ${styles.hoverShadow}`}>
                         <Image
                           src={item.src}
                           alt={item.alt}

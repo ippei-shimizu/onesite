@@ -51,7 +51,7 @@ export const SubCategoryListItem = () => {
               <li>{data.contents[0].subcategory[0].name}</li>
             </ol>
           </nav>
-          <div className="grid grid-cols-2 gap-4 mt-4 md:grid-cols-1 gap-2">
+          <div className="grid grid-cols-2 gap-4 mt-4 md:grid-cols-1 md:gap-2">
             {data.contents.map((content) => (
               <article
                 key={content.id}
@@ -66,19 +66,11 @@ export const SubCategoryListItem = () => {
                       height={70}
                       className="rounded-xl"
                     />
-                  </a>
-                </Link>
-                <Link href={`/categories/${content.category.id}`}>
-                  <a>
                     <p
                       className={`font-medium mt-2 text-sky-600 ${styles.category}`}
                     >
                       {content.category.name}
                     </p>
-                  </a>
-                </Link>
-                <Link href={`/blogs/${content.id}`} prefetch={false}>
-                  <a>
                     <div className="text-center">
                       <h2
                         className={`font-bold mt-2 mb-3 inline-block text-left ${styles.postTitle}`}
@@ -86,19 +78,19 @@ export const SubCategoryListItem = () => {
                         {content.title}
                       </h2>
                     </div>
+                    <div className="flex justify-center items-center">
+                      <Image
+                        src={content.subcategory[0].icon.url}
+                        alt={content.subcategory[0].icon.url}
+                        width={24}
+                        height={24}
+                      />
+                      <p className="ml-2 text-base font-bold mr-4">
+                        {content.subcategory[0].name}
+                      </p>
+                    </div>
                   </a>
                 </Link>
-                <div className="flex justify-center items-center">
-                  <Image
-                    src={content.subcategory[0].icon.url}
-                    alt={content.subcategory[0].icon.url}
-                    width={24}
-                    height={24}
-                  />
-                  <p className="ml-2 text-base font-bold mr-4">
-                    {content.subcategory[0].name}
-                  </p>
-                </div>
               </article>
             ))}
           </div>

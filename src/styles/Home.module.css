@@ -23,3 +23,9 @@
   background-clip: text;
   color: transparent;
 }
+@media (hover: hover) {
+  .hoverShadow {
+    @apply hover:transform hover:duration-200 hover:scale-105;
+  }
+}
+
