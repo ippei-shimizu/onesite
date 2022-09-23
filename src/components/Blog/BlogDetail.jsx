@@ -8,7 +8,14 @@ import formatDate from "libs/utils";
 import Head from "next/head";
 import { renderToc } from "libs/render-toc";
 import { TableOfContents } from "./TalbleOfContent";
-import { TwitterShareButton, TwitterIcon } from "react-share";
+import {
+  TwitterShareButton,
+  TwitterIcon,
+  FacebookShareButton,
+  FacebookIcon,
+  LineShareButton,
+  LineIcon,
+} from "react-share";
 
 const PROFILE_SNS = [
   {
@@ -65,7 +72,7 @@ export const BlogDetail = () => {
           <div className="mt-10 text-right pr-6 sticky top-28"></div>
         </div>
         <div>
-          <div className="w-11/12 max-w-3xl min-w-48 mx-auto mt-10 bg-white rounded-3xl py-8 px-8 border-2 border-slate-200">
+          <div className="w-11/12 max-w-3xl min-w-48 mx-auto mt-10 bg-white rounded-3xl py-8 px-8 border-2 border-slate-200 xl:min-w-0 xl:max-w-max xl:w-auto lg:min-w-0 lg:w-auto md:p-4">
             <div className="text-center">
               <Image src={data.icon.url} alt="icon" width={90} height={90} />
             </div>
@@ -93,7 +100,7 @@ export const BlogDetail = () => {
               </ol>
             </nav>
           </div>
-          <div className="w-11/12 max-w-3xl min-w-48 mx-auto bg-white mt-6 py-10 px-10 rounded-3xl border-2 border-slate-200">
+          <div className="w-11/12 max-w-3xl min-w-48 mx-auto bg-white mt-6 py-10 px-10 rounded-3xl border-2 border-slate-200 xl:min-w-0 xl:max-w-max xl:w-auto lg:min-w-0 lg:w-auto md:mt-4 md:p-4">
             <Image
               src={data.eyecatch.url}
               alt={data.alt}
@@ -102,11 +109,29 @@ export const BlogDetail = () => {
               className="rounded-3xl"
             />
             <div className="mt-3">
-              <div className="flex items-center mb-4">
-                <Image src="/clock.svg" alt="投稿日時" width={20} height={20} />
-                <p className="ml-1 text-base tracking-normal font-medium">
-                  <time>{formatDate(data.date)}</time>
-                </p>
+              <div className="flex">
+                <div className="flex items-center mb-4 mr-4">
+                  <Image
+                    src="/clock.svg"
+                    alt="投稿日時"
+                    width={20}
+                    height={20}
+                  />
+                  <p className="ml-1 text-base tracking-normal font-medium">
+                    <time>{formatDate(data.date)}</time>
+                  </p>
+                </div>
+                <div className="flex items-center mb-4">
+                  <Image
+                    src="/refresh-small.svg"
+                    alt="更新日時"
+                    width={20}
+                    height={20}
+                  />
+                  <p className="ml-1 text-base tracking-normal font-medium">
+                    <time>{formatDate(data.updatedAt)}</time>
+                  </p>
+                </div>
               </div>
               <ul className="flex -ml-1 space-x-4">
                 {data.subcategory.map((sub) => {
@@ -137,7 +162,7 @@ export const BlogDetail = () => {
           </div>
         </div>
         {/* サイドバー */}
-        <div className="mt-10 ml-6 relative">
+        <div className="mt-10 ml-6 relative lg:hidden">
           <div className="sticky top-6">
             <div className="flex items-center bg-white rounded-3xl py-5 px-6 border-2 border-slate-200 mb-6">
               <Image
@@ -169,14 +194,22 @@ export const BlogDetail = () => {
               </div>
             </div>
             <TableOfContents toc={toc} />
-            <div className=" mt-6 ml-3">
+            <div className=" mt-6 ml-3 space-x-3">
               <TwitterShareButton
                 url={`https://www.onesite-web.com/blogs/${data.id}`}
                 title={data.title}
               >
                 <TwitterIcon size={40} round={true} className="mx-auto" />
-                <p className="text-xs mt-1 text-slate-400">ツイート</p>
               </TwitterShareButton>
+              <FacebookShareButton
+                url={`https://www.onesite-web.com/blogs/${data.id}`}
+                title={data.title}
+              >
+                <FacebookIcon size={40} round={true} className="mx-auto" />
+              </FacebookShareButton>
+              <LineShareButton>
+                <LineIcon size={40} round={true} className="mx-auto" />
+              </LineShareButton>
             </div>
           </div>
         </div>

@@ -31,7 +31,7 @@ export const LatestPost = () => {
     <>
       <section className="mt-10">
         <div className="w-11/12 max-w-3xl mx-auto">
-          <div className="grid grid-cols-5 gap-6">
+          <div className="grid grid-cols-5 gap-6 md:grid-cols-1 md:gap-2">
             {data.contents.map((content) => {
               return (
                 <article

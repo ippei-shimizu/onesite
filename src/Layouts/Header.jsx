@@ -39,12 +39,12 @@ const NAV_ITEMS = [
 
 export const Header = () => {
   return (
-    <header className="w-full mt-12">
+    <header className="w-full mt-12 md:mt-5">
       <div className="w-11/12 max-w-3xl mx-auto">
         <div className="flex justify-between items-center">
           <Link href="/" prefetch={false}>
             <a>
-              <h1>
+              <h1 className="md:w-32">
                 <Image
                   src="/logo.svg"
                   alt="Onesite Logo"
@@ -76,28 +76,37 @@ export const Header = () => {
           </div>
         </div>
         <div className="flex items-center mt-6">
-          <Image src="/profile.png" alt="IppeiShimizu" width={52} height={52} />
+          <div className="flex md:w-11">
+            <Image
+              src="/profile.png"
+              alt="IppeiShimizu"
+              width={52}
+              height={52}
+            />
+          </div>
           <div className="ml-4">
-            <p className="text-lg font-bold">Ippei</p>
-            <p className="text-sm font-medium text-zinc-500">
+            <p className="text-lg font-bold md:text-base">Ippei</p>
+            <p className="text-sm font-medium text-zinc-500 md:text-xs">
               Yamanashi / Web Coder
             </p>
           </div>
         </div>
-        <nav className="mt-16">
-          <ul className="grid grid-cols-4 gap-6">
+        <nav className="mt-16 md:mt-14">
+          <ul className="grid grid-cols-4 gap-6 md:grid-cols-2 md:gap-2">
             {NAV_ITEMS.map((item) => {
               return (
                 <li key={item.href} className={`${item.class} rounded-3xl`}>
                   <Link href={item.href} prefetch={false}>
-                    <a className="text-center block pt-8 pb-7 px-2">
-                      <Image
-                        src={item.src}
-                        alt={item.alt}
-                        width={72}
-                        height={72}
-                      />
-                      <h2 className="text-lg tracking-wide font-bold mt-2">{item.label}</h2>
+                    <a className="text-center block pt-8 pb-7 px-2 md:pt-7 md:pb-6">
+                        <Image
+                          src={item.src}
+                          alt={item.alt}
+                          width={72}
+                          height={72}
+                        />
+                      <h2 className="text-lg tracking-wide font-bold mt-2 md:text-base">
+                        {item.label}
+                      </h2>
                     </a>
                   </Link>
                 </li>

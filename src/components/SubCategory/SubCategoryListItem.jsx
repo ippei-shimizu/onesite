@@ -51,7 +51,7 @@ export const SubCategoryListItem = () => {
               <li>{data.contents[0].subcategory[0].name}</li>
             </ol>
           </nav>
-          <div className="grid grid-cols-2 gap-4 mt-4">
+          <div className="grid grid-cols-2 gap-4 mt-4 md:grid-cols-1 gap-2">
             {data.contents.map((content) => (
               <article
                 key={content.id}
@@ -80,7 +80,9 @@ export const SubCategoryListItem = () => {
                 <Link href={`/blogs/${content.id}`} prefetch={false}>
                   <a>
                     <div className="text-center">
-                      <h2 className={`font-bold mt-2 mb-3 inline-block text-left ${styles.postTitle}`}>
+                      <h2
+                        className={`font-bold mt-2 mb-3 inline-block text-left ${styles.postTitle}`}
+                      >
                         {content.title}
                       </h2>
                     </div>

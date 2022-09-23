@@ -51,7 +51,7 @@ export const CategoryItems = () => {
               <li>{data.contents[0].category.name}</li>
             </ol>
           </nav>
-          <div className="grid grid-cols-2 gap-4 mt-4">
+          <div className="grid grid-cols-2 gap-4 mt-4 md:grid-cols-1 md:gap-2">
             {data.contents.map((blog) => (
               <article
                 key={blog.id}
