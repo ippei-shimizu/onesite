@@ -19,6 +19,10 @@ html {
 html.wf-active {
   visibility: visible;
 }
+html.dark,
+html.dark body {
+background-color:#0f172a;
+}
 
 a {
   color: inherit;

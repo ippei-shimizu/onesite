@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useDarkMode } from "src/hooks/useDarkMode";
 import classes from "src/styles/Home.module.css";
 
 const SNS_LIST = [
@@ -49,6 +50,7 @@ const PAGE_LIST = [
 export const Footer = (contents) => {
   const CategoryList = contents.contents.categories;
   const SubCategoryList = contents.contents.subCategory;
+  const [colorTheme, setTheme] = useDarkMode();
   return (
     <>
       <footer className="mt-10">
@@ -83,18 +85,25 @@ export const Footer = (contents) => {
           <div className="text-center">
             <Link href="/">
               <a>
+                {colorTheme == "dark"?
                 <Image
                   src="/logo.svg"
                   alt="Onesite Logo"
                   width={124}
                   height={32}
-                />
+                />:
+                <Image
+                  src="/logo-white.svg"
+                  alt="Onesite Logo"
+                  width={124}
+                  height={32}
+                />}
               </a>
             </Link>
-            <p className="text-xs mb-3 font-normal">
+            <p className="text-xs mb-3 font-normal dark:text-slate-300">
               &copy; 2022 Ippei Shimizu
             </p>
-            <p className="text-xs mb-1 font-normal text-gray-500">
+            <p className="text-xs mb-1 font-normal text-gray-500 dark:text-gray-300">
               Site designed by Auforia. App icon by
               <Link href="https://icons8.com/">
                 <a target="_blank" className="pl-1">

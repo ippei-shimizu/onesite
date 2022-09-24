@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useDarkMode } from "src/hooks/useDarkMode";
 import styles from "src/styles/Home.module.css";
 
 const NAV_ITEMS = [
@@ -39,6 +40,7 @@ const NAV_ITEMS = [
 ];
 
 export const Header = () => {
+  const [colorTheme, setTheme] = useDarkMode();
   return (
     <header className="w-full mt-12 md:mt-5">
       <div className="w-11/12 max-w-3xl mx-auto">
@@ -46,33 +48,62 @@ export const Header = () => {
           <Link href="/" prefetch={false}>
             <a>
               <h1 className="md:w-32">
-                <Image
-                  src="/logo.svg"
-                  alt="Onesite Logo"
-                  width={148}
-                  height={36}
-                />
+                {colorTheme == "dark" ? (
+                  <Image
+                    src="/logo.svg"
+                    alt="Onesite Logo"
+                    width={148}
+                    height={36}
+                  />
+                ) : (
+                  <Image
+                    src="/logo-white.svg"
+                    alt="Onesite Logo"
+                    width={148}
+                    height={36}
+                  />
+                )}
               </h1>
             </a>
           </Link>
           <div className="flex space-x-6 items-center">
             <ul className="flex space-x-3 items-center">
-              <li className="h-7">
-                <Image
-                  src="/search.svg"
-                  alt="検索する"
-                  width={30}
-                  height={30}
-                />
+              <li className="bg-white w-8 h-8 flex items-center justify-center rounded-md border border-slate-300 cursor-pointer dark:bg-slate-700 dark:border-slate-100">
+                {colorTheme == "dark" ? (
+                  <Image
+                    src="/search.svg"
+                    alt="検索する"
+                    width={18}
+                    height={18}
+                  />
+                ) : (
+                  <Image
+                    src="/search-white.svg"
+                    alt="検索する"
+                    width={18}
+                    height={18}
+                  />
+                )}
               </li>
-              <li className="h-7">
-                <Image
-                  src="/sun.svg"
-                  alt="ダークモード切り替えボタン"
-                  width={30}
-                  height={30}
-                />
-              </li>
+              <ul onClick={() => setTheme(colorTheme)}>
+                <li className="bg-white w-8 h-8 flex items-center justify-center rounded-md border border-slate-300 cursor-pointer dark:bg-slate-700 dark:border-slate-100">
+                  {colorTheme == "light" ? (
+                    <Image
+                      src="/dark-white.svg"
+                      alt="ダークモード切り替えボタン"
+                      width={18}
+                      height={18}
+                    />
+                  ) : (
+                    <Image
+                      src="/sun.svg"
+                      alt="ダークモード切り替えボタン"
+                      width={18}
+                      height={18}
+                    />
+                  )}
+                </li>
+              </ul>
             </ul>
           </div>
         </div>
@@ -86,8 +117,10 @@ export const Header = () => {
             />
           </div>
           <div className="ml-4">
-            <p className="text-lg font-bold md:text-base">Ippei</p>
-            <p className="text-sm font-medium text-zinc-500 md:text-xs">
+            <p className="text-lg font-bold md:text-base dark:text-slate-100">
+              Ippei
+            </p>
+            <p className="text-sm font-medium text-zinc-500 md:text-xs dark:text-slate-300">
               Yamanashi / Web Coder
             </p>
           </div>
@@ -98,13 +131,15 @@ export const Header = () => {
               return (
                 <li key={item.href} className={`${item.class} rounded-3xl`}>
                   <Link href={item.href} prefetch={false}>
-                    <a className={`text-center block pt-8 pb-7 px-2 md:pt-7 md:pb-6 rounded-3xl transition duration-100 ${styles.hoverShadow}`}>
-                        <Image
-                          src={item.src}
-                          alt={item.alt}
-                          width={72}
-                          height={72}
-                        />
+                    <a
+                      className={`text-center block pt-8 pb-7 px-2 md:pt-7 md:pb-6 rounded-3xl transition duration-100 ${styles.hoverShadow}`}
+                    >
+                      <Image
+                        src={item.src}
+                        alt={item.alt}
+                        width={72}
+                        height={72}
+                      />
                       <h2 className="text-lg tracking-wide font-bold mt-2 md:text-base">
                         {item.label}
                       </h2>

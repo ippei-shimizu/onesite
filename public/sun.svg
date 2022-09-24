@@ -1,1 +1,11 @@
-<svg width="31" height="30" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x=".5" y=".5" width="30" height="29" rx="3.5" fill="#fff" stroke="#B8B8B8"/><path d="M7.75 14.25a.75.75 0 0 0 0 1.5v-1.5Zm1.833 1.5a.75.75 0 0 0 0-1.5v1.5Zm-.53 5.136a.75.75 0 0 0 1.06 1.061l-1.06-1.06Zm2.894-.772a.75.75 0 0 0-1.06-1.061l1.06 1.06Zm4.803 1.303a.75.75 0 0 0-1.5 0h1.5Zm-1.5 1.833a.75.75 0 0 0 1.5 0h-1.5Zm5.864-4.197a.75.75 0 0 0-1.061 1.06l1.06-1.06Zm.772 2.894a.75.75 0 0 0 1.061-1.06l-1.06 1.06ZM10.114 8.053a.75.75 0 0 0-1.061 1.06l1.06-1.06Zm.772 2.894a.75.75 0 0 0 1.061-1.06l-1.06 1.06Zm11.53 3.303a.75.75 0 0 0 0 1.5v-1.5Zm1.834 1.5a.75.75 0 0 0 0-1.5v1.5Zm-4.197-5.864a.75.75 0 0 0 1.06 1.061l-1.06-1.06Zm2.894-.772a.75.75 0 0 0-1.06-1.061l1.06 1.06ZM16.75 6.75a.75.75 0 0 0-1.5 0h1.5Zm-1.5 1.833a.75.75 0 0 0 1.5 0h-1.5ZM18 15a2 2 0 0 1-2 2v1.5a3.5 3.5 0 0 0 3.5-3.5H18Zm-2 2a2 2 0 0 1-2-2h-1.5a3.5 3.5 0 0 0 3.5 3.5V17Zm-2-2a2 2 0 0 1 2-2v-1.5a3.5 3.5 0 0 0-3.5 3.5H14Zm2-2a2 2 0 0 1 2 2h1.5a3.5 3.5 0 0 0-3.5-3.5V13Zm-8.25 2.75h1.833v-1.5H7.75v1.5Zm2.364 6.197 1.833-1.833-1.06-1.061-1.834 1.833 1.06 1.061Zm5.136-.53v1.833h1.5v-1.833h-1.5Zm4.803-1.303 1.833 1.833 1.061-1.06-1.833-1.834-1.061 1.06Zm-11-11 1.833 1.833 1.061-1.06-1.833-1.834-1.061 1.06Zm13.364 6.636h1.833v-1.5h-1.833v1.5Zm-1.303-4.803 1.833-1.833-1.06-1.061-1.834 1.833 1.06 1.061ZM15.25 6.75v1.833h1.5V6.75h-1.5Z" fill="#000"/></svg>
+<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11 16C13.7614 16 16 13.7614 16 11C16 8.23858 13.7614 6 11 6C8.23858 6 6 8.23858 6 11C6 13.7614 8.23858 16 11 16Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M11 1V3" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M11 19V21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M4 4L5 5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M17 17L18 18" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1 11H3" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M19 11H21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M4 18L5 17" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M17 5L18 4" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
