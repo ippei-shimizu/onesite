@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useDarkMode } from "src/hooks/useDarkMode";
 import styles from "src/styles/Home.module.css";
 
 const NAV_ITEMS = [
@@ -10,7 +11,7 @@ const NAV_ITEMS = [
     src: "/frontend.svg",
     alt: "Front End",
     class:
-      "bg-gradient-to-tl from-nav01-blue-t via-nav01-blue-v to-nav01-blue-b",
+      "bg-gradient-to-tl from-nav01-blue-t via-nav01-blue-v to-nav01-blue-b dark:from-nav01-blue-t-dark dark:via-nav01-blue-v-dark dark:to-nav01-blue-b-dark",
   },
   {
     href: "/categories/web-production",
@@ -18,7 +19,7 @@ const NAV_ITEMS = [
     src: "/webproduction.svg",
     alt: "Web Production",
     class:
-      "bg-gradient-to-tl from-nav02-blue-t via-nav02-blue-v to-nav02-blue-b",
+      "bg-gradient-to-tl from-nav02-blue-t via-nav02-blue-v to-nav02-blue-b dark:from-nav02-blue-t-dark dark:via-nav02-blue-v-dark dark:to-nav02-blue-b-dark",
   },
   {
     href: "/categories/design",
@@ -26,7 +27,7 @@ const NAV_ITEMS = [
     src: "/design.svg",
     alt: "Design",
     class:
-      "bg-gradient-to-tl from-nav03-blue-t via-nav03-blue-v to-nav03-blue-b",
+      "bg-gradient-to-tl from-nav03-blue-t via-nav03-blue-v to-nav03-blue-b dark:from-nav03-blue-t-dark dark:via-nav03-blue-v-dark dark:to-nav03-blue-b-dark",
   },
   {
     href: "/categories/life-style",
@@ -34,11 +35,12 @@ const NAV_ITEMS = [
     src: "/lifestyle.svg",
     alt: "Life Style",
     class:
-      "bg-gradient-to-tl from-nav04-blue-t via-nav04-blue-v to-nav04-blue-b",
+      "bg-gradient-to-tl from-nav04-blue-t via-nav04-blue-v to-nav04-blue-b dark:from-nav04-blue-t-dark dark:via-nav04-blue-v-dark dark:to-nav04-blue-b-dark",
   },
 ];
 
 export const Header = () => {
+  const [colorTheme, setTheme] = useDarkMode();
   return (
     <header className="w-full mt-12 md:mt-5">
       <div className="w-11/12 max-w-3xl mx-auto">
@@ -46,33 +48,62 @@ export const Header = () => {
           <Link href="/" prefetch={false}>
             <a>
               <h1 className="md:w-32">
-                <Image
-                  src="/logo.svg"
-                  alt="Onesite Logo"
-                  width={148}
-                  height={36}
-                />
+                {colorTheme == "dark" ? (
+                  <Image
+                    src="/logo.svg"
+                    alt="Onesite Logo"
+                    width={148}
+                    height={36}
+                  />
+                ) : (
+                  <Image
+                    src="/logo-white.svg"
+                    alt="Onesite Logo"
+                    width={148}
+                    height={36}
+                  />
+                )}
               </h1>
             </a>
           </Link>
           <div className="flex space-x-6 items-center">
             <ul className="flex space-x-3 items-center">
-              <li className="h-7">
-                <Image
-                  src="/search.svg"
-                  alt="検索する"
-                  width={30}
-                  height={30}
-                />
+              <li className="bg-white w-8 h-8 flex items-center justify-center rounded-md border border-slate-300 cursor-pointer dark:bg-slate-700 dark:border-slate-100">
+                {colorTheme == "dark" ? (
+                  <Image
+                    src="/search.svg"
+                    alt="検索する"
+                    width={18}
+                    height={18}
+                  />
+                ) : (
+                  <Image
+                    src="/search-white.svg"
+                    alt="検索する"
+                    width={18}
+                    height={18}
+                  />
+                )}
               </li>
-              <li className="h-7">
-                <Image
-                  src="/sun.svg"
-                  alt="ダークモード切り替えボタン"
-                  width={30}
-                  height={30}
-                />
-              </li>
+              <ul onClick={() => setTheme(colorTheme)}>
+                <li className="bg-white w-8 h-8 flex items-center justify-center rounded-md border border-slate-300 cursor-pointer dark:bg-slate-700 dark:border-slate-100">
+                  {colorTheme == "light" ? (
+                    <Image
+                      src="/dark-white.svg"
+                      alt="ダークモード切り替えボタン"
+                      width={18}
+                      height={18}
+                    />
+                  ) : (
+                    <Image
+                      src="/sun.svg"
+                      alt="ダークモード切り替えボタン"
+                      width={18}
+                      height={18}
+                    />
+                  )}
+                </li>
+              </ul>
             </ul>
           </div>
         </div>
@@ -86,8 +117,10 @@ export const Header = () => {
             />
           </div>
           <div className="ml-4">
-            <p className="text-lg font-bold md:text-base">Ippei</p>
-            <p className="text-sm font-medium text-zinc-500 md:text-xs">
+            <p className="text-lg font-bold md:text-base dark:text-slate-100">
+              Ippei
+            </p>
+            <p className="text-sm font-medium text-zinc-500 md:text-xs dark:text-slate-300">
               Yamanashi / Web Coder
             </p>
           </div>
@@ -98,14 +131,16 @@ export const Header = () => {
               return (
                 <li key={item.href} className={`${item.class} rounded-3xl`}>
                   <Link href={item.href} prefetch={false}>
-                    <a className={`text-center block pt-8 pb-7 px-2 md:pt-7 md:pb-6 rounded-3xl transition duration-100 ${styles.hoverShadow}`}>
-                        <Image
-                          src={item.src}
-                          alt={item.alt}
-                          width={72}
-                          height={72}
-                        />
-                      <h2 className="text-lg tracking-wide font-bold mt-2 md:text-base">
+                    <a
+                      className={`text-center block pt-8 pb-7 px-2 md:pt-7 md:pb-6 rounded-3xl transition duration-100 ${styles.hoverShadow}`}
+                    >
+                      <Image
+                        src={item.src}
+                        alt={item.alt}
+                        width={72}
+                        height={72}
+                      />
+                      <h2 className="text-lg tracking-wide font-bold mt-2 md:text-base dark:text-slate-200">
                         {item.label}
                       </h2>
                     </a>
