@@ -1,4 +1,5 @@
 import { Link as ScrollLink } from "react-scroll";
+import classes from "src/styles/Home.module.css";
 
 export const TableOfContents = ({ toc }) => {
   return (
@@ -10,7 +11,7 @@ export const TableOfContents = ({ toc }) => {
         {toc.map((data) => (
           <li key={data.id}>
             <ScrollLink to={data.id} smooth offset={-60} href={data.id}>
-              <p className="cursor-pointer text-sm font-bold text-slate-500 mb-2">
+              <p className={`cursor-pointer text-sm font-bold text-slate-500 mb-2 duration-100 ${classes.hoverOpacity}`}>
                 {data.text}
               </p>
             </ScrollLink>

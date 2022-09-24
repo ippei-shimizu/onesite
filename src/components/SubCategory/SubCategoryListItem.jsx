@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useFetchArray } from "src/hooks/useFetchArray";
 import styles from "src/components/Category/Category.module.css";
 import Head from "next/head";
+import classes from "src/styles/Home.module.css";
 
 export const SubCategoryListItem = () => {
   const { data, error, isLoading, isEmpty } = useFetchArray(`subcategory`);
@@ -55,10 +56,10 @@ export const SubCategoryListItem = () => {
             {data.contents.map((content) => (
               <article
                 key={content.id}
-                className={`text-center bg-gradient-to-tr from-post-bg-t to-post-bg-b pt-8 pb-7 px-4 rounded-3xl ${styles.categoryPost}`}
+                className={`text-center bg-gradient-to-tr from-post-bg-t to-post-bg-b rounded-3xl ${styles.categoryPost} transition duration-100 ${classes.hoverShadow}`}
               >
                 <Link href={`/blogs/${content.id}`} prefetch={false}>
-                  <a>
+                  <a className="block pt-8 pb-7 px-4">
                     <Image
                       src={content.icon.url}
                       alt={content.alt}

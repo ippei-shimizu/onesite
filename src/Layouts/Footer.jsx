@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import classes from "src/styles/Home.module.css";
 
 const SNS_LIST = [
   {
@@ -58,7 +59,7 @@ export const Footer = (contents) => {
                 return (
                   <li
                     key={sns.href}
-                    className={`rounded-3xl text-center py-8 ${sns.class}`}
+                    className={`rounded-3xl text-center py-8 ${sns.class} transition duration-100 ${classes.hoverShadow}`}
                   >
                     <Link href={sns.href}>
                       <a className="block">
@@ -90,11 +91,15 @@ export const Footer = (contents) => {
                 />
               </a>
             </Link>
-            <p className="text-xs mb-3 font-normal">&copy; 2022 Ippei Shimizu</p>
+            <p className="text-xs mb-3 font-normal">
+              &copy; 2022 Ippei Shimizu
+            </p>
             <p className="text-xs mb-1 font-normal text-gray-500">
-              Site designed by Auforia. App icon by 
+              Site designed by Auforia. App icon by
               <Link href="https://icons8.com/">
-                <a target="_blank" className="pl-1">icons8</a>
+                <a target="_blank" className="pl-1">
+                  icons8
+                </a>
               </Link>
             </p>
           </div>
