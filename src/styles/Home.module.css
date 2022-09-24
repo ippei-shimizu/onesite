@@ -25,7 +25,9 @@
 }
 @media (hover: hover) {
   .hoverShadow {
-    @apply hover:transform hover:duration-200 hover:scale-105;
+    @apply hover:transform hover:duration-200 hover:shadow-xl;
+  }
+  .hoverOpacity {
+    @apply hover:duration-200 hover:opacity-60;
   }
 }
-

@@ -8,6 +8,7 @@ import formatDate from "libs/utils";
 import Head from "next/head";
 import { renderToc } from "libs/render-toc";
 import { TableOfContents } from "./TalbleOfContent";
+import classes from "src/styles/Home.module.css";
 import {
   TwitterShareButton,
   TwitterIcon,
@@ -178,7 +179,7 @@ export const BlogDetail = () => {
                     return (
                       <li key={sns.href}>
                         <Link href={sns.href}>
-                          <a>
+                          <a className={`duration-100 ${classes.hoverOpacity}`}>
                             <Image
                               src={sns.src}
                               alt={sns.alt}
@@ -199,16 +200,16 @@ export const BlogDetail = () => {
                 url={`https://www.onesite-web.com/blogs/${data.id}`}
                 title={data.title}
               >
-                <TwitterIcon size={40} round={true} className="mx-auto" />
+                <TwitterIcon size={40} round={true} className={`mx-auto duration-100 ${classes.hoverOpacity}`} />
               </TwitterShareButton>
               <FacebookShareButton
                 url={`https://www.onesite-web.com/blogs/${data.id}`}
                 title={data.title}
               >
-                <FacebookIcon size={40} round={true} className="mx-auto" />
+                <FacebookIcon size={40} round={true} className={`mx-auto duration-100 ${classes.hoverOpacity}`} />
               </FacebookShareButton>
               <LineShareButton>
-                <LineIcon size={40} round={true} className="mx-auto" />
+                <LineIcon size={40} round={true} className={`mx-auto duration-100 ${classes.hoverOpacity}`} />
               </LineShareButton>
             </div>
           </div>

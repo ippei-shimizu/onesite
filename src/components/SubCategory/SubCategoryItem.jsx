@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "src/components/SubCategory/SubCategory.module.css";
+import classes from "src/styles/Home.module.css";
 
 export const SubCategoryItem = (props) => {
   return (
@@ -11,10 +12,10 @@ export const SubCategoryItem = (props) => {
             return (
               <li
                 key={sub.id}
-                className={`py-4 px-5 rounded-2xl ${styles.bgColor}`}
+                className={`rounded-2xl ${styles.bgColor} transition duration-100 ${classes.hoverShadow}`}
               >
                 <Link href={`/subcategory/${sub.id}`} prefetch={false}>
-                  <a className="flex items-center">
+                  <a className="flex items-center py-4 px-5">
                     <Image
                       src={sub.icon.url}
                       alt={sub.alt}

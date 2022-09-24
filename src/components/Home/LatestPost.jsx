@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useFetchArray } from "src/hooks/useFetchArray";
 import styles from "src/components/Category/Category.module.css";
+import classes from "src/styles/Home.module.css";
 
 export const LatestPost = () => {
   const { data, error, isLoading, isEmpty } = useFetchArray(`blogs`);
@@ -36,11 +37,11 @@ export const LatestPost = () => {
               return (
                 <article
                   key={content.id}
-                  className={`${styles.article} bg-gradient-to-tl from-post-bg-t to-post-bg-b p-7 rounded-3xl`}
+                  className={`${styles.article} bg-gradient-to-tl from-post-bg-t to-post-bg-b rounded-3xl transition duration-100 ${classes.hoverShadow}`}
                 >
                   <div className="text-center">
                     <Link href={`/blogs/${content.id}`} prefetch={false}>
-                      <a className="block">
+                      <a className="block p-7">
                         <Image
                           src={content.icon.url}
                           alt={content.title}
