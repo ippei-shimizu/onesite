@@ -11,7 +11,7 @@ const NAV_ITEMS = [
     src: "/frontend.svg",
     alt: "Front End",
     class:
-      "bg-gradient-to-tl from-nav01-blue-t via-nav01-blue-v to-nav01-blue-b",
+      "bg-gradient-to-tl from-nav01-blue-t via-nav01-blue-v to-nav01-blue-b dark:from-nav01-blue-t-dark dark:via-nav01-blue-v-dark dark:to-nav01-blue-b-dark",
   },
   {
     href: "/categories/web-production",
@@ -19,7 +19,7 @@ const NAV_ITEMS = [
     src: "/webproduction.svg",
     alt: "Web Production",
     class:
-      "bg-gradient-to-tl from-nav02-blue-t via-nav02-blue-v to-nav02-blue-b",
+      "bg-gradient-to-tl from-nav02-blue-t via-nav02-blue-v to-nav02-blue-b dark:from-nav02-blue-t-dark dark:via-nav02-blue-v-dark dark:to-nav02-blue-b-dark",
   },
   {
     href: "/categories/design",
@@ -27,7 +27,7 @@ const NAV_ITEMS = [
     src: "/design.svg",
     alt: "Design",
     class:
-      "bg-gradient-to-tl from-nav03-blue-t via-nav03-blue-v to-nav03-blue-b",
+      "bg-gradient-to-tl from-nav03-blue-t via-nav03-blue-v to-nav03-blue-b dark:from-nav03-blue-t-dark dark:via-nav03-blue-v-dark dark:to-nav03-blue-b-dark",
   },
   {
     href: "/categories/life-style",
@@ -35,7 +35,7 @@ const NAV_ITEMS = [
     src: "/lifestyle.svg",
     alt: "Life Style",
     class:
-      "bg-gradient-to-tl from-nav04-blue-t via-nav04-blue-v to-nav04-blue-b",
+      "bg-gradient-to-tl from-nav04-blue-t via-nav04-blue-v to-nav04-blue-b dark:from-nav04-blue-t-dark dark:via-nav04-blue-v-dark dark:to-nav04-blue-b-dark",
   },
 ];
 
@@ -140,7 +140,7 @@ export const Header = () => {
                         width={72}
                         height={72}
                       />
-                      <h2 className="text-lg tracking-wide font-bold mt-2 md:text-base">
+                      <h2 className="text-lg tracking-wide font-bold mt-2 md:text-base dark:text-slate-200">
                         {item.label}
                       </h2>
                     </a>

@@ -37,7 +37,7 @@ export const CategoryItems = () => {
       </Head>
       <div className="w-11/12 max-w-3xl mx-auto mt-8">
         <section>
-          <h1 className={`font-bold tracking-wide text-center ${styles.title}`}>
+          <h1 className={`font-bold tracking-wide text-center ${styles.title} dark:text-slate-100`}>
             {data.contents[0].category.name}
           </h1>
           <nav>
@@ -45,7 +45,7 @@ export const CategoryItems = () => {
               <li>
                 <Link href={`/`} prefetch={false}>
                   <a>
-                    Home<span className="mx-2 text-stone-900">/</span>
+                    Home<span className="mx-2 text-stone-900 dark:text-sky-500">/</span>
                   </a>
                 </Link>
               </li>
@@ -56,7 +56,7 @@ export const CategoryItems = () => {
             {data.contents.map((blog) => (
               <article
                 key={blog.id}
-                className={`text-center bg-gradient-to-tr from-post-bg-t to-post-bg-b rounded-3xl ${styles.categoryPost} transition duration-100 ${classes.hoverShadow}`}
+                className={`text-center bg-gradient-to-tr from-post-bg-t to-post-bg-b rounded-3xl ${styles.categoryPost} transition duration-100 ${classes.hoverShadow} dark:from-post-bg-t-dark dark:to-post-bg-b-dark`}
               >
                 <Link href={`/blogs/${blog.id}`} prefetch={false}>
                   <a className="block pt-8 pb-7 px-4">
@@ -67,13 +67,13 @@ export const CategoryItems = () => {
                       height={70}
                     />
                     <p
-                      className={`font-medium mt-2 text-sky-600 ${styles.category}`}
+                      className={`font-medium mt-2 text-sky-600 ${styles.category} dark:text-slate-200`}
                     >
                       {blog.category.name}
                     </p>
                     <div className="text-center">
                       <h2
-                        className={`font-bold mt-2 mb-3 inline-block text-left ${styles.postTitle}`}
+                        className={`font-bold mt-2 mb-3 inline-block text-left ${styles.postTitle} dark:text-slate-100`}
                       >
                         {blog.title}
                       </h2>
@@ -85,7 +85,7 @@ export const CategoryItems = () => {
                         width={24}
                         height={24}
                       />
-                      <p className="ml-2 text-base font-bold mr-4">
+                      <p className="ml-2 text-base font-bold mr-4 dark:text-slate-100">
                         {blog.subcategory[0].name}
                       </p>
                     </div>

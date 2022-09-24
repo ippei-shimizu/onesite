@@ -21,7 +21,7 @@ html.wf-active {
 }
 html.dark,
 html.dark body {
-background-color:#0f172a;
+  background-color: #0f172a;
 }
 
 a {
@@ -32,4 +32,3 @@ a {
 * {
   box-sizing: border-box;
 }
-

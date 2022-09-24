@@ -12,7 +12,7 @@ export const SubCategoryItem = (props) => {
             return (
               <li
                 key={sub.id}
-                className={`rounded-2xl ${styles.bgColor} transition duration-100 ${classes.hoverShadow}`}
+                className={`rounded-2xl ${styles.bgColor} transition duration-100 ${classes.hoverShadow} dark:bg-gradient-to-tl dark:from-subCategory-bg-t-dark dark:to-subCategory-bg-l-dark`}
               >
                 <Link href={`/subcategory/${sub.id}`} prefetch={false}>
                   <a className="flex items-center py-4 px-5">
@@ -22,7 +22,9 @@ export const SubCategoryItem = (props) => {
                       width={28}
                       height={28}
                     />
-                    <h3 className="ml-2 text-base font-bold">{sub.name}</h3>
+                    <h3 className="ml-2 text-base font-bold dark:text-slate-100 ">
+                      {sub.name}
+                    </h3>
                   </a>
                 </Link>
               </li>

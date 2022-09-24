@@ -37,7 +37,7 @@ export const LatestPost = () => {
               return (
                 <article
                   key={content.id}
-                  className={`${styles.article} bg-gradient-to-tl from-post-bg-t to-post-bg-b rounded-3xl transition duration-100 ${classes.hoverShadow}`}
+                  className={`${styles.article} bg-gradient-to-tl from-post-bg-t to-post-bg-b rounded-3xl transition duration-100 ${classes.hoverShadow} dark:from-post-bg-t-dark dark:to-post-bg-b-dark`}
                 >
                   <div className="text-center">
                     <Link href={`/blogs/${content.id}`} prefetch={false}>
@@ -49,12 +49,12 @@ export const LatestPost = () => {
                           height={80}
                         />
                         <div className="mt-4">
-                          <p className="font-medium text-sky-600">
+                          <p className="font-medium text-sky-600 dark:text-slate-200">
                             {content.category.name}
                           </p>
                           <div className="text-center">
                             <h3
-                              className={`font-bold my-3 text-lg inline-block text-left`}
+                              className={`font-bold my-3 text-lg inline-block text-left dark:text-slate-100`}
                             >
                               {content.title}
                             </h3>
@@ -67,7 +67,7 @@ export const LatestPost = () => {
                                 width={24}
                                 height={24}
                               />
-                              <p className="text-sm font-bold mr-4 ml-2">
+                              <p className="text-sm font-bold mr-4 ml-2 dark:text-slate-100">
                                 {content.subcategory[0].name}
                               </p>
                             </div>
