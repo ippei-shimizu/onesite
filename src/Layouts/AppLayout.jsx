@@ -1,3 +1,4 @@
+import { Footer } from "./Footer";
 import { Header } from "./Header";
 
 export const AppLayout = (props) => {
@@ -5,6 +6,7 @@ export const AppLayout = (props) => {
     <>
       <Header />
       {props.children}
+      <Footer />
     </>
   );
 };

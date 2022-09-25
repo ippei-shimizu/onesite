@@ -38,7 +38,6 @@ const Home = (props) => {
         <SWRConfig value={{ fallback }}>
           <LatestPost />
           <SubCategoryItem props={props.subCategory} />
-          <Footer contents={props} />
         </SWRConfig>
       </main>
     </>

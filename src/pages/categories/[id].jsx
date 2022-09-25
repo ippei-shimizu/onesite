@@ -41,7 +41,6 @@ export const CategoryList = (props) => {
       <SWRConfig value={{ fallback }}>
         <CategoryItems />
         <SubCategoryItem props={props.subCategory} />
-        <Footer contents={props} />
       </SWRConfig>
     </>
   );
