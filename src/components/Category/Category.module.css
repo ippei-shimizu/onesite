@@ -36,7 +36,7 @@
   grid-column-end: 3;
 }
 
-@media (width <= 768px) {
+@media screen and (max-width: 768px) {
   .article:nth-child(1) {
   grid-column-start: 1;
   grid-column-end: 1;

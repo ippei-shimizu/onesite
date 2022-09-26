@@ -21,12 +21,12 @@
   color:#475569;
 }
 
-@media (width <= 1400px) {
+@media screen and (max-width: 1400px) {
   .main {
     grid-template-columns: 0% 70% 1fr;
   }
 }
-@media (width <= 1000px) {
+@media screen and (max-width: 1000px) {
   .main {
     display: block;
   }
