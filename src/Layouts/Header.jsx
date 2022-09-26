@@ -41,6 +41,7 @@ const NAV_ITEMS = [
 
 export const Header = () => {
   const [colorTheme, setTheme] = useDarkMode();
+
   return (
     <header className="w-full mt-12 md:mt-5">
       <div className="w-11/12 max-w-3xl mx-auto">
@@ -48,16 +49,16 @@ export const Header = () => {
           <Link href="/" prefetch={false}>
             <a>
               <h1 className="md:w-32">
-                {colorTheme == "dark" ? (
+                {colorTheme == "light" ? (
                   <Image
-                    src="/logo.svg"
+                    src="/logo-white.svg"
                     alt="Onesite Logo"
                     width={148}
                     height={36}
                   />
                 ) : (
                   <Image
-                    src="/logo-white.svg"
+                    src="/logo.svg"
                     alt="Onesite Logo"
                     width={148}
                     height={36}
