@@ -47,10 +47,8 @@ const PAGE_LIST = [
   { href: "/privacy-policy", id: "Privacy Policy" },
 ];
 
-export const Footer = (contents) => {
-  const CategoryList = contents.contents.categories;
-  const SubCategoryList = contents.contents.subCategory;
-  const [colorTheme, setTheme] = useDarkMode();
+export const Footer = () => {
+  const [colorTheme] = useDarkMode();
   return (
     <>
       <footer className="mt-10">
@@ -85,19 +83,21 @@ export const Footer = (contents) => {
           <div className="text-center">
             <Link href="/">
               <a>
-                {colorTheme == "dark"?
-                <Image
-                  src="/logo.svg"
-                  alt="Onesite Logo"
-                  width={124}
-                  height={32}
-                />:
-                <Image
-                  src="/logo-white.svg"
-                  alt="Onesite Logo"
-                  width={124}
-                  height={32}
-                />}
+                {colorTheme == "dark" ? (
+                  <Image
+                    src="/logo.svg"
+                    alt="Onesite Logo"
+                    width={124}
+                    height={32}
+                  />
+                ) : (
+                  <Image
+                    src="/logo-white.svg"
+                    alt="Onesite Logo"
+                    width={124}
+                    height={32}
+                  />
+                )}
               </a>
             </Link>
             <p className="text-xs mb-3 font-normal dark:text-slate-300">

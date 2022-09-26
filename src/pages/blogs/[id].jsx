@@ -39,7 +39,6 @@ export const BlogsId = (props) => {
       <SWRConfig value={{ fallback }}>
         <BlogDetail />
         <SubCategoryItem props={props.subCategory} />
-        <Footer contents={props} />
       </SWRConfig>
     </>
   );
