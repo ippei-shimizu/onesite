@@ -29,7 +29,8 @@ const SNS_LIST = [
     width: 28,
     height: 28,
     id: "@ippei_111",
-    class: "bg-gradient-to-tl from-twitter-icon-t to-twitter-icon-b",
+    class:
+      "bg-gradient-to-tl from-twitter-icon-t to-twitter-icon-b dark:from-twitter-icon-t-dark dark:to-twitter-icon-b-dark",
   },
   {
     href: "https://www.instagram.com/ippei_5/",
@@ -38,7 +39,8 @@ const SNS_LIST = [
     width: 28,
     height: 28,
     id: "@ippei_5",
-    class: "bg-gradient-to-tl from-instagram-icon-t to-instagram-icon-b",
+    class:
+      "bg-gradient-to-tl from-instagram-icon-t to-instagram-icon-b dark:from-instagram-icon-t-dark dark:to-instagram-icon-b-dark",
   },
 ];
 
@@ -48,7 +50,9 @@ const PAGE_LIST = [
 ];
 
 export const Footer = () => {
-  const [colorTheme] = useDarkMode();
+  const [colorTheme, setTheme] = useDarkMode();
+  console.log(colorTheme);
+
   return (
     <>
       <footer className="mt-10">
