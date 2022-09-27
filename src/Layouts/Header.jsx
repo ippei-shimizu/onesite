@@ -86,25 +86,27 @@ export const Header = () => {
                   />
                 )}
               </li>
-              <ul onClick={() => setTheme(colorTheme)}>
-                <li className="bg-white w-8 h-8 flex items-center justify-center rounded-md border border-slate-300 cursor-pointer dark:bg-slate-700 dark:border-slate-100">
-                  {colorTheme == "light" ? (
-                    <Image
-                      src="/dark-white.svg"
-                      alt="ダークモード切り替えボタン"
-                      width={18}
-                      height={18}
-                    />
-                  ) : (
-                    <Image
-                      src="/sun.svg"
-                      alt="ダークモード切り替えボタン"
-                      width={18}
-                      height={18}
-                    />
-                  )}
-                </li>
-              </ul>
+              <li>
+                <ul onClick={() => setTheme(colorTheme)}>
+                  <li className="bg-white w-8 h-8 flex items-center justify-center rounded-md border border-slate-300 cursor-pointer dark:bg-slate-700 dark:border-slate-100">
+                    {colorTheme == "light" ? (
+                      <Image
+                        src="/dark-white.svg"
+                        alt="ダークモード切り替えボタン"
+                        width={18}
+                        height={18}
+                      />
+                    ) : (
+                      <Image
+                        src="/sun.svg"
+                        alt="ダークモード切り替えボタン"
+                        width={18}
+                        height={18}
+                      />
+                    )}
+                  </li>
+                </ul>
+              </li>
             </ul>
           </div>
         </div>
