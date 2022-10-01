@@ -24,7 +24,7 @@ export const CategoryItems = () => {
   }
   if (isEmpty) {
     return (
-      <div className="text-lg font-bold text-center w-11/12 max-w-3xl mx-auto mt-10">
+      <div className="text-lg font-bold text-center w-11/12 max-w-3xl mx-auto mt-10 dark:text-slate-200">
         There is no article.
       </div>
     );
