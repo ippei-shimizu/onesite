@@ -1,6 +1,8 @@
-import { useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
-export const useDarkMode = () => {
+const DarkModeContext = createContext();
+
+export const DarkModeProvider = (props) => {
   const [theme, setTheme] = useState(
     typeof window !== "undefined" ? localStorage.theme : "dark"
   );
@@ -11,6 +13,14 @@ export const useDarkMode = () => {
     root.classList.add(theme);
     localStorage.setItem("theme", theme);
   }, [colorTheme, theme]);
-
-  return [colorTheme, setTheme];
+  return (
+    <div>
+      <DarkModeContext.Provider value={{ colorTheme, setTheme }}>
+        {props.children}
+      </DarkModeContext.Provider>
+    </div>
+  );
 };
+
+export default DarkModeProvider;
+export { DarkModeContext };

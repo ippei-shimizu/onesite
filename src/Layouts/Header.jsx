@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useDarkMode } from "src/hooks/useDarkMode";
+import { useContext } from "react";
+import { DarkModeContext } from "src/hooks/DarkModeContext";
+import DarkModeSwitch from "src/hooks/DarkModeSwitch";
 import styles from "src/styles/Home.module.css";
 
 const NAV_ITEMS = [
@@ -40,7 +42,7 @@ const NAV_ITEMS = [
 ];
 
 export const Header = () => {
-  const [colorTheme, setTheme] = useDarkMode();
+  const { colorTheme } = useContext(DarkModeContext);
 
   return (
     <header className="w-full mt-12 md:mt-5">
@@ -49,16 +51,16 @@ export const Header = () => {
           <Link href="/" prefetch={false}>
             <a>
               <h1 className="md:w-32">
-                {colorTheme == "light" ? (
+                {colorTheme === "dark" ? (
                   <Image
-                    src="/logo-white.svg"
+                    src="/logo.svg"
                     alt="Onesite Logo"
                     width={148}
                     height={36}
                   />
                 ) : (
                   <Image
-                    src="/logo.svg"
+                    src="/logo-white.svg"
                     alt="Onesite Logo"
                     width={148}
                     height={36}
@@ -68,9 +70,13 @@ export const Header = () => {
             </a>
           </Link>
           <div className="flex space-x-6 items-center">
-            <ul className="flex space-x-3 items-center">
-              <li className="bg-white w-8 h-8 flex items-center justify-center rounded-md border border-slate-300 cursor-pointer dark:bg-slate-700 dark:border-slate-100">
-                {colorTheme == "dark" ? (
+            <div className="flex space-x-3 items-center">
+              <button
+                aria-label="SearchButton"
+                type="button"
+                className="bg-white w-8 h-8 flex items-center justify-center rounded-md border border-slate-300 cursor-pointer dark:bg-slate-700 dark:border-slate-100"
+              >
+                {colorTheme === "dark" ? (
                   <Image
                     src="/search.svg"
                     alt="検索する"
@@ -85,29 +91,9 @@ export const Header = () => {
                     height={18}
                   />
                 )}
-              </li>
-              <li>
-                <ul onClick={() => setTheme(colorTheme)}>
-                  <li className="bg-white w-8 h-8 flex items-center justify-center rounded-md border border-slate-300 cursor-pointer dark:bg-slate-700 dark:border-slate-100">
-                    {colorTheme == "light" ? (
-                      <Image
-                        src="/dark-white.svg"
-                        alt="ダークモード切り替えボタン"
-                        width={18}
-                        height={18}
-                      />
-                    ) : (
-                      <Image
-                        src="/sun.svg"
-                        alt="ダークモード切り替えボタン"
-                        width={18}
-                        height={18}
-                      />
-                    )}
-                  </li>
-                </ul>
-              </li>
-            </ul>
+              </button>
+              <DarkModeSwitch />
+            </div>
           </div>
         </div>
         <div className="flex items-center mt-6">

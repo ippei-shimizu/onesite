@@ -2,6 +2,7 @@ import Head from "next/head";
 import { AppLayout } from "../Layouts/AppLayout";
 import { SWRConfig } from "swr";
 import "../styles/globals.css";
+import DarkModeProvider from "src/hooks/DarkModeContext";
 
 const fetcher = async (...args) => {
   const res = await fetch(...args);
@@ -16,9 +17,11 @@ const MyApp = ({ Component, pageProps }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <SWRConfig value={{ fetcher }}>
-        <AppLayout>
-          <Component {...pageProps} />
-        </AppLayout>
+        <DarkModeProvider>
+          <AppLayout>
+            <Component {...pageProps} />
+          </AppLayout>
+        </DarkModeProvider>
       </SWRConfig>
     </>
   );

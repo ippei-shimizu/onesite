@@ -17,7 +17,8 @@ import {
   LineShareButton,
   LineIcon,
 } from "react-share";
-import { useDarkMode } from "src/hooks/useDarkMode";
+import { useContext } from "react";
+import { DarkModeContext } from "src/hooks/DarkModeContext";
 
 const PROFILE_SNS = [
   {
@@ -56,7 +57,7 @@ export const BlogDetail = () => {
     router.query.id ? `${API_URL_M_CMS}/blogs/${router.query.id}` : null
   );
   const toc = renderToc(data.content);
-  const [colorTheme] = useDarkMode();
+  const { colorTheme } = useContext(DarkModeContext);
 
   if (isLoading) {
     return <div>Loading....</div>;

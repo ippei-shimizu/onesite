@@ -2,7 +2,6 @@ import { client } from "libs/client";
 import Head from "next/head";
 import { LatestPost } from "src/components/Home/LatestPost";
 import { SubCategoryItem } from "src/components/SubCategory/SubCategoryItem";
-import { Footer } from "src/Layouts/Footer";
 import { API_URL_M_CMS } from "src/utils/const";
 import { SWRConfig } from "swr";
 
