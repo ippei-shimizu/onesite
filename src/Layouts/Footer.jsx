@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useDarkMode } from "src/hooks/useDarkMode";
+import { useContext } from "react";
+import { DarkModeContext } from "src/hooks/DarkModeContext";
 import classes from "src/styles/Home.module.css";
 
 const SNS_LIST = [
@@ -50,8 +51,7 @@ const PAGE_LIST = [
 ];
 
 export const Footer = () => {
-  const [colorTheme, setTheme] = useDarkMode();
-  console.log(colorTheme);
+  const { colorTheme } = useContext(DarkModeContext);
 
   return (
     <>
@@ -87,7 +87,7 @@ export const Footer = () => {
           <div className="text-center">
             <Link href="/">
               <a>
-                {colorTheme == "dark" ? (
+                {colorTheme === "dark" ? (
                   <Image
                     src="/logo.svg"
                     alt="Onesite Logo"
