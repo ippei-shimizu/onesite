@@ -38,7 +38,7 @@ const Home = (props) => {
           content="Onesite - フロントエンドの技術アウトプットブログ"
         />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="../onesite-ogp.jpg" />
+        <meta property="og:image" content="https://onesite-rouge.vercel.app/onesite-ogp.jpg" />
       </Head>
       <main>
         <SWRConfig value={{ fallback }}>
