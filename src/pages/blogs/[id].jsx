@@ -29,6 +29,7 @@ export const getStaticProps = async (context) => {
       subCategory: subCategoryData.contents,
     },
     revalidate: 10,
+    notFound: !data,
   };
 };
 
