@@ -38,7 +38,7 @@ const Home = (props) => {
           content="Onesite - フロントエンドの技術アウトプットブログ"
         />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="./public/onesite-ogp.jgp" />
+        <meta property="og:image" content="/onesite-ogp.jgp" />
         <meta property="og:image:width" content={1200} />
         <meta property="og:image:height" content={600} />
       </Head>
