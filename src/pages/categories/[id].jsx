@@ -22,6 +22,7 @@ export const getStaticProps = async (context) => {
   const API_CATEGORY = `${API_URL_M_CMS}/blogs`;
   const subCategoryData = await client.get({ endpoint: "subcategory" });
   const CategoryData = await client.get({ endpoint: "categories" });
+
   return {
     props: {
       fallback: {

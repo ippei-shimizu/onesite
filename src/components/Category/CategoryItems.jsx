@@ -37,7 +37,9 @@ export const CategoryItems = () => {
       </Head>
       <div className="w-11/12 max-w-3xl mx-auto mt-8">
         <section>
-          <h1 className={`font-bold tracking-wide text-center ${styles.title} dark:text-slate-100`}>
+          <h1
+            className={`font-bold tracking-wide text-center ${styles.title} dark:text-slate-100`}
+          >
             {data.contents[0].category.name}
           </h1>
           <nav>
@@ -45,7 +47,10 @@ export const CategoryItems = () => {
               <li>
                 <Link href={`/`} prefetch={false}>
                   <a>
-                    Home<span className="mx-2 text-stone-900 dark:text-sky-500">/</span>
+                    Home
+                    <span className="mx-2 text-stone-900 dark:text-sky-500">
+                      /
+                    </span>
                   </a>
                 </Link>
               </li>
