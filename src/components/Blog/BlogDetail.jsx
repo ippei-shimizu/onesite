@@ -70,6 +70,12 @@ export const BlogDetail = () => {
       <Head>
         <title>{data.title} - Onesite</title>
         <meta name="description" content={data.description} />
+        <meta property="og:url" content={`${API_URL_M_CMS}/blogs/${data.id}`} />
+        <meta property="og:title" content={data.title} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content={data.eyecatch.url} />
+        <meta property="og:image:width" content={data.eyecatch.width} />
+        <meta property="og:image:height" content={data.eyecatch.height} />
       </Head>
       <main className={`w-11/12 mx-auto ${styles.main}`}>
         <div>
