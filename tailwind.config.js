@@ -16,8 +16,8 @@ module.exports = {
         strongBgDark: "linear-gradient(#ff6 100%, #ff6 100%)",
       },
       fontSize: {
-        contentH2: "clamp(1.5rem, 1.35rem + 0.8vw, 1.75rem)",
-        contentH3: "clamp(1.25rem, 1.1rem + 0.8vw, 1.5rem)",
+        contentH2: "clamp(1.25rem, 1.159rem + 0.45vw, 1.5rem)",
+        contentH3: "clamp(1.125rem, 1.08rem + 0.23vw, 1.25rem)",
         contentH4: "clamp(1rem, 0.925rem + 0.4vw, 1.125rem)",
         contentP: "clamp(0.938rem, 0.9rem + 0.2vw, 1rem)",
       },
