@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useContext } from "react";
 import { DarkModeContext } from "src/hooks/DarkModeContext";
 import DarkModeSwitch from "src/hooks/DarkModeSwitch";
+import Search from "src/hooks/Search";
 import styles from "src/styles/Home.module.css";
 
 const NAV_ITEMS = [
@@ -71,27 +72,7 @@ export const Header = () => {
           </Link>
           <div className="flex space-x-6 items-center">
             <div className="flex space-x-3 items-center">
-              <button
-                aria-label="SearchButton"
-                type="button"
-                className="bg-white w-8 h-8 flex items-center justify-center rounded-md border border-slate-300 cursor-pointer dark:bg-slate-700 dark:border-slate-100"
-              >
-                {colorTheme === "dark" ? (
-                  <Image
-                    src="/search.svg"
-                    alt="検索する"
-                    width={18}
-                    height={18}
-                  />
-                ) : (
-                  <Image
-                    src="/search-white.svg"
-                    alt="検索する"
-                    width={18}
-                    height={18}
-                  />
-                )}
-              </button>
+              <Search />
               <DarkModeSwitch />
             </div>
           </div>

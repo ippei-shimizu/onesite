@@ -3,7 +3,7 @@
   grid-template-columns: 1fr 48rem 1fr;
 }
 .title {
-  font-size: clamp(1.125rem, 0.943rem + 0.91vw, 1.625rem);
+  font-size: clamp(1.125rem, 0.989rem + 0.68vw, 1.5rem);
 }
 
 .content iframe {

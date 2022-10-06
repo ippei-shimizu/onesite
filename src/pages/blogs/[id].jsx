@@ -1,7 +1,6 @@
 import { client } from "libs/client";
 import { BlogDetail } from "src/components/Blog/BlogDetail";
 import { SubCategoryItem } from "src/components/SubCategory/SubCategoryItem";
-import { Footer } from "src/Layouts/Footer";
 import { API_URL_M_CMS } from "src/utils/const";
 import { SWRConfig } from "swr";
 
@@ -29,7 +28,6 @@ export const getStaticProps = async (context) => {
       subCategory: subCategoryData.contents,
     },
     revalidate: 10,
-    notFound: !data,
   };
 };
 

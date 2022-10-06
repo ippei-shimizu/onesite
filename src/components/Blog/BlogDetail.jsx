@@ -88,7 +88,7 @@ export const BlogDetail = () => {
             </div>
             <div className="text-center">
               <h1
-                className={`font-bold tracking-wide mt-1 inline-block text-left ${styles.title} dark:text-slate-200`}
+                className={`font-bold tracking-wide mt-2 inline-block text-left ${styles.title} dark:text-slate-200`}
               >
                 {data.title}
               </h1>
@@ -200,7 +200,7 @@ export const BlogDetail = () => {
               dark:prose-p:text-slate-200
               prose-strong:font-medium prose-strong:bg-stone-100 prose-strong:!text-sky-700 prose-strong:border-2 prose-strong:border-stone-300 prose-strong:px-1 prose-strong:py-0.5 prose-strong:rounded-lg
               dark:prose-strong:!text-sky-200 dark:prose-strong:bg-stone-600
-              prose-a:inline-block prose-a:font-bold prose-a:px-12 prose-a:py-3 prose-a:text-white prose-a:text-center prose-a:bg-sky-600 prose-a:rounded-xl prose-a:my-8
+              prose-a:inline-block prose-a:text-sm prose-a:font-bold prose-a:px-12 prose-a:py-4 prose-a:text-white prose-a:text-center prose-a:bg-sky-600 prose-a:rounded-lg prose-a:my-2
               prose-pre:bg-slate-800 prose-pre:overflow-x-scroll prose-pre:py-8 prose-pre:px-6 prose-pre:rounded-xl prose-pre:mb-10
               dark:prose-pre:bg-slate-900 dark:prose-pre:border dark:prose-pre:border-slate200
               prose-code:text-white prose-code:text-sm prose-code:leading-7
