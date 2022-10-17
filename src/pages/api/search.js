@@ -6,6 +6,10 @@ export default async function handler(req, res) {
     queries: { q: req.body.q },
   });
   if (req.body.q) {
-    res.status(200).json(data);
+    try {
+      res.status(200).json(data);
+    } catch {
+      return;
+    }
   }
 }
