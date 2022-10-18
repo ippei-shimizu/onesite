@@ -18,9 +18,9 @@ const MyApp = ({ Component, pageProps }) => {
       </Head>
       <SWRConfig value={{ fetcher }}>
         <DarkModeProvider>
-          <AppLayout>
-            <Component {...pageProps} />
-          </AppLayout>
+            <AppLayout>
+              <Component {...pageProps} />
+            </AppLayout>
         </DarkModeProvider>
       </SWRConfig>
     </>
