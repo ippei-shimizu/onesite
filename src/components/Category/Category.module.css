@@ -5,7 +5,7 @@
   font-size: clamp(0.875rem, 0.833rem + 0.21vw, 1rem);
 }
 .postTitle {
-  font-size: clamp(1rem, 0.958rem + 0.21vw, 1.125rem);
+  font-size: clamp(0.938rem, 0.915rem + 0.11vw, 1rem);
 }
 
 .article:nth-child(1) {

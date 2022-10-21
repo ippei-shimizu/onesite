@@ -1,7 +1,6 @@
 import { client } from "libs/client";
 import { SubCategoryItem } from "src/components/SubCategory/SubCategoryItem";
 import { SubCategoryListItem } from "src/components/SubCategory/SubCategoryListItem";
-import { Footer } from "src/Layouts/Footer";
 import { API_URL_M_CMS } from "src/utils/const";
 import { SWRConfig } from "swr";
 
