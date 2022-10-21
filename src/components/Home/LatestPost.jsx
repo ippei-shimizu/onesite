@@ -28,6 +28,7 @@ export const LatestPost = () => {
       </div>
     );
   }
+
   return (
     <>
       <section className="mt-10">

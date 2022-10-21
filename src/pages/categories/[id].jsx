@@ -1,7 +1,6 @@
 // import { prop } from "cheerio/lib/api/attributes";
 import { client } from "libs/client";
 import { CategoryItems } from "src/components/Category/CategoryItems";
-import { CategoryWorksItems } from "src/components/Works/CategoryWorksItems";
 import { SubCategoryItem } from "src/components/SubCategory/SubCategoryItem";
 import { API_URL_M_CMS } from "src/utils/const";
 import { SWRConfig } from "swr";
@@ -39,11 +38,10 @@ export const getStaticProps = async (context) => {
 
 export const CategoryList = (props) => {
   const { fallback } = props;
-  const IdWorks = props.id === "works" ? true : false;
   return (
     <>
       <SWRConfig value={{ fallback }}>
-        {IdWorks ? <CategoryWorksItems /> : <CategoryItems />}
+        <CategoryItems />
         <SubCategoryItem props={props.subCategory} />
       </SWRConfig>
     </>
