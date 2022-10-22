@@ -1,5 +1,5 @@
 ---
-title: "建設コンサルタント会社様"
+title: "建設コンサルタント会社様 HP"
 id: "works-01"
 category: "Corporate Site"
 tech: "#WordPress"
