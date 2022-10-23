@@ -30,6 +30,22 @@
   grid-column-start: 4;
   grid-column-end: 6;
 }
+.article:nth-child(6) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.article:nth-child(7) {
+  grid-column-start: 3;
+  grid-column-end: 6;
+}
+.article:nth-child(8) {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+.article:nth-child(9) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
 
 .categoryPost:nth-child(1) {
   grid-column-start: 1;
@@ -38,30 +54,46 @@
 
 @media screen and (max-width: 768px) {
   .article:nth-child(1) {
-  grid-column-start: 1;
-  grid-column-end: 1;
-}
+    grid-column-start: 1;
+    grid-column-end: 1;
+  }
 
-.article:nth-child(2) {
-  grid-column-start: 1;
-  grid-column-end: 1;
-}
+  .article:nth-child(2) {
+    grid-column-start: 1;
+    grid-column-end: 1;
+  }
 
-.article:nth-child(3) {
-  grid-column-start: 1;
-  grid-column-end: 1;
-}
-.article:nth-child(4) {
-  grid-column-start: 1;
-  grid-column-end: 1;
-}
-.article:nth-child(5) {
-  grid-column-start: 1;
-  grid-column-end: 1;
-}
+  .article:nth-child(3) {
+    grid-column-start: 1;
+    grid-column-end: 1;
+  }
+  .article:nth-child(4) {
+    grid-column-start: 1;
+    grid-column-end: 1;
+  }
+  .article:nth-child(5) {
+    grid-column-start: 1;
+    grid-column-end: 1;
+  }
+  .article:nth-child(6) {
+    grid-column-start: 1;
+    grid-column-end: 1;
+  }
+  .article:nth-child(7) {
+    grid-column-start: 1;
+    grid-column-end: 1;
+  }
+  .article:nth-child(8) {
+    grid-column-start: 1;
+    grid-column-end: 1;
+  }
+  .article:nth-child(9) {
+    grid-column-start: 1;
+    grid-column-end: 1;
+  }
 
-.categoryPost:nth-child(1) {
-  grid-column-start: 1;
-  grid-column-end: 1;
-}
+  .categoryPost:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 1;
+  }
 }
