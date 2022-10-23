@@ -2,7 +2,7 @@
 import { client } from "libs/client";
 import { CategoryItems } from "src/components/Category/CategoryItems";
 import { SubCategoryItem } from "src/components/SubCategory/SubCategoryItem";
-import { API_URL_M_CMS } from "src/utils/const";
+import { API_URL_M_CMS, PostListLimit } from "src/utils/const";
 import { SWRConfig } from "swr";
 
 // 静的生成のためのパスを指定します
@@ -17,7 +17,7 @@ export const getStaticProps = async (context) => {
   const id = context.params.id;
   const data = await client.get({
     endpoint: "blogs",
-    queries: { filters: `category[equals]${id}` },
+    queries: { filters: `category[equals]${id}`, limit: PostListLimit },
   });
   const API_CATEGORY = `${API_URL_M_CMS}/blogs`;
   const subCategoryData = await client.get({ endpoint: "subcategory" });
