@@ -96,12 +96,12 @@ export const Header = () => {
             <div className="flex mt-1">
               <Link href="/profile">
                 <a>
-                  <p className="leading-4 mr-4">Profile</p>
+                  <p className="leading-4 mr-4 font-bold text-sky-700 dark:text-sky-300">Profile</p>
                 </a>
               </Link>
               <Link href="/works">
                 <a>
-                  <p className="leading-4">Works</p>
+                  <p className="leading-4 font-bold text-sky-700 dark:text-sky-300">Works</p>
                 </a>
               </Link>
             </div>
