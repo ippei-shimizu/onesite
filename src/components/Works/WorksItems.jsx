@@ -34,7 +34,7 @@ export const WorksItems = (props) => {
             {WorksPostsList.map((works) => (
               <article
                 key={works.FrontMatter.id}
-                className={`text-center pb-3 bg-gradient-to-tr from-post-bg-t to-post-bg-b rounded-2xl ${styles.categoryPost} transition duration-100 ${classes.hoverShadow} dark:from-post-bg-t-dark dark:to-post-bg-b-dark`}
+                className={`text-center bg-gradient-to-tr from-post-bg-t to-post-bg-b rounded-2xl ${styles.categoryPost} transition duration-100 ${classes.hoverShadow} dark:from-post-bg-t-dark dark:to-post-bg-b-dark`}
               >
                 <Link href={`/works/${works.slug}`} prefetch={false}>
                   <a className="block pb-3">
@@ -46,18 +46,20 @@ export const WorksItems = (props) => {
                       className="rounded-t-2xl"
                     />
                     <p
-                      className={`font-medium mt-1 pt-2 text-sky-600 ${styles.category} dark:text-slate-200 tracking-wide`}
+                      className={`font-medium mt-2 text-sky-600 ${styles.category} dark:text-slate-200 tracking-wide`}
                     >
                       {works.FrontMatter.category}
                     </p>
                     <div className="text-center px-3">
                       <h2
-                        className={`font-bold mt-2 mb-4 inline-block text-left ${styles.postTitle} dark:text-slate-100`}
+                        className={`font-bold mt-1 mb-2 inline-block text-left ${styles.postTitle} dark:text-slate-100`}
                       >
                         {works.FrontMatter.title}
                       </h2>
                     </div>
-                    <p className="text-sm text-slate-600 font-medium dark:text-slate-200">{works.FrontMatter.tech}</p>
+                    <p className="text-sm text-slate-600 font-medium dark:text-slate-200">
+                      {works.FrontMatter.tech}
+                    </p>
                   </a>
                 </Link>
               </article>

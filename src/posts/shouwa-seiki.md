@@ -1,5 +1,6 @@
 ---
 title: "金属製品加工業様 HP"
+date: "2022/09/30"
 id: "works-06"
 category: "Corporate Site"
 tech: "#WordPress"
