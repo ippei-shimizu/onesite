@@ -82,17 +82,29 @@ export const Header = () => {
             <Image
               src="/profile.png"
               alt="IppeiShimizu"
-              width={52}
-              height={52}
+              width={68}
+              height={68}
             />
           </div>
           <div className="ml-4">
-            <p className="text-lg font-bold md:text-base dark:text-slate-100">
+            <p className="text-lg font-bold leading-6 md:text-base dark:text-slate-100">
               Ippei
             </p>
             <p className="text-sm font-medium text-zinc-500 md:text-xs dark:text-slate-300">
               Yamanashi / Web Coder
             </p>
+            <div className="flex mt-1">
+              <Link href="/profile">
+                <a>
+                  <p className="leading-4 mr-4">Profile</p>
+                </a>
+              </Link>
+              <Link href="/works">
+                <a>
+                  <p className="leading-4">Works</p>
+                </a>
+              </Link>
+            </div>
           </div>
         </div>
         <nav className="mt-16 md:mt-14">
