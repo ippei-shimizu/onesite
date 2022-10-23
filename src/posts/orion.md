@@ -1,5 +1,6 @@
 ---
 title: "活版印刷ショップ HP"
+date: "2022/03/01"
 id: "works-03"
 category: "Branding Site"
 tech: "#WordPress"

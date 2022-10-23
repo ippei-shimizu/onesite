@@ -1,5 +1,6 @@
 ---
 title: "ワイナリー様 EC"
+date: "2022/09/23"
 id: "works-05"
 category: "EC"
 tech: "#WordPress　#Welcart"
@@ -8,4 +9,5 @@ alt: "ワイナリー様のファーストビュー"
 url: "https://toumuwinery.com/"
 ---
 
-##ワイナリー様 EC
+
+
