@@ -19,14 +19,14 @@ export const WorksPostDetail = (props) => {
             alt={FrontMatter.alt}
             width={1200}
             height={630}
-            className="rounded-3xl"
+            className="rounded-3xl !border-2 !border-slate-200 !border-solid"
           />
           <div className="flex items-center justify-end mt-2">
             <a
               href={FrontMatter.url}
               rel="noreferrer"
               target="_blank"
-              className="text-sm mr-2"
+              className="text-sm mr-2 dark:text-white"
             >
               {FrontMatter.url}
             </a>
@@ -47,11 +47,11 @@ export const WorksPostDetail = (props) => {
             )}
           </div>
           <div className="text-center mt-6">
-            <p className="text-base text-sky-600">{FrontMatter.category}</p>
-            <h2 className="inline-block font-bold text-xl tracking-wide my-2">
+            <p className="text-base text-sky-600 dark:text-sky-300">{FrontMatter.category}</p>
+            <h2 className="inline-block font-bold text-xl tracking-wider my-2 dark:text-slate-100">
               {FrontMatter.title}
             </h2>
-            <p className="text-sm text-slate-500">{FrontMatter.tech}</p>
+            <p className="text-sm text-slate-500 dark:text-slate-100">{FrontMatter.tech}</p>
           </div>
           <ol className="flex justify-center text-sky-500 mt-8">
             <li>
