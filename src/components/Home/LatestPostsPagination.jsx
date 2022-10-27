@@ -1,12 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Pagination } from "src/components/Pagination/Pagination";
 import styles from "src/components/Category/Category.module.css";
 import classes from "src/styles/Home.module.css";
+import { Pagination } from "../Pagination/Pagination";
 import { SubCategoryItem } from "../SubCategory/SubCategoryItem";
 import TopHead from "./TopHead";
 
-export const LatestPostsPagination = ({ blogs, totalCount, subCategory }) => {
+export const LatestPostsPagination = ({
+  id,
+  blogs,
+  totalCount,
+  subCategory,
+}) => {
+
   return (
     <>
       <TopHead />
@@ -62,7 +68,7 @@ export const LatestPostsPagination = ({ blogs, totalCount, subCategory }) => {
           </div>
         </div>
       </section>
-      <Pagination totalCount={totalCount} />
+      <Pagination totalCount={totalCount} id={id} />
       <SubCategoryItem props={subCategory} />
     </>
   );

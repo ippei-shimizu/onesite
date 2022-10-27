@@ -3,18 +3,21 @@ import { LatestPostsPagination } from "src/components/Home/LatestPostsPagination
 
 const PER_PAGE = 5;
 
-export default function LatestPageId({ blogs, totalCount, subCategory }) {
+export default function LatestPageId({ id, blogs, totalCount, subCategory }) {
   return (
     <>
-      <LatestPostsPagination blogs={blogs} totalCount={totalCount} subCategory={subCategory} />
+      <LatestPostsPagination
+        id={id}
+        blogs={blogs}
+        totalCount={totalCount}
+        subCategory={subCategory}
+      />
     </>
   );
 }
 
 export const getStaticPaths = async () => {
   const repos = await client.get({ endpoint: "blogs" });
-
-  const pageNumbers = [];
 
   const range = (start, end) =>
     [...Array(end - start + 1)].map((_, i) => start + i);
@@ -38,6 +41,7 @@ export const getStaticProps = async (context) => {
 
   return {
     props: {
+      id: id,
       blogs: data.contents,
       totalCount: data.totalCount,
       subCategory: subCategoryData.contents,
