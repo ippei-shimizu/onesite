@@ -2,7 +2,7 @@ import { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
 
 export const middleware = (req) => {
-  if (req.nextUrl.pathname.startsWith("/works")) {
+  if (req.nextUrl.pathname.startsWith("/works/:path*")) {
     const authorizationHeader = req.headers.get("authorization");
 
     if (authorizationHeader) {
