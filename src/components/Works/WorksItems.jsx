@@ -36,7 +36,7 @@ export const WorksItems = (props) => {
                 key={works.FrontMatter.id}
                 className={`text-center bg-gradient-to-tr from-post-bg-t to-post-bg-b rounded-2xl ${styles.categoryPost} transition duration-100 ${classes.hoverShadow} dark:from-post-bg-t-dark dark:to-post-bg-b-dark`}
               >
-                <Link href={`/works/${works.slug}`} prefetch={false}>
+                <Link href={`/works/${works.slug}`}>
                   <a className="block pb-3">
                     <Image
                       src={works.FrontMatter.coverImg}

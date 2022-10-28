@@ -1,25 +1,27 @@
+import { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
 
-export const config = {
-  matcher: ["/works"],
-};
+export const middleware = (req) => {
+  if (req.nextUrl.pathname.startsWith("/works/:path*")) {
+    const authorizationHeader = req.headers.get("authorization");
 
-export function middleware(req) {
-  const basicAuth = req.headers.get("authorization");
-  const url = req.nextUrl;
+    if (authorizationHeader) {
+      const basicAuth = authorizationHeader.split(" ")[1];
+      const [user, password] = atob(basicAuth).split(":");
 
-  if (basicAuth) {
-    const authValue = basicAuth.split(" ")[1];
-    const [user, pwd] = authValue.split(":");
-
-    if (
-      user === process.env.BASIC_AUTH_USER &&
-      pwd === process.env.BASIC_AUTH_PASSWORD
-    ) {
-      return NextResponse.next();
+      if (
+        user === process.env.BASIC_AUTH_USER &&
+        password === process.env.BASIC_AUTH_PASSWORD
+      ) {
+        return NextResponse.next();
+      }
     }
-  }
-  url.pathname = "/api/auth";
 
-  return NextResponse.rewrite(url);
-}
+    const url = req.nextUrl;
+    url.pathname = "/api/auth";
+
+    return NextResponse.rewrite(url);
+  }
+
+  return NextResponse.next();
+};
