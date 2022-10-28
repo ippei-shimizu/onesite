@@ -16,9 +16,8 @@ export default function WorksPosts(posts) {
   );
 }
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const files = fs.readdirSync(path.join("src/posts"));
-
   const posts = files.map((filename) => {
     const slug = filename.replace(".md", "");
     const markdownWithMeta = fs.readFileSync(
