@@ -103,14 +103,18 @@ export const Header = () => {
                   </p>
                 </a>
               </Link>
-              <button
+              {/* <button
                 className="cursor-pointer"
                 onClick={() => router.push("/works")}
-              >
-                <p className="leading-4 font-bold text-sky-700 dark:text-sky-300">
-                  Works
-                </p>
-              </button>
+              > */}
+              <Link href="works">
+                <a>
+                  <p className="leading-4 font-bold text-sky-700 dark:text-sky-300">
+                    Works
+                  </p>
+                </a>
+              </Link>
+              {/* </button> */}
             </div>
           </div>
         </div>
