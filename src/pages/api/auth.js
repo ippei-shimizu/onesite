@@ -1,4 +1,3 @@
-import { NextApiRequest, NextApiResponse } from "next";
 
 export default function handler(_, res) {
   res.setHeader("WWW-authenticate", 'Basic realm="Secure Area"');
