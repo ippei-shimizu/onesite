@@ -17,28 +17,22 @@ export default function WorksPost(props) {
   );
 }
 
-// export const getStaticPaths = async () => {
-//   const files = fs.readdirSync(path.join("src/posts"));
-//   const paths = files.map((filename) => ({
-//     params: {
-//       slug: filename.replace(".md", ""),
-//     },
-//   }));
-
-//   return {
-//     paths,
-//     fallback: false,
-//   };
-// };
-
-export const getServerSideProps = async (ctx) => {
-  const slug = ctx.query.slug;
+export const getStaticPaths = async () => {
   const files = fs.readdirSync(path.join("src/posts"));
   const paths = files.map((filename) => ({
     params: {
       slug: filename.replace(".md", ""),
     },
   }));
+
+  return {
+    paths,
+    fallback: false,
+  };
+};
+
+
+export const getStaticProps = async ({ params: { slug } }) => {
   const markdownWithMeta = fs.readFileSync(
     path.join("src/posts", slug + ".md"),
     "utf-8"
@@ -54,7 +48,14 @@ export const getServerSideProps = async (ctx) => {
   };
 };
 
-// export const getStaticProps = async ({ params: { slug } }) => {
+// export const getServerSideProps = async (ctx) => {
+//   const slug = ctx.query.slug;
+//   const files = fs.readdirSync(path.join("src/posts"));
+//   const paths = files.map((filename) => ({
+//     params: {
+//       slug: filename.replace(".md", ""),
+//     },
+//   }));
 //   const markdownWithMeta = fs.readFileSync(
 //     path.join("src/posts", slug + ".md"),
 //     "utf-8"
@@ -69,3 +70,5 @@ export const getServerSideProps = async (ctx) => {
 //     },
 //   };
 // };
+
+
