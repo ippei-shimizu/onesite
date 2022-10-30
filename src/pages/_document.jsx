@@ -4,7 +4,9 @@ import Script from "next/script";
 const Document = () => {
   return (
     <Html lang="ja">
-      <Head />
+      <Head>
+        <link rel="manifest" href="/manifest.json" />
+      </Head>
       <body>
         <Main />
         <NextScript />
