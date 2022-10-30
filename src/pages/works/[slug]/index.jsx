@@ -11,6 +11,7 @@ export default function WorksPost(props) {
     <>
       <Head>
         <title>{FrontMatter.title} - 制作実績</title>
+        <meta name="robots" content="noindex" />
       </Head>
       <WorksPostDetail props={props} />
     </>
@@ -30,7 +31,6 @@ export const getStaticPaths = async () => {
     fallback: false,
   };
 };
-
 
 export const getStaticProps = async ({ params: { slug } }) => {
   const markdownWithMeta = fs.readFileSync(
@@ -70,5 +70,3 @@ export const getStaticProps = async ({ params: { slug } }) => {
 //     },
 //   };
 // };
-
-
