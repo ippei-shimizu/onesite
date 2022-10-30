@@ -74,7 +74,7 @@ export const Header = () => {
           </Link>
           <div className="flex space-x-6 items-center">
             <div className="flex space-x-3 items-center">
-              <Search />
+              
               <DarkModeSwitch />
             </div>
           </div>
@@ -98,7 +98,7 @@ export const Header = () => {
             <div className="flex mt-1">
               <Link href="/profile">
                 <a>
-                  <p className="leading-4 mr-4 font-bold text-sky-700 dark:text-sky-300">
+                  <p className="leading-4 mr-4 font-bold text-sky-700 dark:text-sky-300 hover:opacity-70 hover:duration-150">
                     Profile
                   </p>
                 </a>
@@ -107,7 +107,7 @@ export const Header = () => {
                 className="cursor-pointer"
                 onClick={() => router.push("/works")}
               >
-                <p className="leading-4 font-bold text-sky-700 dark:text-sky-300">
+                <p className="leading-4 font-bold text-sky-700 dark:text-sky-300 hover:opacity-70 hover:duration-150">
                   Works
                 </p>
               </button>

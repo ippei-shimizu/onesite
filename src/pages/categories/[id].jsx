@@ -22,6 +22,7 @@ export const getStaticProps = async (context) => {
   const API_CATEGORY = `${API_URL_M_CMS}/blogs`;
   const subCategoryData = await client.get({ endpoint: "subcategory" });
   const CategoryData = await client.get({ endpoint: "categories" });
+  console.log(data.category);
 
   return {
     props: {
@@ -38,6 +39,7 @@ export const getStaticProps = async (context) => {
 
 export const CategoryList = (props) => {
   const { fallback } = props;
+  console.log(props);
   return (
     <>
       <SWRConfig value={{ fallback }}>
