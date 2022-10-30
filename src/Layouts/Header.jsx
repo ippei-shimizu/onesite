@@ -34,10 +34,10 @@ const NAV_ITEMS = [
       "bg-gradient-to-tl from-nav03-blue-t via-nav03-blue-v to-nav03-blue-b dark:from-nav03-blue-t-dark dark:via-nav03-blue-v-dark dark:to-nav03-blue-b-dark",
   },
   {
-    href: "/categories/life-style",
-    label: "Life Style",
+    href: "/categories/career",
+    label: "Career",
     src: "/lifestyle.svg",
-    alt: "Life Style",
+    alt: "Career",
     class:
       "bg-gradient-to-tl from-nav04-blue-t via-nav04-blue-v to-nav04-blue-b dark:from-nav04-blue-t-dark dark:via-nav04-blue-v-dark dark:to-nav04-blue-b-dark",
   },
@@ -93,7 +93,7 @@ export const Header = () => {
               Ippei
             </p>
             <p className="text-sm font-medium text-zinc-500 md:text-xs dark:text-slate-300">
-              Yamanashi / Web Coder
+            Web Coder / Yamanashi
             </p>
             <div className="flex mt-1">
               <Link href="/profile">
@@ -115,7 +115,7 @@ export const Header = () => {
           </div>
         </div>
         <nav className="mt-16 md:mt-14">
-          <ul className="grid grid-cols-4 gap-6 md:grid-cols-2 md:gap-2">
+          <ul className="grid grid-cols-4 gap-3 md:grid-cols-2 md:gap-2">
             {NAV_ITEMS.map((item) => {
               return (
                 <li key={item.href} className={`${item.class} rounded-3xl dark:hover:opacity-90 dark:hover:duration-200`}>
@@ -126,8 +126,8 @@ export const Header = () => {
                       <Image
                         src={item.src}
                         alt={item.alt}
-                        width={72}
-                        height={72}
+                        width={80}
+                        height={80}
                       />
                       <h2 className="text-lg tracking-wide font-bold mt-2 md:text-base dark:text-slate-200">
                         {item.label}

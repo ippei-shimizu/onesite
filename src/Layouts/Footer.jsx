@@ -55,15 +55,15 @@ export const Footer = () => {
 
   return (
     <>
-      <footer className="mt-10">
+      <footer className="mt-6">
         <div className="w-11/12 max-w-3xl mx-auto">
-          <div className="mb-36">
-            <ul className="grid grid-cols-4 gap-6 md:grid-cols-2 md:gap-2">
+          <div className="mb-32">
+            <ul className="grid grid-cols-4 gap-3 md:grid-cols-2 md:gap-2">
               {SNS_LIST.map((sns) => {
                 return (
                   <li
                     key={sns.href}
-                    className={`rounded-3xl text-center py-8 ${sns.class} transition duration-100 ${classes.hoverShadow} dark:hover:opacity-90 dark:hover:duration-200`}
+                    className={`rounded-3xl text-center py-10 ${sns.class} transition duration-100 ${classes.hoverShadow} dark:hover:opacity-90 dark:hover:duration-200`}
                   >
                     <Link href={sns.href}>
                       <a className="block">
