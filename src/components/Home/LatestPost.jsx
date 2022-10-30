@@ -39,7 +39,7 @@ export const LatestPost = ({totalCount}) => {
               return (
                 <article
                   key={content.id}
-                  className={`${styles.article} bg-gradient-to-tl from-post-bg-t to-post-bg-b rounded-3xl transition duration-100 ${classes.hoverShadow} dark:from-post-bg-t-dark dark:to-post-bg-b-dark`}
+                  className={`${styles.article} bg-gradient-to-tl from-post-bg-t to-post-bg-b rounded-3xl transition duration-100 ${classes.hoverShadow} dark:from-post-bg-t-dark dark:to-post-bg-b-dark dark:hover:opacity-90 dark:hover:duration-200`}
                 >
                   <div className="text-center">
                     <Link href={`/blogs/${content.id}`} prefetch={false}>
