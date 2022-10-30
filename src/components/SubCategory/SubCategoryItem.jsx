@@ -12,7 +12,7 @@ export const SubCategoryItem = (props) => {
             return (
               <li
                 key={sub.id}
-                className={`rounded-2xl ${styles.bgColor} transition duration-100 ${classes.hoverShadow} dark:bg-gradient-to-tl dark:from-subCategory-bg-t-dark dark:to-subCategory-bg-l-dark`}
+                className={`rounded-2xl ${styles.bgColor} transition duration-100 ${classes.hoverShadow} dark:bg-gradient-to-tl dark:from-subCategory-bg-t-dark dark:to-subCategory-bg-l-dark dark:hover:opacity-90 dark:hover:duration-200`}
               >
                 <Link href={`/subcategory/${sub.id}`} prefetch={false}>
                   <a className="flex items-center py-4 px-5">

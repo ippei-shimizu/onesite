@@ -118,7 +118,7 @@ export const Header = () => {
           <ul className="grid grid-cols-4 gap-6 md:grid-cols-2 md:gap-2">
             {NAV_ITEMS.map((item) => {
               return (
-                <li key={item.href} className={`${item.class} rounded-3xl`}>
+                <li key={item.href} className={`${item.class} rounded-3xl dark:hover:opacity-90 dark:hover:duration-200`}>
                   <Link href={item.href} prefetch={false}>
                     <a
                       className={`text-center block pt-8 pb-7 px-2 md:pt-7 md:pb-6 rounded-3xl transition duration-100 ${styles.hoverShadow}`}

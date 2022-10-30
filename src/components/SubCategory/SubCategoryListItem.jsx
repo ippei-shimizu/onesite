@@ -56,7 +56,7 @@ export const SubCategoryListItem = () => {
             {data.contents.map((content) => (
               <article
                 key={content.id}
-                className={`text-center bg-gradient-to-tr from-post-bg-t to-post-bg-b rounded-3xl ${styles.categoryPost} transition duration-100 ${classes.hoverShadow} dark:from-post-bg-t-dark dark:to-post-bg-b-dark`}
+                className={`text-center bg-gradient-to-tr from-post-bg-t to-post-bg-b rounded-3xl ${styles.categoryPost} transition duration-100 ${classes.hoverShadow} dark:from-post-bg-t-dark dark:to-post-bg-b-dark dark:hover:opacity-90 dark:hover:duration-200`}
               >
                 <Link href={`/blogs/${content.id}`} prefetch={false}>
                   <a className="block pt-8 pb-7 px-4">
