@@ -7,11 +7,11 @@ export const Pagination = ({ totalCount }) => {
     [...Array(end - start + 1)].map((_, i) => start + i);
 
   return (
-    <ul className="w-11/12 max-w-3xl mx-auto flex justify-center space-x-5 mt-6">
+    <ul className="w-11/12 max-w-3xl mx-auto flex justify-center space-x-4 mt-6">
       {range(1, Math.ceil(totalCount / PER_PAGE)).map((number, index) => (
         <li key={index} className="text-center">
           <Link href={`/latest/page/${number}`}>
-            <a className="text-sky-900 block w-10 h-10 bg-sky-200 rounded-md leading-10">{number}</a>
+            <a className="text-sm text-sky-900 block w-9 h-9 bg-sky-200 rounded-md leading-9 hover:opacity-70 transition-opacity duration-100 dark:bg-sky-700 dark:text-sky-100">{number}</a>
           </Link>
         </li>
       ))}
