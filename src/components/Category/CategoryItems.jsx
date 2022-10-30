@@ -49,7 +49,7 @@ export const CategoryItems = () => {
           content="https://onesite-rouge.vercel.app/onesite-ogp.jpg"
         />
       </Head>
-      <div className="w-11/12 max-w-3xl mx-auto mt-8">
+      <div className="w-11/12 max-w-3xl mx-auto mt-6">
         <section>
           <h1
             className={`font-bold tracking-wide text-center ${styles.title} dark:text-slate-100`}
@@ -71,7 +71,7 @@ export const CategoryItems = () => {
               <li>{data.contents[0].category.name}</li>
             </ol>
           </nav>
-          <div className="grid grid-cols-2 gap-4 mt-4 md:grid-cols-1 md:gap-2">
+          <div className="grid grid-cols-2 gap-3 mt-4 md:grid-cols-1 md:gap-2">
             {data.contents.map((blog) => (
               <article
                 key={blog.id}

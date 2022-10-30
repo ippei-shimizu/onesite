@@ -8,7 +8,7 @@ export const WorksItems = (props) => {
 
   return (
     <>
-      <div className="w-11/12 max-w-3xl mx-auto mt-8">
+      <div className="w-11/12 max-w-3xl mx-auto mt-6">
         <section>
           <h1
             className={`font-bold tracking-wide text-center ${styles.title} dark:text-slate-100`}
@@ -30,7 +30,7 @@ export const WorksItems = (props) => {
               <li>Works</li>
             </ol>
           </nav>
-          <div className="grid grid-cols-2 gap-6 mt-4 md:grid-cols-1 md:gap-2">
+          <div className="grid grid-cols-2 gap-3 mt-4 md:grid-cols-1 md:gap-2">
             {WorksPostsList.map((works) => (
               <article
                 key={works.FrontMatter.id}

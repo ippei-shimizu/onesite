@@ -115,7 +115,7 @@ export const Header = () => {
           </div>
         </div>
         <nav className="mt-16 md:mt-14">
-          <ul className="grid grid-cols-4 gap-6 md:grid-cols-2 md:gap-2">
+          <ul className="grid grid-cols-4 gap-3 md:grid-cols-2 md:gap-2">
             {NAV_ITEMS.map((item) => {
               return (
                 <li key={item.href} className={`${item.class} rounded-3xl dark:hover:opacity-90 dark:hover:duration-200`}>

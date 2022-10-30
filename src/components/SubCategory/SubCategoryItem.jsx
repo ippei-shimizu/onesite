@@ -6,8 +6,8 @@ import classes from "src/styles/Home.module.css";
 export const SubCategoryItem = (props) => {
   return (
     <>
-      <section className="w-11/12 max-w-3xl mx-auto mt-10">
-        <ul className="grid grid-cols-3 gap-4 md:grid-cols-2 md:gap-2">
+      <section className="w-11/12 max-w-3xl mx-auto mt-6">
+        <ul className="grid grid-cols-3 gap-2 md:grid-cols-2 md:gap-2">
           {props.props.map((sub) => {
             return (
               <li

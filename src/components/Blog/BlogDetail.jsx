@@ -79,10 +79,10 @@ export const BlogDetail = () => {
       </Head>
       <main className={`w-11/12 mx-auto ${styles.main}`}>
         <div>
-          <div className="mt-10 text-right pr-6 sticky top-28"></div>
+          <div className="mt-6 text-right pr-6 sticky top-28"></div>
         </div>
         <div>
-          <div className="w-11/12 max-w-3xl min-w-48 mx-auto mt-10 bg-white rounded-3xl py-8 px-8 border-2 border-slate-200 xl:min-w-0 xl:max-w-max xl:w-auto lg:min-w-0 lg:w-auto md:p-4 dark:bg-slate-800 dark:border-slate-300">
+          <div className="w-11/12 max-w-3xl min-w-48 mx-auto mt-6 bg-white rounded-3xl py-8 px-8 border-2 border-slate-200 xl:min-w-0 xl:max-w-max xl:w-auto lg:min-w-0 lg:w-auto md:p-4 dark:bg-slate-800 dark:border-slate-300">
             <div className="text-center">
               <Image src={data.icon.url} alt="icon" width={90} height={90} />
             </div>
@@ -113,7 +113,7 @@ export const BlogDetail = () => {
               </ol>
             </nav>
           </div>
-          <div className="w-11/12 max-w-3xl min-w-48 mx-auto bg-white mt-6 py-10 px-10 rounded-3xl border-2 border-slate-200 xl:min-w-0 xl:max-w-max xl:w-auto lg:min-w-0 lg:w-auto md:mt-4 md:p-4 dark:bg-slate-800 dark:border-slate-300">
+          <div className="w-11/12 max-w-3xl min-w-48 mx-auto bg-white mt-3 py-10 px-10 rounded-3xl border-2 border-slate-200 xl:min-w-0 xl:max-w-max xl:w-auto lg:min-w-0 lg:w-auto md:mt-4 md:p-4 dark:bg-slate-800 dark:border-slate-300">
             <Image
               src={data.eyecatch.url}
               alt={data.alt}
@@ -213,9 +213,9 @@ export const BlogDetail = () => {
           </div>
         </div>
         {/* サイドバー */}
-        <div className="mt-10 ml-6 relative lg:hidden">
+        <div className="mt-6 ml-3 relative lg:hidden">
           <div className="sticky top-6">
-            <div className="flex items-center bg-white rounded-3xl py-5 px-6 border-2 border-slate-200 mb-6 dark:bg-slate-800 dark:border-slate-300">
+            <div className="flex items-center bg-white rounded-3xl py-5 px-6 border-2 border-slate-200 mb-3 dark:bg-slate-800 dark:border-slate-300">
               <Image
                 src="/profile.png"
                 alt="IppeiShimizu"
@@ -247,7 +247,7 @@ export const BlogDetail = () => {
               </div>
             </div>
             <TableOfContents toc={toc} />
-            <div className=" mt-6 ml-3 space-x-3">
+            <div className=" mt-3 ml-3 space-x-3">
               <TwitterShareButton
                 url={`https://www.onesite-web.com/blogs/${data.id}`}
                 title={data.title}
