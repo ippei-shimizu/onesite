@@ -2,13 +2,13 @@ import { client } from "libs/client";
 import { LatestPost } from "src/components/Home/LatestPost";
 import TopHead from "src/components/Home/TopHead";
 import { SubCategoryItem } from "src/components/SubCategory/SubCategoryItem";
-import { API_URL_M_CMS } from "src/utils/const";
+import { API_URL_M_CMS, LatestPostLimit } from "src/utils/const";
 import { SWRConfig } from "swr";
 
 export const getStaticProps = async () => {
   const blogData = await client.get({
     endpoint: "blogs",
-    queries: { limit: 20, offset: 0, limit: 5 },
+    queries: { limit: 20, offset: 0, limit: LatestPostLimit },
   });
   const subCategoryData = await client.get({ endpoint: "subcategory" });
   const CategoryData = await client.get({ endpoint: "categories" });

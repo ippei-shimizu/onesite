@@ -1,7 +1,8 @@
 import Link from "next/link";
+import { LatestPostLimit } from "src/utils/const";
 
 export const Pagination = ({ totalCount }) => {
-  const PER_PAGE = 5;
+  const PER_PAGE = LatestPostLimit;
 
   const range = (start, end) =>
     [...Array(end - start + 1)].map((_, i) => start + i);
