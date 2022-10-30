@@ -6,6 +6,8 @@ const Document = () => {
     <Html lang="ja">
       <Head>
         <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#ecfeff" />
+        <link rel="apple-touch-icon" href="/onesite-pwa.png"></link>
       </Head>
       <body>
         <Main />
