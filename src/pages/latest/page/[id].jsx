@@ -1,7 +1,8 @@
 import { client } from "libs/client";
 import { LatestPostsPagination } from "src/components/Home/LatestPostsPagination";
+import { LatestPostLimit } from "src/utils/const";
 
-const PER_PAGE = 5;
+const PER_PAGE = LatestPostLimit;
 
 export default function LatestPageId({ id, blogs, totalCount, subCategory }) {
   return (
@@ -34,7 +35,7 @@ export const getStaticProps = async (context) => {
 
   const data = await client.get({
     endpoint: "blogs",
-    queries: { offset: (id - 1) * 5, limit: 5 },
+    queries: { offset: (id - 1) * 9, limit: 9 },
   });
 
   const subCategoryData = await client.get({ endpoint: "subcategory" });

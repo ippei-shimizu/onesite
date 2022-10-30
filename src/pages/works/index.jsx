@@ -9,7 +9,8 @@ export default function WorksPosts(posts) {
   return (
     <>
       <Head>
-        <title>Onesite - Works 制作実績</title>
+        <title>Works 制作実績 - Onesite</title>
+        <meta name="robots" content="noindex" />
       </Head>
       <WorksItems posts={posts} />
     </>
