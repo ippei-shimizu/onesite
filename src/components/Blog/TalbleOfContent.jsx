@@ -16,12 +16,12 @@ export const TableOfContents = ({ toc }) => {
       <p className="TableOfContentsHead text-xl font-bold tracking-wide border-b-2 border-slate-700 dark:text-slate-200 dark:border-slate-400">
         Contents
       </p>
-      <ul className="mt-4">
+      <ul className="mt-5">
         {toc.map((data) => (
           <li key={data.id}>
             <ScrollLink to={data.id} smooth offset={-60} href={data.id}>
               <p
-                className={`cursor-pointer text-sm font-bold text-slate-500 mb-2 duration-100 ${classes.hoverOpacity} dark:text-stone-300`}
+                className={`cursor-pointer text-sm font-bold text-slate-500 mb-3 duration-100 ${classes.hoverOpacity} dark:text-stone-300`}
               >
                 {data.text}
               </p>
