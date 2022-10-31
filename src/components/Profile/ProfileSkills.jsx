@@ -31,7 +31,7 @@ export const ProfileSkills = () => {
         <p className="text-xs tracking-wides text-slate-900 dark:text-slate-200">
           技術
         </p>
-        <div className="mt-7 grid grid-cols-2 gap-8">
+        <div className="mt-7 grid grid-cols-2 gap-8 md:grid-cols-1">
           {SKILLS_ITEMS.map((skills) => {
             return (
               <div

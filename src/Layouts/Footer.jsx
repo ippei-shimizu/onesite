@@ -63,7 +63,7 @@ export const Footer = () => {
                 return (
                   <li
                     key={sns.href}
-                    className={`rounded-3xl text-center py-10 ${sns.class} transition duration-100 ${classes.hoverShadow} dark:hover:opacity-90 dark:hover:duration-200`}
+                    className={`rounded-3xl text-center py-10 ${sns.class} transition duration-100 ${classes.hoverShadow} dark:hover:opacity-90 dark:hover:duration-200 md:py-7`}
                   >
                     <Link href={sns.href}>
                       <a className="block">

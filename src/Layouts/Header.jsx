@@ -74,7 +74,6 @@ export const Header = () => {
           </Link>
           <div className="flex space-x-6 items-center">
             <div className="flex space-x-3 items-center">
-              
               <DarkModeSwitch />
             </div>
           </div>
@@ -93,7 +92,7 @@ export const Header = () => {
               Ippei
             </p>
             <p className="text-sm font-medium text-zinc-500 md:text-xs dark:text-slate-300">
-            Web Coder / Yamanashi
+              Web Coder / Yamanashi
             </p>
             <div className="flex mt-1">
               <Link href="/profile">
@@ -118,16 +117,20 @@ export const Header = () => {
           <ul className="grid grid-cols-4 gap-3 md:grid-cols-2 md:gap-2">
             {NAV_ITEMS.map((item) => {
               return (
-                <li key={item.href} className={`${item.class} rounded-3xl dark:hover:opacity-90 dark:hover:duration-200`}>
+                <li
+                  key={item.href}
+                  className={`${item.class} rounded-3xl dark:hover:opacity-90 dark:hover:duration-200`}
+                >
                   <Link href={item.href} prefetch={false}>
                     <a
-                      className={`text-center block pt-8 pb-7 px-2 md:pt-7 md:pb-6 rounded-3xl transition duration-100 ${styles.hoverShadow}`}
+                      className={`text-center block pt-8 pb-7 px-2 md:pt-5 md:pb-3 rounded-3xl transition duration-100 ${styles.hoverShadow}`}
                     >
                       <Image
                         src={item.src}
                         alt={item.alt}
                         width={80}
                         height={80}
+                        
                       />
                       <h2 className="text-lg tracking-wide font-bold mt-2 md:text-base dark:text-slate-200">
                         {item.label}
