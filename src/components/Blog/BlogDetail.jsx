@@ -19,6 +19,7 @@ import {
 } from "react-share";
 import { useContext } from "react";
 import { DarkModeContext } from "src/hooks/DarkModeContext";
+import "highlight.js/styles/base16/harmonic16-dark.css";
 
 const PROFILE_SNS = [
   {
@@ -51,7 +52,7 @@ const PROFILE_SNS = [
   },
 ];
 
-export const BlogDetail = () => {
+export const BlogDetail = (props) => {
   const router = useRouter();
   const { data, error, isLoading } = useFetch(
     router.query.id ? `${API_URL_M_CMS}/blogs/${router.query.id}` : null
@@ -201,13 +202,13 @@ export const BlogDetail = () => {
               prose-strong:!text-sky-700 prose-strong:font-bold prose-strong:border-stone-300 prose-strong:px-1 prose-strong:py-0.5
               dark:prose-strong:!text-sky-200
               prose-a:inline-block prose-a:text-sm prose-a:font-bold prose-a:px-12 prose-a:py-4 prose-a:text-white prose-a:text-center prose-a:bg-sky-600 prose-a:rounded-lg prose-a:my-2
-              prose-pre:bg-slate-800 prose-pre:overflow-x-scroll prose-pre:py-8 prose-pre:px-6 prose-pre:rounded-xl prose-pre:mb-10
+              prose-pre:bg-slate-800 prose-pre:overflow-x-scroll prose-pre:rounded-xl prose-pre:mb-10
               dark:prose-pre:bg-slate-900 dark:prose-pre:border dark:prose-pre:border-slate200
               prose-code:text-white prose-code:text-sm prose-code:leading-7
               dark:prose-span:!text-slate-200;
               ${styles.content}`}
               dangerouslySetInnerHTML={{
-                __html: `${data.content}`,
+                __html: props.props,
               }}
             />
           </div>
