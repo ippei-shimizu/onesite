@@ -19,7 +19,7 @@ export const WorksPostDetail = (props) => {
             alt={FrontMatter.alt}
             width={1200}
             height={630}
-            className="rounded-3xl !border-2 !border-slate-200 !border-solid"
+            className="rounded-2xl !border-2 !border-slate-200 !border-solid"
           />
           <div className="flex items-center justify-end mt-2">
             <a
@@ -57,7 +57,7 @@ export const WorksPostDetail = (props) => {
               {FrontMatter.tech}
             </p>
           </div>
-          <ol className="flex justify-center text-sky-500 mt-8">
+          <ol className="flex justify-center text-sky-500 mt-6 mb-10">
             <li>
               <Link href={`/`} prefetch={false}>
                 <a>
@@ -74,7 +74,10 @@ export const WorksPostDetail = (props) => {
               </Link>
             </li>
           </ol>
-          <div dangerouslySetInnerHTML={{ __html: marked(Content) }}></div>
+          <div
+            className="prose-strong:font-bold prose-strong:text-xl prose-strong:tracking-wider prose-strong:ml-2 prose-strong:leading-6 prose-h2:flex prose-h2:items-end prose-hr:h-0.5 prose-hr:bg-slate-200 prose-hr:mt-1"
+            dangerouslySetInnerHTML={{ __html: marked(Content) }}
+          ></div>
         </div>
       </main>
     </>

@@ -34,7 +34,7 @@ export const WorksItems = (props) => {
             {WorksPostsList.map((works) => (
               <article
                 key={works.FrontMatter.id}
-                className={`text-center bg-gradient-to-tr from-post-bg-t to-post-bg-b rounded-2xl ${styles.categoryPost} transition duration-100 ${classes.hoverShadow} dark:from-post-bg-t-dark dark:to-post-bg-b-dark`}
+                className={`text-center bg-gradient-to-tr from-post-bg-t to-post-bg-b rounded-2xl ${styles.categoryPost} transition duration-100 ${classes.hoverShadow} dark:from-post-bg-t-dark dark:to-post-bg-b-dark dark:hover:opacity-80 dark:hover:duration-150`}
               >
                 <Link href={`/works/${works.slug}`}>
                   <a className="block pb-3">
