@@ -15,7 +15,7 @@ export const ProfileSkills = () => {
     { skill: "Illustrator", years: "1年" },
     { skill: "Photoshop", years: "1年" },
     { skill: "XD", years: "1年" },
-    { skill: "Figma", years: "2ヶ月（自主制作）" },
+    { skill: "Figma", years: "0.5ヶ月（自主制作）" },
   ];
   return (
     <>

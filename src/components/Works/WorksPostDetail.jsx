@@ -46,17 +46,17 @@ export const WorksPostDetail = (props) => {
             </a>
           </div>
           <div className="text-center mt-6">
-            <p className="text-base text-sky-600 dark:text-sky-300">
+            <p className="text-base text-sky-600 dark:text-sky-300 md:text-sm">
               {FrontMatter.category}
             </p>
-            <h2 className="inline-block font-bold text-2xl tracking-wider my-2 dark:text-slate-100">
+            <h2 className="inline-block font-bold text-2xl tracking-wider my-2 dark:text-slate-100 md:text-xl">
               {FrontMatter.title}
             </h2>
-            <p className="text-sm text-slate-500 dark:text-slate-100">
+            <p className="text-sm text-slate-500 dark:text-slate-100 md:text-xs">
               {FrontMatter.tech}
             </p>
           </div>
-          <ol className="flex justify-center text-sky-500 mt-6 mb-10">
+          <ol className="flex justify-center text-sky-500 mt-6 mb-10 md:my-4">
             <li>
               <Link href={`/`} prefetch={false}>
                 <a>
@@ -74,7 +74,7 @@ export const WorksPostDetail = (props) => {
             </li>
           </ol>
           <div
-            className="prose-h2:font-bold prose-h2:text-xl prose-h2:tracking-widest prose-h2:leading-6 prose-h2:flex prose-h2:items-end prose-h3:text-lg prose-h3:font-bold prose-h3:tracking-wider prose-h3:mb-2 prose-h3:mt-8 prose-img:mr-1 prose-hr:h-0.5 prose-hr:bg-slate-200 prose-h2:mt-12 prose-hr:mt-1 prose-hr:mb-7 prose-li:leading-7 prose-li:list-disc prose-li:my-1 prose-li:tracking-wide prose-ul:ml-4 prose-p:tracking-wide prose-p:leading-7 prose-p:mb-6 prose-p:mt-1 prose-h4:text-base prose-h4:font-bold prose-h4:tracking-wide prose-h4:mt-8 prose-h4:mb-2 prose-code:bg-slate-100 prose-code:text-slate-600  prose-h2:dark:text-slate-200 prose-code:p-1 prose-code:text-sm prose-code:rounded-sm prose-li:dark:text-slate-200 prose-p:dark:text-slate-200 prose-h3:dark:text-slate-200"
+            className="prose-h2:font-bold prose-h2:text-xl prose-h2:tracking-widest prose-h2:leading-6 prose-h2:flex prose-h2:items-end prose-h3:text-lg prose-h3:font-bold prose-h3:tracking-wider prose-h3:mb-2 prose-h3:mt-8 prose-img:mr-1 prose-hr:h-0.5 prose-hr:bg-slate-200 prose-h2:mt-12 prose-hr:mt-1 prose-hr:mb-7 prose-li:leading-7 prose-li:list-disc prose-li:my-1 prose-li:tracking-wide prose-ul:ml-4 prose-p:tracking-wide prose-p:leading-7 prose-p:mb-6 prose-p:mt-1 prose-h4:text-base prose-h4:font-bold prose-h4:tracking-wide prose-h4:mt-8 prose-h4:mb-2 prose-code:bg-slate-100 prose-code:text-slate-600  prose-h2:dark:text-slate-200 prose-code:p-1 prose-code:text-sm prose-code:rounded-sm prose-li:dark:text-slate-200 prose-p:dark:text-slate-200 prose-h3:dark:text-slate-200 prose-h4:dark:text-slate-200 prose-code:dark:bg-slate-600 prose-code:dark:text-slate-100 prose-p:md:text-base prose-p:md:leading-8"
             dangerouslySetInnerHTML={{ __html: marked(Content) }}
           ></div>
         </div>
