@@ -1,0 +1,36 @@
+{
+  "redirects": [
+    {
+      "source": "/mousemove-stalking-img/",
+      "destination": "/blogs/mousemove-stalking-img"
+    },
+    {
+      "source": "/locomotive-scroll-parallax/",
+      "destination": "/blogs/locomotive-scroll-parallax"
+    },
+    {
+      "source": "/gsap-scrolltrigger/",
+      "destination": "/blogs/gsap-scrolltrigger"
+    },
+    {
+      "source": "/javascript-parts/",
+      "destination": "/blogs/javascript-parts"
+    },
+    {
+      "source": "/cubic-bezier-hover/",
+      "destination": "/blogs/cubic-bezier-hover"
+    },
+    {
+      "source": "/hamburger-menu-01/",
+      "destination": "/blogs/hamburger-menu-01"
+    },
+    {
+      "source": "/anime-js-svg/",
+      "destination": "/blogs/anime-js-svg"
+    },
+    {
+      "source": "/colorbox-modal/",
+      "destination": "/blogs/colorbox-modal"
+    }
+  ]
+}
