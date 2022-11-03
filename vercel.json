@@ -17,19 +17,19 @@
       "destination": "/blogs/javascript-parts"
     },
     {
-      "source": "/cubic-bezier-hover/",
+      "source": "/cubic-bezier-hover",
       "destination": "/blogs/cubic-bezier-hover"
     },
     {
-      "source": "/hamburger-menu-01/",
+      "source": "/hamburger-menu-01",
       "destination": "/blogs/hamburger-menu-01"
     },
     {
-      "source": "/anime-js-svg/",
+      "source": "/anime-js-svg",
       "destination": "/blogs/anime-js-svg"
     },
     {
-      "source": "/colorbox-modal/",
+      "source": "/colorbox-modal",
       "destination": "/blogs/colorbox-modal"
     }
   ]
