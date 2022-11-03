@@ -7,7 +7,6 @@ import { DarkModeContext } from "src/hooks/DarkModeContext";
 export const WorksPostDetail = (props) => {
   const { colorTheme } = useContext(DarkModeContext);
   const FrontMatter = props.props.FrontMatter;
-  const Slug = props.props.slug;
   const Content = props.props.content;
 
   return (
@@ -50,7 +49,7 @@ export const WorksPostDetail = (props) => {
             <p className="text-base text-sky-600 dark:text-sky-300">
               {FrontMatter.category}
             </p>
-            <h2 className="inline-block font-bold text-xl tracking-wider my-2 dark:text-slate-100">
+            <h2 className="inline-block font-bold text-2xl tracking-wider my-2 dark:text-slate-100">
               {FrontMatter.title}
             </h2>
             <p className="text-sm text-slate-500 dark:text-slate-100">
@@ -75,7 +74,7 @@ export const WorksPostDetail = (props) => {
             </li>
           </ol>
           <div
-            className="prose-strong:font-bold prose-strong:text-xl prose-strong:tracking-wider prose-strong:ml-2 prose-strong:leading-6 prose-h2:flex prose-h2:items-end prose-hr:h-0.5 prose-hr:bg-slate-200 prose-hr:mt-1"
+            className="prose-h2:font-bold prose-h2:text-xl prose-h2:tracking-widest prose-h2:leading-6 prose-h2:flex prose-h2:items-end prose-h3:text-lg prose-h3:font-bold prose-h3:tracking-wider prose-h3:mb-4 prose-img:mr-1 prose-hr:h-0.5 prose-hr:bg-slate-200 prose-h2:mt-12 prose-hr:mt-1 prose-hr:mb-7 prose-li:leading-7 prose-li:list-disc prose-li:my-1 prose-li:tracking-wide prose-ul:ml-4 prose-p:tracking-wide prose-p:leading-7 prose-p:mb-6 prose-p:mt-1 prose-h4:text-base prose-h4:font-bold prose-h4:tracking-wide prose-h4:mt-8 prose-h4:mb-2 prose-code:bg-slate-100 prose-code:text-slate-600  prose-h2:dark:text-slate-200 prose-code:p-1 prose-code:text-sm prose-code:rounded-sm prose-li:dark:text-slate-200 prose-p:dark:text-slate-200 prose-h3:dark:text-slate-200"
             dangerouslySetInnerHTML={{ __html: marked(Content) }}
           ></div>
         </div>

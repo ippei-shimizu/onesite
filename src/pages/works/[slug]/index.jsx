@@ -47,26 +47,3 @@ export const getStaticProps = async ({ params: { slug } }) => {
     },
   };
 };
-
-// export const getServerSideProps = async (ctx) => {
-//   const slug = ctx.query.slug;
-//   const files = fs.readdirSync(path.join("src/posts"));
-//   const paths = files.map((filename) => ({
-//     params: {
-//       slug: filename.replace(".md", ""),
-//     },
-//   }));
-//   const markdownWithMeta = fs.readFileSync(
-//     path.join("src/posts", slug + ".md"),
-//     "utf-8"
-//   );
-//   const { data: FrontMatter, content } = matter(markdownWithMeta);
-
-//   return {
-//     props: {
-//       FrontMatter,
-//       slug,
-//       content,
-//     },
-//   };
-// };
