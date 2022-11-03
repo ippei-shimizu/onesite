@@ -44,10 +44,10 @@ url: "https://shouwa-seiki.ne.jp/"
 - CSS
 - Scss
 - JavaScript
-- jQuery 3.6.1
-- WordPress 6.0.3
-- PHP 7.4.28
-- gulp 4.0.2
+- jQuery
+- WordPress
+- PHP
+- gulp
 
 <h2>
 <img src="/flamingo.svg" alt="フラミンゴのイラスト" width="36px" height="36px" loading="lazy">
@@ -56,8 +56,8 @@ url: "https://shouwa-seiki.ne.jp/"
 
 ---
 
-- 投稿機能が必要だったこと
-- 制作期間を考えて手軽に英語版対応をする必要があったため
+- **投稿機能が必要だったこと**
+- **制作期間を考えて手軽に英語版対応をする必要があったため**
 
 この 2 点から WordPress を選びました。
 
