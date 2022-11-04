@@ -1,5 +1,4 @@
 /** @type {import('next').NextConfig} */
-/** @type {import('next/dist/next-server/server/config-shared').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
@@ -25,7 +24,7 @@ module.exports = withPWA({
 });
 
 const config = {
-  async redirects() {
+  async rewrites() {
     return [
       {
         source: "/mousemove-stalking-img",
@@ -72,5 +71,4 @@ const config = {
 };
 
 module.exports = config;
-
 module.exports = nextConfig;
