@@ -27,22 +27,22 @@ const config = {
   async redirects() {
     return [
       {
-        source: "/mousemove-stalking-img/",
+        source: "/mousemove-stalking-img",
         destination: "/blogs/mousemove-stalking-img",
         permanent: true,
       },
       {
-        source: "/locomotive-scroll-parallax/",
+        source: "/locomotive-scroll-parallax",
         destination: "/blogs/locomotive-scroll-parallax",
         permanent: true,
       },
       {
-        source: "/gsap-scrolltrigger/",
+        source: "/gsap-scrolltrigger",
         destination: "/blogs/gsap-scrolltrigger",
         permanent: true,
       },
       {
-        source: "/javascript-parts/",
+        source: "/javascript-parts",
         destination: "/blogs/javascript-parts",
         permanent: true,
       },
