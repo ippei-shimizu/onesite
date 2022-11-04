@@ -204,7 +204,7 @@ export const BlogDetail = (props) => {
               prose-a:inline-block prose-a:text-sm prose-a:font-bold prose-a:px-12 prose-a:py-4 prose-a:text-white prose-a:text-center prose-a:bg-sky-600 prose-a:rounded-lg prose-a:my-2
               prose-pre:bg-slate-800 prose-pre:overflow-x-scroll prose-pre:rounded-xl prose-pre:mb-10
               dark:prose-pre:bg-slate-900 dark:prose-pre:border dark:prose-pre:border-slate200
-              prose-code:text-white prose-code:text-sm prose-code:leading-7
+              prose-code:text-white prose-code:text-sm prose-code:leading-7 prose-code:rounded-xl
               dark:prose-span:!text-slate-200;
               ${styles.content}`}
               dangerouslySetInnerHTML={{
