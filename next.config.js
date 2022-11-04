@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+/** @type {import('next/dist/next-server/server/config-shared').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
