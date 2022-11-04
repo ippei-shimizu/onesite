@@ -24,7 +24,7 @@ module.exports = withPWA({
 });
 
 const config = {
-  async rewrites() {
+  async redirects() {
     return [
       {
         source: "/mousemove-stalking-img",
@@ -37,8 +37,8 @@ const config = {
         permanent: true,
       },
       {
-        source: "/gsap-scrolltrigger",
-        destination: "/blogs/gsap-scrolltrigger",
+        source: "https://www.onesite-web.com/gsap-scrolltrigger",
+        destination: "https://www.onesite-web.com/blogs/gsap-scrolltrigger",
         permanent: true,
       },
       {
