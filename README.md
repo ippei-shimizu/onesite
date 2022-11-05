@@ -1,2 +1,2 @@
 {: align="center"}
-![my image](/logo.svg)
+![my image](/public/logo.svg)
