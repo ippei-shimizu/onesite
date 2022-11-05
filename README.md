@@ -1,2 +1,3 @@
-{: align="center"}
-![my image](/public/logo.svg)
+<<<<<<< HEAD
+<img width=300 src="/public/logo.svt#gh-dark-mode-only" alt="GitHub-Mark-Light">
+<img width=300 src="/public/logo-white.svg#gh-light-mode-only" alt="GitHub-Mark-Dark">
