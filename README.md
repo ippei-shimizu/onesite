@@ -1,2 +1,2 @@
 {: align="center"}
-<img width="300" alt="onesite" src="/logo.svg">
+<img width="300" alt="onesite" src="/public/logo.svg">
