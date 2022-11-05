@@ -1,2 +1,2 @@
-{: align="center"}
-<img width="300" alt="onesite" src="/logo.svg">
+<img width=300 src="/public/logo.svt#gh-dark-mode-only" alt="GitHub-Mark-Light">
+<img width=300 src="/public/logo-white.svg#gh-light-mode-only" alt="GitHub-Mark-Dark">
