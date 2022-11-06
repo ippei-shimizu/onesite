@@ -17,8 +17,8 @@ const MyApp = ({ Component, pageProps }) => {
 
   return (
     <>
-      <GoogleAnalytics />
       <SWRConfig value={{ fetcher }}>
+        <GoogleAnalytics />
         <DarkModeProvider>
           <AppLayout>
             <Component {...pageProps} />
