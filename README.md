@@ -1,6 +1,6 @@
 <br>
-<p align="center"><img width=340 src="/public/logo.svg#gh-light-mode-only" alt="GitHub-Mark-Light"></p>
-<p align="center"><img width=340 src="/public/logo-white.svg#gh-dark-mode-only" alt="GitHub-Mark-Dark"></p>
+<p align="center"><img width=320 src="/public/logo.svg#gh-light-mode-only" alt="GitHub-Mark-Light"></p>
+<p align="center"><img width=320 src="/public/logo-white.svg#gh-dark-mode-only" alt="GitHub-Mark-Dark"></p>
 <p align="center"><strong>Next.js×microCMSを使用したJamstack個人技術ブログ👨‍💻</strong></p>
 <p align="center">https://www.onesite-web.com/</p>
 <br>
@@ -28,3 +28,15 @@
 - XMLサイトマップ
 - Google Analytics
 - Basic認証
+
+## 技術
+- Next
+- React
+- Tailwind CSS
+- Vercel
+- microCMS
+- ESLint
+- Prettier
+- PostCSS
+- PWA
+- yarn
