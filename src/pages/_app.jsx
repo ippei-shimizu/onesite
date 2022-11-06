@@ -3,7 +3,6 @@ import { AppLayout } from "../Layouts/AppLayout";
 import { SWRConfig } from "swr";
 import "../styles/globals.css";
 import DarkModeProvider from "src/hooks/DarkModeContext";
-import GoogleAnalytics from "src/components/Home/GoogleAnalytics";
 import usePageView from "src/hooks/usePageView";
 
 const fetcher = async (...args) => {
@@ -18,7 +17,6 @@ const MyApp = ({ Component, pageProps }) => {
   return (
     <>
       <SWRConfig value={{ fetcher }}>
-        <GoogleAnalytics />
         <DarkModeProvider>
           <AppLayout>
             <Component {...pageProps} />
