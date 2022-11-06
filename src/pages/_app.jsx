@@ -19,8 +19,8 @@ const MyApp = ({ Component, pageProps }) => {
     <>
       <Head>
         <link rel="icon" href="/favicon.ico" />
+        <GoogleAnalytics />
       </Head>
-      <GoogleAnalytics />
       <SWRConfig value={{ fetcher }}>
         <DarkModeProvider>
           <AppLayout>
