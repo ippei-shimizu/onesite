@@ -5,6 +5,7 @@ const Document = () => {
   return (
     <Html lang="ja">
       <Head>
+        <link rel="icon" href="/favicon.ico" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#ecfeff" />
         <link rel="apple-touch-icon" href="/onesite-pwa.png"></link>
