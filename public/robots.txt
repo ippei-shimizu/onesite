@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.onesite-web.com/
+
+# Sitemaps
+Sitemap: https://www.onesite-web.com/sitemap.xml
