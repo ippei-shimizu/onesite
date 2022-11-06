@@ -8,8 +8,8 @@ const Document = () => {
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#ecfeff" />
-        <link rel="apple-touch-icon" href="/onesite-pwa.png"></link>
+        {/* <meta name="theme-color" content="#ecfeff" /> */}
+        <link rel="apple-touch-icon" href="/onesite-pwa.png" />
       </Head>
       <body>
         <Main />
