@@ -1,4 +1,4 @@
-import { existsGaId, GA_ID } from "libs/gtag";
+import { GA_ID } from "libs/gtag";
 import { Html, Head, Main, NextScript } from "next/document";
 import Script from "next/script";
 
@@ -14,23 +14,19 @@ const Document = () => {
       <body>
         <Main />
         <NextScript />
-        {existsGaId && (
-          <>
-            <Script
-              defer
-              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-              strategy="afterInteractive"
-            />
-            <Script id="ga" defer strategy="afterInteractive">
-              {`
+        <Script
+          defer
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="ga" defer strategy="afterInteractive">
+          {`
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());    
               gtag('config', '${GA_ID}');
           `}
-            </Script>
-          </>
-        )}
+        </Script>
         <Script
           id="abode-font"
           strategy="beforeInteractive"
