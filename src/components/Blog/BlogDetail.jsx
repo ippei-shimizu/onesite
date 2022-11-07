@@ -83,7 +83,7 @@ export const BlogDetail = (props) => {
           <div className="mt-6 text-right pr-6 sticky top-28"></div>
         </div>
         <div>
-          <div className="w-11/12 max-w-3xl min-w-48 mx-auto mt-6 bg-white rounded-3xl py-8 px-8 border-2 border-slate-200 xl:min-w-0 xl:max-w-max xl:w-auto lg:min-w-0 lg:w-auto md:p-4 dark:bg-slate-800 dark:border-slate-300">
+          <div className="w-11/12 max-w-3xl min-w-48 mx-auto mt-6 bg-white rounded-3xl py-8 px-8 border-2 border-slate-200 xl:min-w-0 xl:max-w-none xl:w-full lg:min-w-0 lg:w-auto md:p-4 dark:bg-slate-800 dark:border-slate-300">
             <div className="text-center">
               <Image src={data.icon.url} alt="icon" width={90} height={90} />
             </div>
