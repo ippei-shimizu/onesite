@@ -217,12 +217,16 @@ export const BlogDetail = (props) => {
         <div className="mt-6 ml-3 relative lg:hidden">
           <div className="sticky top-6">
             <div className="flex items-center bg-white rounded-3xl py-5 px-6 border-2 border-slate-200 mb-3 dark:bg-slate-800 dark:border-slate-300">
-              <Image
-                src="/profile.png"
-                alt="IppeiShimizu"
-                width={52}
-                height={52}
-              />
+              <Link href="/profile">
+                <a className="hover:opacity-70 hover:duration-150">
+                  <Image
+                    src="/profile.png"
+                    alt="IppeiShimizu"
+                    width={52}
+                    height={52}
+                  />
+                </a>
+              </Link>
               <div>
                 <p className="font-bold text-lg ml-3 mb-1 dark:text-slate-200">
                   Ippei
