@@ -83,7 +83,7 @@ export const BlogDetail = (props) => {
           <div className="mt-6 text-right pr-6 sticky top-28"></div>
         </div>
         <div>
-          <div className="w-11/12 max-w-3xl min-w-48 mx-auto mt-6 bg-white rounded-3xl py-8 px-8 border-2 border-slate-200 xl:min-w-0 xl:max-w-max xl:w-auto lg:min-w-0 lg:w-auto md:p-4 dark:bg-slate-800 dark:border-slate-300">
+          <div className="w-11/12 max-w-3xl min-w-48 mx-auto mt-6 bg-white rounded-3xl py-8 px-8 border-2 border-slate-200 xl:min-w-0 xl:max-w-none xl:w-full lg:min-w-0 lg:w-auto md:p-4 dark:bg-slate-800 dark:border-slate-300">
             <div className="text-center">
               <Image src={data.icon.url} alt="icon" width={90} height={90} />
             </div>
@@ -217,12 +217,16 @@ export const BlogDetail = (props) => {
         <div className="mt-6 ml-3 relative lg:hidden">
           <div className="sticky top-6">
             <div className="flex items-center bg-white rounded-3xl py-5 px-6 border-2 border-slate-200 mb-3 dark:bg-slate-800 dark:border-slate-300">
-              <Image
-                src="/profile.png"
-                alt="IppeiShimizu"
-                width={52}
-                height={52}
-              />
+              <Link href="/profile">
+                <a className="hover:opacity-70 hover:duration-150">
+                  <Image
+                    src="/profile.png"
+                    alt="IppeiShimizu"
+                    width={52}
+                    height={52}
+                  />
+                </a>
+              </Link>
               <div>
                 <p className="font-bold text-lg ml-3 mb-1 dark:text-slate-200">
                   Ippei
