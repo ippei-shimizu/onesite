@@ -6,7 +6,7 @@ category: "Corporate Site"
 tech: "#WordPress"
 coverImg: "/shouwa-seiki.jpg"
 alt: "金属製品加工業様き様のファーストビュー"
-url: "https://shouwa-seiki.ne.jp/"
+url: "https://shouwaseiki.jp/"
 ---
 
 <h2>
