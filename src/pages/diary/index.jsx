@@ -20,7 +20,6 @@ export default function DiaryLists(props) {
   );
 }
 
-//ISRの追加
 export const getStaticProps = async () => {
   const database = await getDataBase(databaseId);
   return {
