@@ -13,6 +13,7 @@ export const DiaryPostsLists = (props) => {
           >
             Diary
           </h1>
+          <p className="text-center mb-2 dark:text-slate-200">日々学んだこと・感じたこと</p>
           <nav>
             <ol className="flex justify-center text-sky-500">
               <li>
