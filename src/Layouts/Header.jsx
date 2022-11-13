@@ -110,6 +110,13 @@ export const Header = () => {
                   Works
                 </p>
               </button>
+              <Link href="/diary">
+                <a>
+                  <p className="leading-4 ml-4 font-bold text-sky-700 dark:text-sky-300 hover:opacity-70 hover:duration-150">
+                    Diary
+                  </p>
+                </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -130,7 +137,6 @@ export const Header = () => {
                         alt={item.alt}
                         width={80}
                         height={80}
-                        
                       />
                       <h2 className="text-lg tracking-wide font-bold mt-2 md:text-base dark:text-slate-200">
                         {item.label}
