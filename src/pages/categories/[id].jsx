@@ -48,6 +48,4 @@ export const CategoryList = (props) => {
   );
 };
 
-
 export default CategoryList;
-
