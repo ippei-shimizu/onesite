@@ -70,20 +70,20 @@ const renderBlock = (block) => {
       );
     case "heading_2":
       return (
-        <h2 className="text-contentH2 font-bold tracking-wide mt-14 mb-6 border-b-2 border-slate-200 pb-2 dark:text-slate-200">
+        <h2 className="text-contentH2 font-bold tracking-wide mt-12 mb-6 border-b-2 border-slate-200 pb-2 dark:text-slate-200">
           <Text text={value.rich_text} />
         </h2>
       );
     case "heading_3":
       return (
-        <h3 className="text-contentH3 font-bold tracking-wide mt-12 mb-5 dark:text-slate-200">
+        <h3 className="text-contentH3 font-bold tracking-wide mt-12 mb-3 dark:text-slate-200">
           <Text text={value.rich_text} />
         </h3>
       );
     case "bulleted_list_item":
     case "numbered_list_item":
       return (
-        <li className="dark:text-slate-200">
+        <li className="my-2 leading-6 dark:text-slate-200">
           <Text text={value.rich_text} />
           {!!value.children && renderNestedList(block)}
         </li>
@@ -179,7 +179,7 @@ export default function Post({ page, blocks }) {
         <title>{page.properties.title.title[0].plain_text} - Onesite</title>
       </Head>
       <main className="w-11/12 mx-auto">
-        <div className="w-11/12 max-w-3xl min-w-48 mx-auto mt-6 bg-white rounded-3xl py-8 px-8 border-2 border-slate-200 xl:min-w-0 xl:max-w-none xl:w-full lg:min-w-0 lg:w-auto md:p-4 dark:bg-slate-800 dark:border-slate-300">
+        <div className="w-11/12 max-w-3xl min-w-48 mx-auto mt-6 bg-white rounded-3xl py-8 px-8 border-2 border-slate-200 xl:min-w-0 lg:min-w-0 lg:w-auto md:p-4 dark:bg-slate-800 dark:border-slate-300">
           <div className="text-center">
             <h1
               className={`font-bold tracking-wide mt-2 inline-block text-left ${classes.title} dark:text-slate-200`}
@@ -209,7 +209,7 @@ export default function Post({ page, blocks }) {
           </nav>
         </div>
         <section>
-          <div className="w-11/12 max-w-3xl min-w-48 mx-auto bg-white mt-3 py-10 px-10 rounded-3xl border-2 border-slate-200 xl:min-w-0 xl:max-w-max xl:w-auto lg:min-w-0 lg:w-auto md:mt-4 md:p-4 dark:bg-slate-800 dark:border-slate-300">
+          <div className="w-11/12 max-w-3xl min-w-48 mx-auto bg-white mt-3 py-10 px-10 rounded-3xl border-2 border-slate-200 lg:min-w-0 lg:w-auto md:mt-4 md:p-4 dark:bg-slate-800 dark:border-slate-300">
             {blocks.map((block) => (
               <Fragment key={block.id}>{renderBlock(block)}</Fragment>
             ))}
