@@ -9,6 +9,7 @@ const Document = () => {
         <link rel="icon" href="/favicon.ico" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#ecfeff" />
+        <meta name="google-site-verification" content="6vts5RQIwZltAa08CA09OWSuC-302WQUhE3NKUWrmwU" />
         <link rel="apple-touch-icon" href="/onesite-pwa.png" />
       </Head>
       <body>
