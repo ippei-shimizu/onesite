@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "src/styles/NotionPost.module.css";
 import classes from "src/components/Blog/BlogDetail.module.css";
+import { API_URL_M_CMS } from "src/utils/const";
 
 export const Text = ({ text }) => {
   if (!text) {
@@ -127,7 +128,9 @@ const renderBlock = (block) => {
     case "code":
       return (
         <pre className="bg-slate-100 p-4 rounded-md dark:bg-slate-700">
-          <code key={id} className="whitespace-pre-wrap dark:text-slate-200">{value.rich_text[0].text.content}</code>
+          <code key={id} className="whitespace-pre-wrap dark:text-slate-200">
+            {value.rich_text[0].text.content}
+          </code>
         </pre>
       );
     case "file":
@@ -177,6 +180,20 @@ export default function Post({ page, blocks }) {
     <>
       <Head>
         <title>{page.properties.title.title[0].plain_text} - Onesite</title>
+        <meta
+          name="description"
+          content="コーダーからフロントエンドエンジニアへキャリアチェンジした新米エンジニアの技術アウトプットブログです。"
+        />
+        <meta property="og:url" content={`${API_URL_M_CMS}`} />
+        <meta
+          property="og:title"
+          content={`${page.properties.title.title[0].plain_text} - Onesite`}
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://onesite-rouge.vercel.app/onesite-ogp.jpg"
+        />
       </Head>
       <main className="w-11/12 mx-auto">
         <div className="w-11/12 max-w-3xl min-w-48 mx-auto mt-6 bg-white rounded-3xl py-8 px-8 border-2 border-slate-200 xl:min-w-0 lg:min-w-0 lg:w-auto md:p-4 dark:bg-slate-800 dark:border-slate-300">
