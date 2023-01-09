@@ -126,8 +126,8 @@ const renderBlock = (block) => {
       return <blockquote key={id}>{value.text[0].plain_text}</blockquote>;
     case "code":
       return (
-        <pre>
-          <code key={id}>{value.text[0].plain_text}</code>
+        <pre className="bg-slate-100 p-4 rounded-md dark:bg-slate-700">
+          <code key={id} className="whitespace-pre-wrap dark:text-slate-200">{value.rich_text[0].text.content}</code>
         </pre>
       );
     case "file":
