@@ -6,7 +6,7 @@ export const TopHead = () => {
     <>
       <Head>
         <title>Onesite - フロントエンド開発の技術アウトプットブログ</title>
-        <meta name="description" content="山梨県でWebコーダーとしてWeb制作に携わっています。フロントエンド開発やWeb制作について学んだことをアウトプットしていきます。" />
+        <meta name="description" content="コーダーからフロントエンドエンジニアへキャリアチェンジした新米エンジニアの技術アウトプットブログです。" />
         <meta property="og:url" content={`${API_URL_M_CMS}`} />
         <meta
           property="og:title"
