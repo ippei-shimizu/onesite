@@ -105,7 +105,7 @@ export const Footer = () => {
               </a>
             </Link>
             <p className="text-xs mb-3 font-normal dark:text-slate-300">
-              &copy; 2022 Ippei Shimizu
+              &copy; 2023 Ippei Shimizu
             </p>
             <p className="text-xs mb-1 font-normal text-gray-500 dark:text-gray-300">
               Site designed by Auforia. App icon by

@@ -10,12 +10,28 @@ import styles from "src/styles/Home.module.css";
 const NAV_ITEMS = [
   {
     href: "/categories/front-end",
-    label: "Front End",
+    label: "Frontend",
     src: "/frontend.svg",
     src: "/frontend.svg",
     alt: "Front End",
     class:
       "bg-gradient-to-tl from-nav01-blue-t via-nav01-blue-v to-nav01-blue-b dark:from-nav01-blue-t-dark dark:via-nav01-blue-v-dark dark:to-nav01-blue-b-dark",
+  },
+  {
+    href: "/categories/backend",
+    label: "Backend",
+    src: "/design.svg",
+    alt: "BackEnd",
+    class:
+      "bg-gradient-to-tl from-nav03-blue-t via-nav03-blue-v to-nav03-blue-b dark:from-nav03-blue-t-dark dark:via-nav03-blue-v-dark dark:to-nav03-blue-b-dark",
+  },
+  {
+    href: "/categories/ios",
+    label: "iOS",
+    src: "/lifestyle.svg",
+    alt: "iOS",
+    class:
+      "bg-gradient-to-tl from-nav04-blue-t via-nav04-blue-v to-nav04-blue-b dark:from-nav04-blue-t-dark dark:via-nav04-blue-v-dark dark:to-nav04-blue-b-dark",
   },
   {
     href: "/categories/web-production",
@@ -24,22 +40,6 @@ const NAV_ITEMS = [
     alt: "Web Production",
     class:
       "bg-gradient-to-tl from-nav02-blue-t via-nav02-blue-v to-nav02-blue-b dark:from-nav02-blue-t-dark dark:via-nav02-blue-v-dark dark:to-nav02-blue-b-dark",
-  },
-  {
-    href: "/categories/design",
-    label: "Design",
-    src: "/design.svg",
-    alt: "Design",
-    class:
-      "bg-gradient-to-tl from-nav03-blue-t via-nav03-blue-v to-nav03-blue-b dark:from-nav03-blue-t-dark dark:via-nav03-blue-v-dark dark:to-nav03-blue-b-dark",
-  },
-  {
-    href: "/categories/career",
-    label: "Career",
-    src: "/lifestyle.svg",
-    alt: "Career",
-    class:
-      "bg-gradient-to-tl from-nav04-blue-t via-nav04-blue-v to-nav04-blue-b dark:from-nav04-blue-t-dark dark:via-nav04-blue-v-dark dark:to-nav04-blue-b-dark",
   },
 ];
 
@@ -53,7 +53,7 @@ export const Header = () => {
         <div className="flex justify-between items-center">
           <Link href="/" prefetch={false}>
             <a>
-              <h1 className="md:w-32">
+              <h1 className="md:w-42">
                 {colorTheme === "dark" ? (
                   <Image
                     src="/logo.svg"
@@ -69,6 +69,9 @@ export const Header = () => {
                     height={36}
                   />
                 )}
+                <span className="block tracking-wider pl-1.5 text-sm leading-tight md:text-xs">
+                  Frontend Engineer Tech Blog
+                </span>
               </h1>
             </a>
           </Link>
@@ -78,8 +81,8 @@ export const Header = () => {
             </div>
           </div>
         </div>
-        <div className="flex items-center mt-6">
-          <div className="flex md:w-11">
+        <div className="flex items-center mt-6 md:mt-4">
+          <div className="flex md:w-16">
             <Image
               src="/profile.png"
               alt="IppeiShimizu"
@@ -88,13 +91,20 @@ export const Header = () => {
             />
           </div>
           <div className="ml-4">
-            <p className="text-lg font-bold leading-6 md:text-base dark:text-slate-100">
-              Ippei
+            <p className="text-lg font-bold leading-6 tracking-wide md:text-base dark:text-slate-100">
+              Ippei Shimizu
             </p>
             <p className="text-sm font-medium text-zinc-500 md:text-xs dark:text-slate-300">
-              Web Coder / Yamanashi
+              Web Coder / Tokyo
             </p>
             <div className="flex mt-1">
+              <Link href="/">
+                <a>
+                  <p className="leading-4 mr-4 font-bold text-sky-700 dark:text-sky-300 hover:opacity-70 hover:duration-150">
+                    Home
+                  </p>
+                </a>
+              </Link>
               <Link href="/profile">
                 <a>
                   <p className="leading-4 mr-4 font-bold text-sky-700 dark:text-sky-300 hover:opacity-70 hover:duration-150">
@@ -102,17 +112,17 @@ export const Header = () => {
                   </p>
                 </a>
               </Link>
-              <button
+              {/* <button
                 className="cursor-pointer"
                 onClick={() => router.push("/works")}
               >
                 <p className="leading-4 font-bold text-sky-700 dark:text-sky-300 hover:opacity-70 hover:duration-150">
                   Works
                 </p>
-              </button>
+              </button> */}
               <Link href="/diary">
                 <a>
-                  <p className="leading-4 ml-4 font-bold text-sky-700 dark:text-sky-300 hover:opacity-70 hover:duration-150">
+                  <p className="leading-4 font-bold text-sky-700 dark:text-sky-300 hover:opacity-70 hover:duration-150">
                     Diary
                   </p>
                 </a>
@@ -120,7 +130,7 @@ export const Header = () => {
             </div>
           </div>
         </div>
-        <nav className="mt-16 md:mt-14">
+        <nav className="mt-16 md:mt-10">
           <ul className="grid grid-cols-4 gap-3 md:grid-cols-2 md:gap-2">
             {NAV_ITEMS.map((item) => {
               return (
@@ -130,15 +140,16 @@ export const Header = () => {
                 >
                   <Link href={item.href} prefetch={false}>
                     <a
-                      className={`text-center block pt-8 pb-7 px-2 md:pt-5 md:pb-3 rounded-3xl transition duration-100 ${styles.hoverShadow}`}
+                      className={`text-center block pt-8 pb-7 px-2 md:pt-3 md:pb-3 rounded-3xl transition duration-100 ${styles.hoverShadow}`}
                     >
                       <Image
                         src={item.src}
                         alt={item.alt}
                         width={80}
                         height={80}
+                        className="md:!w-14 md:!h-14 md:!min-w-0 md:!min-h-0"
                       />
-                      <h2 className="text-lg tracking-wide font-bold mt-2 md:text-base dark:text-slate-200">
+                      <h2 className="text-lg tracking-wide font-bold mt-2 md:text-base md:-mt-3 dark:text-slate-200">
                         {item.label}
                       </h2>
                     </a>
