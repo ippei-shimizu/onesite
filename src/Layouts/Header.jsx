@@ -69,7 +69,7 @@ export const Header = () => {
                     height={36}
                   />
                 )}
-                <span className="block tracking-wider pl-1.5 text-sm leading-tight md:text-xs">
+                <span className="block tracking-wider pl-1.5 text-sm leading-tight md:text-xs dark:text-slate-300">
                   Frontend Engineer Tech Blog
                 </span>
               </h1>
