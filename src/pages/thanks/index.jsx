@@ -27,13 +27,17 @@ export default function ContactForm() {
             </li>
           </ul>
         </nav>
-        <div>
-          <p className="text-center">
-            お問い合わせありがとうございました。
-            <br />
-            内容を確認次第、折り返しご連絡させていただきますので、今暫くお待ちくださいませ。
-          </p>
-        </div>
+        <article
+          className={`text-center py-9 px-8 mt-4 bg-gradient-to-tr from-post-bg-t to-post-bg-b rounded-3xl transition duration-100 dark:from-post-bg-t-dark dark:to-post-bg-b-dark md:px-5 md:py-6`}
+        >
+          <div>
+            <p className="text-center leading-7 tracking-wider dark:text-slate-100">
+              お問い合わせありがとうございました。
+              <br />
+              内容を確認次第、折り返しご連絡させていただきますので、今暫くお待ちくださいませ。
+            </p>
+          </div>
+        </article>
       </section>
     </>
   );
