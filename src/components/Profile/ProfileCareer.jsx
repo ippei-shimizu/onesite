@@ -1,18 +1,21 @@
 export const ProfileCareer = () => {
   const CAREER_ITEMS = [
     {
+      id: 4,
       days: "2021.10",
       title: "印刷会社へWebコーダーとして入社",
       description:
         "コーダー業務をメインで行うメンバーが私1人だけなので、入社後のWeb制作案件（社内サイトも含む）のコーディングは9割ほど私1人で行っています。Web制作案件は主にWordPressを使用して制作を行っており、WelCartを使用したECサイト制作も行っています。また、デザインツールはIllustrator・Photoshop・XDを使用しています。",
     },
     {
+      id: 3,
       days: "2021.03",
       title: "職業訓練",
       description:
         "5月〜8月の3ヶ月間、職業訓練にてWeb制作について学び、主にHTML・CSS・WordPress・jQueryについて学習をしました。職業訓練に通う前から独学で学習をしていたこともあり、他の生徒から質問をされることが多く、学んだことのアウトプットができて効率よく理解を深めることができました。",
     },
     {
+      id: 2,
       days: "2021.03",
       title: "Web制作独学",
       description: `HTML・CSS・Sass・WordPress・jQueryの独学を開始しました。最初は「Progate」と「ドットインストール」で基礎を学び、その後はWeb制作フリーランスのしょーごさんの${(
@@ -27,6 +30,7 @@ export const ProfileCareer = () => {
       )}を参考にし、デザインカンプからのコーディング練習を行いました。`,
     },
     {
+      id: 1,
       days: "2019.04",
       title: "社会人硬式野球",
       description:
@@ -51,7 +55,7 @@ export const ProfileCareer = () => {
           {CAREER_ITEMS.map((career) => {
             return (
               <div
-                key={career.days}
+                key={career.id}
                 className="flex items-baseline py-8 border-t last:border-b border-sky-100 dark:border-sky-800 md:block"
               >
                 <p className="text-lg font-bold flex items-center dark:text-slate-200">

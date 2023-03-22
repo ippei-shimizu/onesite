@@ -1,17 +1,17 @@
 import Head from "next/head";
-import ProfileContent from "src/components/Profile/ProfileContent";
+import ContactContent from "src/components/Contact/ContactContent";
 
-export default function Profile() {
+export default function ContactForm() {
   return (
     <>
       <Head>
-        <title>Profile - 清水一平 Ippei Shimizu</title>
+        <title>Contact - お問い合わせフォーム</title>
         <meta
           name="description"
           content="山梨県でWebコーダーとしてWeb制作に携わっています。フロントエンド開発やWeb制作について学んだことをアウトプットしていきます。"
         />
       </Head>
-      <ProfileContent />
+      <ContactContent />
     </>
   );
 }
