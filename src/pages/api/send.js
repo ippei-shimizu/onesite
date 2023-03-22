@@ -7,7 +7,7 @@ export default function handler(req, res) {
       to: req.body.email,
       bcc: "ippei.shimizu.32@gmail.com",
       from: "ippei.shimizu.32@gmail.com",
-      subject: req.body.subject,
+      subject: `${req.body.subject} - Onesite`,
       text: `${req.body.name}様\nこの度は、お問い合わせをいただきありがとうございます。\nお問い合わせ内容を確認次第、折り返しご連絡させていただきます。\n恐れ入りますが、今暫くお待ちください。\n\n\n【お問い合わせ内容】\n${req.body.message}`,
       html: `${req.body.name}様<br><br>この度は、お問い合わせをいただきありがとうございます。<br>お問い合わせ内容を確認次第、折り返しご連絡させていただきます。<br>恐れ入りますが、今暫くお待ちください。<br><br><br>【お問い合わせ内容】<br>${req.body.message}`,
     };

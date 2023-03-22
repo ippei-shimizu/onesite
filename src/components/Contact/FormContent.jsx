@@ -4,7 +4,7 @@ export const FormContent = () => {
   const registerUser = async (event) => {
     event.preventDefault();
 
-    const res = await fetch("api/send", {
+    const res = await fetch("/api/send", {
       body: JSON.stringify({
         name: event.target.name.value,
         email: event.target.email.value,
