@@ -122,8 +122,15 @@ export const Header = () => {
               </button> */}
               <Link href="/diary">
                 <a>
-                  <p className="leading-4 font-bold text-sky-700 dark:text-sky-300 hover:opacity-70 hover:duration-150">
+                  <p className="leading-4 mr-4 font-bold text-sky-700 dark:text-sky-300 hover:opacity-70 hover:duration-150">
                     Diary
+                  </p>
+                </a>
+              </Link>
+              <Link href="/contact">
+                <a>
+                  <p className="leading-4 font-bold text-sky-700 dark:text-sky-300 hover:opacity-70 hover:duration-150">
+                    Contact
                   </p>
                 </a>
               </Link>
