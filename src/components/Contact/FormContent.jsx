@@ -1,4 +1,4 @@
-import React from "react";
+import { Router } from "next/router";
 
 export const FormContent = () => {
   const registerUser = async (event) => {
@@ -18,7 +18,7 @@ export const FormContent = () => {
     });
 
     const result = await res.json();
-    if (res.ok) Router.push("/thanks");
+    if (result.ok) Router.push("/thanks");
   };
 
   return (
@@ -27,9 +27,17 @@ export const FormContent = () => {
         className={`text-center py-9 px-8 mt-4 bg-gradient-to-tr from-post-bg-t to-post-bg-b rounded-3xl transition duration-100 dark:from-post-bg-t-dark dark:to-post-bg-b-dark md:px-5 md:py-6`}
       >
         <div className="my-4">
-          <form onSubmit={registerUser} className="text-left w-10/12 mx-auto md:w-full">
+          <form
+            onSubmit={registerUser}
+            className="text-left w-10/12 mx-auto md:w-full"
+          >
             <div className="mb-6">
-              <label htmlFor="name" className="block tracking-wider font-semibold mb-2 dark:text-slate-100">お名前</label>
+              <label
+                htmlFor="name"
+                className="block tracking-wider font-semibold mb-2 dark:text-slate-100"
+              >
+                お名前
+              </label>
               <input
                 type="text"
                 id="name"
@@ -39,7 +47,12 @@ export const FormContent = () => {
               />
             </div>
             <div className="mb-6">
-              <label htmlFor="email" className="block tracking-wider font-semibold mb-2 dark:text-slate-100">メールアドレス</label>
+              <label
+                htmlFor="email"
+                className="block tracking-wider font-semibold mb-2 dark:text-slate-100"
+              >
+                メールアドレス
+              </label>
               <input
                 type="email"
                 id="email"
@@ -49,7 +62,12 @@ export const FormContent = () => {
               />
             </div>
             <div className="mb-6">
-              <label htmlFor="subject" className="block tracking-wider font-semibold mb-2 dark:text-slate-100">件名</label>
+              <label
+                htmlFor="subject"
+                className="block tracking-wider font-semibold mb-2 dark:text-slate-100"
+              >
+                件名
+              </label>
               <input
                 type="text"
                 id="subject"
@@ -59,7 +77,12 @@ export const FormContent = () => {
               />
             </div>
             <div>
-              <label htmlFor="message" className="block tracking-wider font-semibold mb-2 dark:text-slate-100">お問い合わせ内容</label>
+              <label
+                htmlFor="message"
+                className="block tracking-wider font-semibold mb-2 dark:text-slate-100"
+              >
+                お問い合わせ内容
+              </label>
               <textarea
                 name="message"
                 id="message"
@@ -69,7 +92,12 @@ export const FormContent = () => {
               ></textarea>
             </div>
             <div className="text-center mt-12 md:mt-8">
-              <button type="submit" className="text-lg tracking-widest bg-sky-600 text-slate-100 w-52 py-4 rounded-full transition-opacity font-bold hover:opacity-75 dark:bg-sky-500 md:text-base md:py-3 md:w-48">送 信</button>
+              <button
+                type="submit"
+                className="text-lg tracking-widest bg-sky-600 text-slate-100 w-52 py-4 rounded-full transition-opacity font-bold hover:opacity-75 dark:bg-sky-500 md:text-base md:py-3 md:w-48"
+              >
+                送 信
+              </button>
             </div>
           </form>
         </div>
