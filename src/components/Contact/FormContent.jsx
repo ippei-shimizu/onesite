@@ -13,6 +13,7 @@ export const FormContent = () => {
       }),
       headers: {
         "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": process.env.ACCESS_CONTROL_ALLOW_ORIGIN,
       },
       method: "POST",
     });
