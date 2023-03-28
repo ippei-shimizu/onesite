@@ -127,13 +127,13 @@ export const Header = () => {
                   </p>
                 </a>
               </Link>
-              <Link href="/contact">
+              {/* <Link href="/contact">
                 <a>
                   <p className="leading-4 font-bold text-sky-700 dark:text-sky-300 hover:opacity-70 hover:duration-150">
                     Contact
                   </p>
                 </a>
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>

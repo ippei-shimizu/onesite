@@ -4,7 +4,7 @@ export const FormContent = () => {
   const registerUser = async (event) => {
     event.preventDefault();
 
-    const res = await fetch("/api/send", {
+    const res = await fetch("/v3/mail/send", {
       body: JSON.stringify({
         name: event.target.name.value,
         email: event.target.email.value,
@@ -12,6 +12,7 @@ export const FormContent = () => {
         message: event.target.message.value,
       }),
       headers: {
+        "Access-Control-Allow-Origin": process.env.ACCESS_CONTROL_ALLOW_ORIGIN,
         "Content-Type": "application/json",
       },
       method: "POST",
