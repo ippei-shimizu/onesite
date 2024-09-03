@@ -43,13 +43,6 @@ const PROFILE_SNS = [
     width: 20,
     height: 20,
   },
-  {
-    href: "https://www.instagram.com/ippei_5/",
-    src: "/instagram-gray.svg",
-    alt: "instagram",
-    width: 20,
-    height: 20,
-  },
 ];
 
 export const BlogDetail = (props) => {

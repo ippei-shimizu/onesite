@@ -33,16 +33,6 @@ const SNS_LIST = [
     class:
       "bg-gradient-to-tl from-twitter-icon-t to-twitter-icon-b dark:from-twitter-icon-t-dark dark:to-twitter-icon-b-dark",
   },
-  {
-    href: "https://www.instagram.com/ippei_5/",
-    src: "/instagram.svg",
-    alt: "instagram",
-    width: 28,
-    height: 28,
-    id: "@ippei_5",
-    class:
-      "bg-gradient-to-tl from-instagram-icon-t to-instagram-icon-b dark:from-instagram-icon-t-dark dark:to-instagram-icon-b-dark",
-  },
 ];
 
 const PAGE_LIST = [
